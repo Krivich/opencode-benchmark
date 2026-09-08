@@ -649,7 +649,7 @@ function renderHtml(report, benchUrl, extras = {}) {
       <td class="model">${annotateIcons(r.model)}</td>
       <td class="num">${score}</td>
       <td class="num">$${r.price.toFixed(4)}</td>
-      <td class="num">${mp}</td>
+      <td class="num"><strong>${mp}</strong></td>
       <td class="num">$${r.usage}</td>
       <td class="num">${mult}</td>
       <td class="num">${req}</td>
@@ -770,6 +770,9 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
     .tagline { color: #bbb; }
   }
   .sub { color: #666; margin: 0 0 20px; font-size: 0.9rem; }
+  .datalinks { font-size: 0.82rem; color: #888; margin: -12px 0 16px; }
+  .datalinks a { color: #2563eb; }
+  td.num strong { font-weight: 700; }
   .intro { max-width: 74ch; margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px dashed #ddd;
     color: #444; font-size: 0.94rem; }
   .intro b { color: #222; }
@@ -846,6 +849,10 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
         typical session actually costs and how smart each model is — side by side, so you can pick.</p>
       <p class="sub">Typical session cost and the share of the monthly quota it consumes.
         Updated: <time datetime="${generatedAt}">${new Date(generatedAt).toLocaleString('en-US')}</time></p>
+
+      <p class="datalinks">Data:
+        <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
+        <a href="history/index.json">history/index.json</a> — daily snapshots with change diffs</p>
 
       <p class="intro">Picking a model on OpenCode Go means solving a billing puzzle, not an AI one.
         Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into

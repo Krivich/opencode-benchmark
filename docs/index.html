@@ -22,7 +22,7 @@
 <meta name="twitter:title" content="Which OpenCode Go model gets you the most for your money?">
 <meta name="twitter:description" content="Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.">
 <meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-09-08T17:11:41.679Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-09-08T17:11:41.679Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-09-08T17:22:12.762Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-09-08T17:22:12.762Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -48,6 +48,9 @@
     .tagline { color: #bbb; }
   }
   .sub { color: #666; margin: 0 0 20px; font-size: 0.9rem; }
+  .datalinks { font-size: 0.82rem; color: #888; margin: -12px 0 16px; }
+  .datalinks a { color: #2563eb; }
+  td.num strong { font-weight: 700; }
   .intro { max-width: 74ch; margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px dashed #ddd;
     color: #444; font-size: 0.94rem; }
   .intro b { color: #222; }
@@ -123,7 +126,11 @@
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what a
         typical session actually costs and how smart each model is — side by side, so you can pick.</p>
       <p class="sub">Typical session cost and the share of the monthly quota it consumes.
-        Updated: <time datetime="2026-09-08T17:11:41.679Z">9/8/2026, 8:11:41 PM</time></p>
+        Updated: <time datetime="2026-09-08T17:22:12.762Z">9/8/2026, 8:22:12 PM</time></p>
+
+      <p class="datalinks">Data:
+        <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
+        <a href="history/index.json">history/index.json</a> — daily snapshots with change diffs</p>
 
       <p class="intro">Picking a model on OpenCode Go means solving a billing puzzle, not an AI one.
         Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into
@@ -165,7 +172,7 @@
       <td class="model">Qwen3.7 Max</td>
       <td class="num">95</td>
       <td class="num">$0.0953</td>
-      <td class="num">317.5</td>
+      <td class="num"><strong>317.5</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
       <td class="num">314</td>
@@ -176,7 +183,7 @@
       <td class="model">Grok 4.6 (≤ 200K tokens)</td>
       <td class="num">94</td>
       <td class="num">$0.0909</td>
-      <td class="num">606.2</td>
+      <td class="num"><strong>606.2</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">164</td>
@@ -187,7 +194,7 @@
       <td class="model">Grok 4.6 (&gt; 200K tokens)</td>
       <td class="num">94</td>
       <td class="num">$0.1819</td>
-      <td class="num">1212.3</td>
+      <td class="num"><strong>1212.3</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">82</td>
@@ -198,7 +205,7 @@
       <td class="model">Qwen3.8 Max</td>
       <td class="num">91</td>
       <td class="num">$0.0541</td>
-      <td class="num">360.8</td>
+      <td class="num"><strong>360.8</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">277</td>
@@ -209,7 +216,7 @@
       <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)</td>
       <td class="num">90</td>
       <td class="num">$0.0029</td>
-      <td class="num">19.6</td>
+      <td class="num"><strong>19.6</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">5,112</td>
@@ -220,7 +227,7 @@
       <td class="model">GPT 5.6 Luna (≤ 272K tokens)</td>
       <td class="num">90</td>
       <td class="num">$0.0049</td>
-      <td class="num">32.4</td>
+      <td class="num"><strong>32.4</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">3,089</td>
@@ -231,7 +238,7 @@
       <td class="model">DeepSeek V4 Flash Vision Exp (Peak)</td>
       <td class="num">90</td>
       <td class="num">$0.0059</td>
-      <td class="num">39.1</td>
+      <td class="num"><strong>39.1</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">2,556</td>
@@ -242,7 +249,7 @@
       <td class="model">GPT 5.6 Luna (&gt; 272K tokens)</td>
       <td class="num">90</td>
       <td class="num">$0.0095</td>
-      <td class="num">63.5</td>
+      <td class="num"><strong>63.5</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">1,573</td>
@@ -253,7 +260,7 @@
       <td class="model">GLM-5.2</td>
       <td class="num">90</td>
       <td class="num">$0.0505</td>
-      <td class="num">84.1</td>
+      <td class="num"><strong>84.1</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">1,189</td>
@@ -264,7 +271,7 @@
       <td class="model">DeepSeek V4 Flash (Off-Peak)</td>
       <td class="num">88</td>
       <td class="num">$0.0029</td>
-      <td class="num">9.8</td>
+      <td class="num"><strong>9.8</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
       <td class="num">10,225</td>
@@ -275,7 +282,7 @@
       <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
       <td class="num">88</td>
       <td class="num">$0.0095</td>
-      <td class="num">15.8</td>
+      <td class="num"><strong>15.8</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">6,335</td>
@@ -286,7 +293,7 @@
       <td class="model">DeepSeek V4 Flash (Peak)</td>
       <td class="num">88</td>
       <td class="num">$0.0059</td>
-      <td class="num">19.6</td>
+      <td class="num"><strong>19.6</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
       <td class="num">5,112</td>
@@ -297,7 +304,7 @@
       <td class="model">Qwen3.7 Plus (&gt; 256K tokens)</td>
       <td class="num">88</td>
       <td class="num">$0.0284</td>
-      <td class="num">47.4</td>
+      <td class="num"><strong>47.4</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">2,111</td>
@@ -308,7 +315,7 @@
       <td class="model">DeepSeek V4 Pro (Off-Peak)</td>
       <td class="num">88</td>
       <td class="num">$0.0089</td>
-      <td class="num">59.7</td>
+      <td class="num"><strong>59.7</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">1,676</td>
@@ -319,7 +326,7 @@
       <td class="model">DeepSeek V4 Pro (Peak)</td>
       <td class="num">88</td>
       <td class="num">$0.0179</td>
-      <td class="num">119.3</td>
+      <td class="num"><strong>119.3</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">838</td>
@@ -330,7 +337,7 @@
       <td class="model">Kimi K3</td>
       <td class="num">88</td>
       <td class="num">$0.0719</td>
-      <td class="num">479.5</td>
+      <td class="num"><strong>479.5</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">208</td>
@@ -341,7 +348,7 @@
       <td class="model">GLM-5.3-Flash</td>
       <td class="num">84</td>
       <td class="num">$0.0057</td>
-      <td class="num">38.2</td>
+      <td class="num"><strong>38.2</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">2,617</td>
@@ -352,7 +359,7 @@
       <td class="model">GLM-5.1</td>
       <td class="num">82</td>
       <td class="num">$0.0505</td>
-      <td class="num">84.1</td>
+      <td class="num"><strong>84.1</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">1,189</td>
@@ -363,7 +370,7 @@
       <td class="model">MiniMax M2.7</td>
       <td class="num">81</td>
       <td class="num">$0.0115</td>
-      <td class="num">19.2</td>
+      <td class="num"><strong>19.2</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">5,208</td>
@@ -374,7 +381,7 @@
       <td class="model">Hy3</td>
       <td class="num">79</td>
       <td class="num">$0.0064</td>
-      <td class="num">10.7</td>
+      <td class="num"><strong>10.7</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">9,356</td>
@@ -385,7 +392,7 @@
       <td class="model">MiniMax M3</td>
       <td class="num">76</td>
       <td class="num">$0.0115</td>
-      <td class="num">19.2</td>
+      <td class="num"><strong>19.2</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">5,208</td>
@@ -396,7 +403,7 @@
       <td class="model">Kimi K2.6</td>
       <td class="num">76</td>
       <td class="num">$0.0321</td>
-      <td class="num">53.5</td>
+      <td class="num"><strong>53.5</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">1,867</td>
@@ -407,7 +414,7 @@
       <td class="model">Muse Spark 1.3 Contributor</td>
       <td class="num">—</td>
       <td class="num">$0.0011</td>
-      <td class="num">1.9</td>
+      <td class="num"><strong>1.9</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">53,120</td>
@@ -418,7 +425,7 @@
       <td class="model">Muse Spark 1.2 Contributor</td>
       <td class="num">—</td>
       <td class="num">$0.0011</td>
-      <td class="num">1.9</td>
+      <td class="num"><strong>1.9</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">53,120</td>
@@ -429,7 +436,7 @@
       <td class="model">MiMo V2.5</td>
       <td class="num">—</td>
       <td class="num">$0.0016</td>
-      <td class="num">2.6</td>
+      <td class="num"><strong>2.6</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">37,943</td>
@@ -440,7 +447,7 @@
       <td class="model">LongCat-2.0</td>
       <td class="num">—</td>
       <td class="num">$0.0036</td>
-      <td class="num">5.9</td>
+      <td class="num"><strong>5.9</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">16,813</td>
@@ -451,7 +458,7 @@
       <td class="model">Omen Alpha</td>
       <td class="num">—</td>
       <td class="num">$0.0076</td>
-      <td class="num">7.6</td>
+      <td class="num"><strong>7.6</strong></td>
       <td class="num">$100</td>
       <td class="num">0.60</td>
       <td class="num">13,092</td>
@@ -462,7 +469,7 @@
       <td class="model">Qwen3.8 Flash</td>
       <td class="num">—</td>
       <td class="num">$0.0037</td>
-      <td class="num">12.2</td>
+      <td class="num"><strong>12.2</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
       <td class="num">8,197</td>
@@ -473,7 +480,7 @@
       <td class="model">MiniMax M2.5</td>
       <td class="num">—</td>
       <td class="num">$0.0115</td>
-      <td class="num">19.2</td>
+      <td class="num"><strong>19.2</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">5,208</td>
@@ -484,7 +491,7 @@
       <td class="model">Qwen3.6 Plus (≤ 256K tokens)</td>
       <td class="num">—</td>
       <td class="num">$0.0121</td>
-      <td class="num">20.2</td>
+      <td class="num"><strong>20.2</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">4,943</td>
@@ -495,7 +502,7 @@
       <td class="model">MiMo V2.5 Pro</td>
       <td class="num">—</td>
       <td class="num">$0.0042</td>
-      <td class="num">27.8</td>
+      <td class="num"><strong>27.8</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">3,600</td>
@@ -506,7 +513,7 @@
       <td class="model">Hy4 preview</td>
       <td class="num">—</td>
       <td class="num">$0.0134</td>
-      <td class="num">44.7</td>
+      <td class="num"><strong>44.7</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
       <td class="num">2,239</td>
@@ -517,7 +524,7 @@
       <td class="model">Kimi K2.7 Code</td>
       <td class="num">—</td>
       <td class="num">$0.0365</td>
-      <td class="num">60.9</td>
+      <td class="num"><strong>60.9</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">1,642</td>
@@ -528,7 +535,7 @@
       <td class="model">Qwen3.6 Plus (&gt; 256K tokens)</td>
       <td class="num">—</td>
       <td class="num">$0.0467</td>
-      <td class="num">77.9</td>
+      <td class="num"><strong>77.9</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
       <td class="num">1,283</td>
@@ -539,7 +546,7 @@
       <td class="model">GLM-5.3</td>
       <td class="num">—</td>
       <td class="num">$0.0505</td>
-      <td class="num">336.4</td>
+      <td class="num"><strong>336.4</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
       <td class="num">297</td>
