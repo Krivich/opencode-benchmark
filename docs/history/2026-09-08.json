@@ -1,0 +1,553 @@
+{
+  "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
+  "generatedAt": "2026-09-08T17:11:41.660Z",
+  "generator": {
+    "name": "opencode-benchmark",
+    "page": "https://krivich.github.io/opencode-benchmark/",
+    "source": "https://github.com/krivich/opencode-benchmark",
+    "license": "MIT"
+  },
+  "sources": {
+    "pricing": {
+      "title": "OpenCode Go tariff prices and quotas",
+      "url": "https://opencode.ai/docs/ru/go",
+      "publisher": "OpenCode"
+    },
+    "benchmark": {
+      "title": "TIMETOACT GROUP — LLM Benchmark",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026",
+      "indexUrl": "https://www.timetoact-group.at/en/insights/llm-benchmarks",
+      "publisher": "TIMETOACT GROUP",
+      "copyright": "Copyright © TIMETOACT GROUP. All benchmark rights belong to their owners."
+    }
+  },
+  "legal": {
+    "trademarks": "Model names and trademarks belong to their respective owners and are used for identification only.",
+    "disclaimer": "Unofficial, independent aggregation of public data; not affiliated with or endorsed by OpenCode, TIMETOACT GROUP or any model vendor. All figures are rough estimates and may change without notice — verify before use."
+  },
+  "session": {
+    "inputTokens": 7750,
+    "cacheReadTokens": 147250,
+    "outputTokens": 300,
+    "monthlyPoolUsd": 60
+  },
+  "rows": [
+    {
+      "model": "Qwen3.7 Max",
+      "score": 95,
+      "priceUsdPerSession": 0.09525,
+      "mpPerSession": 317.5,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "requestsPerMonth": 314,
+      "matchedBenchmarkName": "Qwen3.7 Max ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Grok 4.6 (≤ 200K tokens)",
+      "score": 94,
+      "priceUsdPerSession": 0.090925,
+      "mpPerSession": 606.17,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 164,
+      "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Grok 4.6 (> 200K tokens)",
+      "score": 94,
+      "priceUsdPerSession": 0.18185,
+      "mpPerSession": 1212.33,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 82,
+      "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "score": 91,
+      "priceUsdPerSession": 0.054113,
+      "mpPerSession": 360.75,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 277,
+      "matchedBenchmarkName": "Qwen3.8 Max (reasoning medium) ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
+      "score": 90,
+      "priceUsdPerSession": 0.002934,
+      "mpPerSession": 19.56,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 5112,
+      "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "score": 90,
+      "priceUsdPerSession": 0.004855,
+      "mpPerSession": 32.37,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 3089,
+      "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
+      "score": 90,
+      "priceUsdPerSession": 0.005868,
+      "mpPerSession": 39.12,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 2556,
+      "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "GPT 5.6 Luna (> 272K tokens)",
+      "score": 90,
+      "priceUsdPerSession": 0.00953,
+      "mpPerSession": 63.53,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 1573,
+      "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "GLM-5.2",
+      "score": 90,
+      "priceUsdPerSession": 0.050455,
+      "mpPerSession": 84.09,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 1189,
+      "matchedBenchmarkName": "GLM 5.2 ✅ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "DeepSeek V4 Flash (Off-Peak)",
+      "score": 88,
+      "priceUsdPerSession": 0.002934,
+      "mpPerSession": 9.78,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "requestsPerMonth": 10225,
+      "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Qwen3.7 Plus (≤ 256K tokens)",
+      "score": 88,
+      "priceUsdPerSession": 0.00947,
+      "mpPerSession": 15.78,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 6335,
+      "matchedBenchmarkName": "Qwen3.7 Plus ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "DeepSeek V4 Flash (Peak)",
+      "score": 88,
+      "priceUsdPerSession": 0.005868,
+      "mpPerSession": 19.56,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "requestsPerMonth": 5112,
+      "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Qwen3.7 Plus (> 256K tokens)",
+      "score": 88,
+      "priceUsdPerSession": 0.02841,
+      "mpPerSession": 47.35,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 2111,
+      "matchedBenchmarkName": "Qwen3.7 Plus ⚠️",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "DeepSeek V4 Pro (Off-Peak)",
+      "score": 88,
+      "priceUsdPerSession": 0.008948,
+      "mpPerSession": 59.66,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 1676,
+      "matchedBenchmarkName": "DeepSeek V4 Pro ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "DeepSeek V4 Pro (Peak)",
+      "score": 88,
+      "priceUsdPerSession": 0.017897,
+      "mpPerSession": 119.31,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 838,
+      "matchedBenchmarkName": "DeepSeek V4 Pro ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Kimi K3",
+      "score": 88,
+      "priceUsdPerSession": 0.071925,
+      "mpPerSession": 479.5,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 208,
+      "matchedBenchmarkName": "Kimi K3 ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "score": 84,
+      "priceUsdPerSession": 0.00573,
+      "mpPerSession": 38.2,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 2617,
+      "matchedBenchmarkName": "GLM 5.3 Flash (reasoning high) ✅",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "GLM-5.1",
+      "score": 82,
+      "priceUsdPerSession": 0.050455,
+      "mpPerSession": 84.09,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 1189,
+      "matchedBenchmarkName": "GLM 5.1 ✅ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "MiniMax M2.7",
+      "score": 81,
+      "priceUsdPerSession": 0.01152,
+      "mpPerSession": 19.2,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 5208,
+      "matchedBenchmarkName": "MiniMax M2.7 ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Hy3",
+      "score": 79,
+      "priceUsdPerSession": 0.006413,
+      "mpPerSession": 10.69,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 9356,
+      "matchedBenchmarkName": "Tencent Hy3 ⚠️ ⏳",
+      "similarity": 0.273,
+      "tier": "OK"
+    },
+    {
+      "model": "MiniMax M3",
+      "score": 76,
+      "priceUsdPerSession": 0.01152,
+      "mpPerSession": 19.2,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 5208,
+      "matchedBenchmarkName": "MiniMax M3 ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Kimi K2.6",
+      "score": 76,
+      "priceUsdPerSession": 0.032122,
+      "mpPerSession": 53.54,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 1867,
+      "matchedBenchmarkName": "Kimi K2.6 ⚠️ ⏳",
+      "similarity": 1,
+      "tier": "OK"
+    },
+    {
+      "model": "Muse Spark 1.3 Contributor",
+      "score": null,
+      "priceUsdPerSession": 0.00113,
+      "mpPerSession": 1.88,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 53120,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Muse Spark 1.2 Contributor",
+      "score": null,
+      "priceUsdPerSession": 0.00113,
+      "mpPerSession": 1.88,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 53120,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "MiMo V2.5",
+      "score": null,
+      "priceUsdPerSession": 0.001581,
+      "mpPerSession": 2.64,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 37943,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "LongCat-2.0",
+      "score": null,
+      "priceUsdPerSession": 0.003569,
+      "mpPerSession": 5.95,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 16813,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Omen Alpha",
+      "score": null,
+      "priceUsdPerSession": 0.007638,
+      "mpPerSession": 7.64,
+      "quotaUsd": 100,
+      "multiplier": 0.6,
+      "requestsPerMonth": 13092,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "score": null,
+      "priceUsdPerSession": 0.003659,
+      "mpPerSession": 12.2,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "requestsPerMonth": 8197,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "MiniMax M2.5",
+      "score": null,
+      "priceUsdPerSession": 0.01152,
+      "mpPerSession": 19.2,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 5208,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Qwen3.6 Plus (≤ 256K tokens)",
+      "score": null,
+      "priceUsdPerSession": 0.012138,
+      "mpPerSession": 20.23,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 4943,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "MiMo V2.5 Pro",
+      "score": null,
+      "priceUsdPerSession": 0.004166,
+      "mpPerSession": 27.77,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 3600,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Hy4 preview",
+      "score": null,
+      "priceUsdPerSession": 0.013398,
+      "mpPerSession": 44.66,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "requestsPerMonth": 2239,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "score": null,
+      "priceUsdPerSession": 0.03654,
+      "mpPerSession": 60.9,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 1642,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "Qwen3.6 Plus (> 256K tokens)",
+      "score": null,
+      "priceUsdPerSession": 0.04675,
+      "mpPerSession": 77.92,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "requestsPerMonth": 1283,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    },
+    {
+      "model": "GLM-5.3",
+      "score": null,
+      "priceUsdPerSession": 0.050455,
+      "mpPerSession": 336.37,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "requestsPerMonth": 297,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE"
+    }
+  ],
+  "ranked": [
+    {
+      "model": "DeepSeek V4 Flash (Off-Peak)",
+      "score": 88,
+      "mpPerSession": 9.8,
+      "scorePerMp": 9
+    },
+    {
+      "model": "Hy3",
+      "score": 79,
+      "mpPerSession": 10.7,
+      "scorePerMp": 7.39
+    },
+    {
+      "model": "Qwen3.7 Plus (≤ 256K tokens)",
+      "score": 88,
+      "mpPerSession": 15.8,
+      "scorePerMp": 5.58
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
+      "score": 90,
+      "mpPerSession": 19.6,
+      "scorePerMp": 4.6
+    },
+    {
+      "model": "DeepSeek V4 Flash (Peak)",
+      "score": 88,
+      "mpPerSession": 19.6,
+      "scorePerMp": 4.5
+    },
+    {
+      "model": "MiniMax M2.7",
+      "score": 81,
+      "mpPerSession": 19.2,
+      "scorePerMp": 4.22
+    },
+    {
+      "model": "MiniMax M3",
+      "score": 76,
+      "mpPerSession": 19.2,
+      "scorePerMp": 3.96
+    },
+    {
+      "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "score": 90,
+      "mpPerSession": 32.4,
+      "scorePerMp": 2.78
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
+      "score": 90,
+      "mpPerSession": 39.1,
+      "scorePerMp": 2.3
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "score": 84,
+      "mpPerSession": 38.2,
+      "scorePerMp": 2.2
+    },
+    {
+      "model": "Qwen3.7 Plus (> 256K tokens)",
+      "score": 88,
+      "mpPerSession": 47.4,
+      "scorePerMp": 1.86
+    },
+    {
+      "model": "DeepSeek V4 Pro (Off-Peak)",
+      "score": 88,
+      "mpPerSession": 59.7,
+      "scorePerMp": 1.48
+    },
+    {
+      "model": "Kimi K2.6",
+      "score": 76,
+      "mpPerSession": 53.5,
+      "scorePerMp": 1.42
+    },
+    {
+      "model": "GPT 5.6 Luna (> 272K tokens)",
+      "score": 90,
+      "mpPerSession": 63.5,
+      "scorePerMp": 1.42
+    },
+    {
+      "model": "GLM-5.2",
+      "score": 90,
+      "mpPerSession": 84.1,
+      "scorePerMp": 1.07
+    }
+  ],
+  "changes": {
+    "vs": "2026-09-08",
+    "benchmarkIssueChanged": false,
+    "items": []
+  }
+}

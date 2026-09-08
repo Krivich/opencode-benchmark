@@ -1,0 +1,21 @@
+{
+  "name": "opencode-benchmark",
+  "version": "1.0.0",
+  "description": "Downloads OpenCode Go price tables and the TIMETOACT LLM benchmark, joins by model name, computes the typical session price in $ and mp of quota, and generates docs/index.html.",
+  "type": "module",
+  "main": "opencode-benchmark.js",
+  "scripts": {
+    "start": "node opencode-benchmark.js",
+    "pages": "PAGES=1 node opencode-benchmark.js",
+    "pages:win": "set PAGES=1&& node opencode-benchmark.js"
+  },
+  "keywords": ["opencode", "benchmark", "pricing", "github-pages"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "optionalDependencies": {
+    "socks-proxy-agent": "^8.0.5"
+  }
+}

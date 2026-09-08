@@ -1,0 +1,55 @@
+﻿# Updates docs/index.html (and friends) on a schedule (cron) and pushes back to main.
+# GitHub Pages is configured to serve from the /docs folder of main.
+#
+# Manual run: Actions → "Update benchmark page" → Run workflow.
+#
+# If you need a SOCKS proxy for downloading (usually not needed here),
+# add the SOCKS environment variable (e.g. secrets.SOCKS) and uncomment the env below.
+
+name: Update benchmark page
+
+on:
+  schedule:
+    # UTC, every day at 06:00. Format: minute hour day month day-of-week
+    - cron: '0 6 * * *'
+  workflow_dispatch:   # manual run
+
+permissions:
+  contents: write   # so the updated files can be committed back to the repository
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Generate index.html
+        env:
+          PAGES: '1'
+          SITE_URL: ${{ vars.SITE_URL }}   # https://USER.github.io/REPO — for SEO (OG/Twitter/JSON-LD)
+          # SOCKS: ${{ secrets.SOCKS }}   # uncomment if a proxy is needed
+        run: npm start
+
+      - name: Commit & push if changed
+        run: |
+          if [ -z "$(git status --porcelain docs README.md)" ]; then
+            echo "no changes — docs are up to date"
+          else
+            git config user.name "opencode-benchmark bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add docs README.md
+            git commit -m "chore: refresh benchmark page ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+            git push
+            echo "docs updated and pushed"
+          fi
