@@ -15,14 +15,12 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Which OpenCode Go model gets you the most for your money?">
 <meta property="og:description" content="Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.">
-<meta property="og:url" content="https://krivich.github.io/opencode-benchmark/">
-  <meta property="og:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
-  <link rel="canonical" href="https://krivich.github.io/opencode-benchmark/">
-<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Which OpenCode Go model gets you the most for your money?">
 <meta name="twitter:description" content="Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.">
-<meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-09-08T17:22:12.762Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-09-08T17:22:12.762Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"index.html#website","url":"index.html","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"index.html#website"},"dateModified":"2026-09-10T10:14:30.847Z","inLanguage":"en","mainEntity":{"@id":"index.html#dataset"}},{"@type":"Dataset","@id":"index.html#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"index.html","dateModified":"2026-09-10T10:14:30.847Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -126,7 +124,7 @@
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what a
         typical session actually costs and how smart each model is — side by side, so you can pick.</p>
       <p class="sub">Typical session cost and the share of the monthly quota it consumes.
-        Updated: <time datetime="2026-09-08T17:22:12.762Z">9/8/2026, 8:22:12 PM</time></p>
+        Updated: <time datetime="2026-09-10T10:14:30.847Z">9/10/2026, 10:14:30 AM</time></p>
 
       <p class="datalinks">Data:
         <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
@@ -155,7 +153,14 @@
   <h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
   
   <ul class="chgs">
-      <li class="chg empty">No changes vs 2026-09-08.</li>
+      <li class="chg good"><b>price:</b> DeepSeek V4 Flash (Off-Peak) $0.0029 → $0.0018 ▼</li>
+      <li class="chg good"><b>price:</b> DeepSeek V4 Flash (Peak) $0.0059 → $0.0036 ▼</li>
+      <li class="chg good"><b>price:</b> DeepSeek V4 Flash Vision Exp (Off-Peak) $0.0029 → $0.0018 ▼</li>
+      <li class="chg good"><b>price:</b> DeepSeek V4 Flash Vision Exp (Peak) $0.0059 → $0.0036 ▼</li>
+      <li class="chg neu"><b>quota:</b> GLM-5.3-Flash $15 → $60</li>
+      <li class="chg neu"><b>+ new tariff:</b> DeepSeek V4.1 Flash (Off-Peak)</li>
+      <li class="chg neu"><b>+ new tariff:</b> DeepSeek V4.1 Flash (Peak)</li>
+      <li class="chg neu"><b>− removed:</b> Omen Alpha</li>
   </ul>
 
   <div class="scroll">
@@ -215,15 +220,26 @@
       <td class="num">5</td>
       <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)</td>
       <td class="num">90</td>
-      <td class="num">$0.0029</td>
-      <td class="num"><strong>19.6</strong></td>
+      <td class="num">$0.0018</td>
+      <td class="num"><strong>11.9</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">5,112</td>
+      <td class="num">8,406</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash Vision Exp (reasoning low) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">6</td>
+      <td class="model">DeepSeek V4 Flash Vision Exp (Peak)</td>
+      <td class="num">90</td>
+      <td class="num">$0.0036</td>
+      <td class="num"><strong>23.8</strong></td>
+      <td class="num">$15</td>
+      <td class="num">4.00</td>
+      <td class="num">4,203</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash Vision Exp (reasoning low) <span class="ic" title="License not determined">⚠️</span></td>
+    </tr>
+<tr>
+      <td class="num">7</td>
       <td class="model">GPT 5.6 Luna (≤ 272K tokens)</td>
       <td class="num">90</td>
       <td class="num">$0.0049</td>
@@ -232,17 +248,6 @@
       <td class="num">4.00</td>
       <td class="num">3,089</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">7</td>
-      <td class="model">DeepSeek V4 Flash Vision Exp (Peak)</td>
-      <td class="num">90</td>
-      <td class="num">$0.0059</td>
-      <td class="num"><strong>39.1</strong></td>
-      <td class="num">$15</td>
-      <td class="num">4.00</td>
-      <td class="num">2,556</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash Vision Exp (reasoning low) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">8</td>
@@ -270,15 +275,26 @@
       <td class="num">10</td>
       <td class="model">DeepSeek V4 Flash (Off-Peak)</td>
       <td class="num">88</td>
-      <td class="num">$0.0029</td>
-      <td class="num"><strong>9.8</strong></td>
+      <td class="num">$0.0018</td>
+      <td class="num"><strong>5.9</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
-      <td class="num">10,225</td>
+      <td class="num">16,813</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash (reasoning high) <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">11</td>
+      <td class="model">DeepSeek V4 Flash (Peak)</td>
+      <td class="num">88</td>
+      <td class="num">$0.0036</td>
+      <td class="num"><strong>11.9</strong></td>
+      <td class="num">$30</td>
+      <td class="num">2.00</td>
+      <td class="num">8,406</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash (reasoning high) <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num">12</td>
       <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
       <td class="num">88</td>
       <td class="num">$0.0095</td>
@@ -287,17 +303,6 @@
       <td class="num">1.00</td>
       <td class="num">6,335</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
-    </tr>
-<tr>
-      <td class="num">12</td>
-      <td class="model">DeepSeek V4 Flash (Peak)</td>
-      <td class="num">88</td>
-      <td class="num">$0.0059</td>
-      <td class="num"><strong>19.6</strong></td>
-      <td class="num">$30</td>
-      <td class="num">2.00</td>
-      <td class="num">5,112</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash (reasoning high) <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">13</td>
@@ -348,10 +353,10 @@
       <td class="model">GLM-5.3-Flash</td>
       <td class="num">84</td>
       <td class="num">$0.0057</td>
-      <td class="num"><strong>38.2</strong></td>
-      <td class="num">$15</td>
-      <td class="num">4.00</td>
-      <td class="num">2,617</td>
+      <td class="num"><strong>9.6</strong></td>
+      <td class="num">$60</td>
+      <td class="num">1.00</td>
+      <td class="num">10,471</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GLM 5.3 Flash (reasoning high) <span class="ic" title="Open source, unrestricted local use">✅</span></td>
     </tr>
 <tr>
@@ -455,13 +460,13 @@
     </tr>
 <tr>
       <td class="num">27</td>
-      <td class="model">Omen Alpha</td>
+      <td class="model">DeepSeek V4.1 Flash (Off-Peak)</td>
       <td class="num">—</td>
-      <td class="num">$0.0076</td>
-      <td class="num"><strong>7.6</strong></td>
-      <td class="num">$100</td>
-      <td class="num">0.60</td>
-      <td class="num">13,092</td>
+      <td class="num">$0.0018</td>
+      <td class="num"><strong>11.9</strong></td>
+      <td class="num">$15</td>
+      <td class="num">4.00</td>
+      <td class="num">8,406</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
@@ -499,6 +504,17 @@
     </tr>
 <tr>
       <td class="num">31</td>
+      <td class="model">DeepSeek V4.1 Flash (Peak)</td>
+      <td class="num">—</td>
+      <td class="num">$0.0036</td>
+      <td class="num"><strong>23.8</strong></td>
+      <td class="num">$15</td>
+      <td class="num">4.00</td>
+      <td class="num">4,203</td>
+      <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
+    </tr>
+<tr>
+      <td class="num">32</td>
       <td class="model">MiMo V2.5 Pro</td>
       <td class="num">—</td>
       <td class="num">$0.0042</td>
@@ -509,7 +525,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">32</td>
+      <td class="num">33</td>
       <td class="model">Hy4 preview</td>
       <td class="num">—</td>
       <td class="num">$0.0134</td>
@@ -520,7 +536,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">33</td>
+      <td class="num">34</td>
       <td class="model">Kimi K2.7 Code</td>
       <td class="num">—</td>
       <td class="num">$0.0365</td>
@@ -531,7 +547,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">34</td>
+      <td class="num">35</td>
       <td class="model">Qwen3.6 Plus (&gt; 256K tokens)</td>
       <td class="num">—</td>
       <td class="num">$0.0467</td>
@@ -542,7 +558,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">35</td>
+      <td class="num">36</td>
       <td class="model">GLM-5.3</td>
       <td class="num">—</td>
       <td class="num">$0.0505</td>
@@ -565,71 +581,71 @@
     <td class="num">1</td>
     <td class="model">DeepSeek V4 Flash (Off-Peak)</td>
     <td class="num">88</td>
-    <td class="num">9.8</td>
-    <td class="num"><strong>9.00</strong></td>
+    <td class="num">5.9</td>
+    <td class="num"><strong>14.80</strong></td>
   </tr>
 <tr>
     <td class="num">2</td>
+    <td class="model">GLM-5.3-Flash</td>
+    <td class="num">84</td>
+    <td class="num">9.6</td>
+    <td class="num"><strong>8.80</strong></td>
+  </tr>
+<tr>
+    <td class="num">3</td>
+    <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)</td>
+    <td class="num">90</td>
+    <td class="num">11.9</td>
+    <td class="num"><strong>7.57</strong></td>
+  </tr>
+<tr>
+    <td class="num">4</td>
+    <td class="model">DeepSeek V4 Flash (Peak)</td>
+    <td class="num">88</td>
+    <td class="num">11.9</td>
+    <td class="num"><strong>7.40</strong></td>
+  </tr>
+<tr>
+    <td class="num">5</td>
     <td class="model">Hy3</td>
     <td class="num">79</td>
     <td class="num">10.7</td>
     <td class="num"><strong>7.39</strong></td>
   </tr>
 <tr>
-    <td class="num">3</td>
+    <td class="num">6</td>
     <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
     <td class="num">88</td>
     <td class="num">15.8</td>
     <td class="num"><strong>5.58</strong></td>
   </tr>
 <tr>
-    <td class="num">4</td>
-    <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)</td>
-    <td class="num">90</td>
-    <td class="num">19.6</td>
-    <td class="num"><strong>4.60</strong></td>
-  </tr>
-<tr>
-    <td class="num">5</td>
-    <td class="model">DeepSeek V4 Flash (Peak)</td>
-    <td class="num">88</td>
-    <td class="num">19.6</td>
-    <td class="num"><strong>4.50</strong></td>
-  </tr>
-<tr>
-    <td class="num">6</td>
+    <td class="num">7</td>
     <td class="model">MiniMax M2.7</td>
     <td class="num">81</td>
     <td class="num">19.2</td>
     <td class="num"><strong>4.22</strong></td>
   </tr>
 <tr>
-    <td class="num">7</td>
+    <td class="num">8</td>
     <td class="model">MiniMax M3</td>
     <td class="num">76</td>
     <td class="num">19.2</td>
     <td class="num"><strong>3.96</strong></td>
   </tr>
 <tr>
-    <td class="num">8</td>
+    <td class="num">9</td>
+    <td class="model">DeepSeek V4 Flash Vision Exp (Peak)</td>
+    <td class="num">90</td>
+    <td class="num">23.8</td>
+    <td class="num"><strong>3.78</strong></td>
+  </tr>
+<tr>
+    <td class="num">10</td>
     <td class="model">GPT 5.6 Luna (≤ 272K tokens)</td>
     <td class="num">90</td>
     <td class="num">32.4</td>
     <td class="num"><strong>2.78</strong></td>
-  </tr>
-<tr>
-    <td class="num">9</td>
-    <td class="model">DeepSeek V4 Flash Vision Exp (Peak)</td>
-    <td class="num">90</td>
-    <td class="num">39.1</td>
-    <td class="num"><strong>2.30</strong></td>
-  </tr>
-<tr>
-    <td class="num">10</td>
-    <td class="model">GLM-5.3-Flash</td>
-    <td class="num">84</td>
-    <td class="num">38.2</td>
-    <td class="num"><strong>2.20</strong></td>
   </tr>
 <tr>
     <td class="num">11</td>
@@ -675,6 +691,12 @@
     <table>
       <thead><tr><th>Date</th><th class="num">Models</th><th>Best score/mp</th><th class="num">Δ changes</th></tr></thead>
       <tbody>
+<tr>
+        <td><a href="history/2026-09-10.json">2026-09-10</a></td>
+        <td class="num">36</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td class="num">8</td>
+      </tr>
 <tr>
         <td><a href="history/2026-09-08.json">2026-09-08</a></td>
         <td class="num">35</td>
