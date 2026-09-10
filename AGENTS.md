@@ -42,9 +42,9 @@ Every `npm start` run regenerates all of these from live external data:
 4. **Parsing** (lines ~174-271) — Separate parsers for Go pricing table and benchmark table.
 5. **Matching** (lines ~278-424) — Levenshtein-based fuzzy match with hard filters for versions (X.Y) and subtypes (flash/max/pro/etc.). Confidence tiers: OK, AMBIG, WEAK, NONE.
 6. **Computation** (lines ~429-442) — Session cost: 7,750 input + 147,250 cache-read + 300 output tokens.
-7. **HTML rendering** (lines ~540-952) — Full page with inline CSS/JS, dark mode, sortable tables, SEO metadata.
-8. **History/diffing** (lines ~1065-1154) — Snapshots + change detection between runs.
-9. **README patching** (lines ~957-997, 1336-1350) — Rewrites the auto section in README.md between markers.
+7. **HTML rendering** (lines ~538-1130) — Full page with inline CSS/JS, dark mode, sortable tables, SEO metadata, plus a client-side "Top movers" section that fetches `history/index.json` + snapshot JSONs and computes score/mp deltas over 1/7/30-day periods (no server-side rendering of that section).
+8. **History/diffing** (lines ~1228-1317) — Snapshots + change detection between runs.
+9. **README patching** (lines ~1126-1183, ~1477-1527) — Rewrites the auto section in README.md between markers.
 
 ## Gotchas
 
@@ -52,5 +52,7 @@ Every `npm start` run regenerates all of these from live external data:
 - **Sanity check** — expects ≥10 Go models and ≥50 benchmark rows. If parsing returns less, the run fails with `FATAL:` error, no files are overwritten.
 - **README auto section** — `<!-- AUTO-DATA -->` and `<!-- /AUTO-DATA -->` markers must exist in `README.md`. Manual text outside these markers is preserved. Do not edit the auto section by hand; it is regenerated.
 - **Windows** — use `npm run pages:win` for the `PAGES=1` env var (`set PAGES=1&& node opencode-benchmark.js`). PowerShell doesn't support inline env vars like Unix shells.
-- **No `.github/workflows/`** — the repo references a daily GitHub Action (`update-pages.yml`) but no workflow files exist in the repo. If adding CI, create `.github/workflows/` and use `npm run pages`.
 - **`index.html` in root is gitignored** — only `docs/index.html` is committed. The root copy is for local dev preview.
+- **CI workflow exists** — `.github/workflows/update-pages.yml` runs daily (06:00 UTC) and on `workflow_dispatch`: `npm ci && npm start` with `PAGES=1`, then commits `docs/` + `README.md` back to main. `SITE_URL` comes from the repo variable (`vars.SITE_URL`); if empty, the generated HTML uses relative URLs — don't "fix" those by hand, the next CI run would overwrite them.
+- **Local fetch may hang** — on some networks `timetoact-group.at` stalls mid-body (HTTP 200, never finishes). If `npm start` dies with `FATAL: terminated`, set `SOCKS=socks5h://127.0.0.1:1080` (or your proxy) and re-run. GitHub runners fetch directly and are unaffected.
+- **Top movers needs old snapshots** — the client-side movers table compares against `docs/history/*.json`; with fewer than two snapshots it shows an empty-state message (no crash).

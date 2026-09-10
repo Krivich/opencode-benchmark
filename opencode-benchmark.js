@@ -688,11 +688,13 @@ function renderHtml(report, benchUrl, extras = {}) {
       : changeLines + (changes.items.length > 50
         ? `\n      <li class="chg empty">…and ${changes.items.length - 50} more — see <a href="report.json">report.json</a></li>`
         : '');
-  const changesSection = `<h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
+  const changesSection = `<div class="chgcard">
+  <h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
   ${changes.benchmarkIssueChanged ? '<p class="chg-issue">New monthly benchmark issue detected — scores below come from a fresh issue.</p>' : ''}
   <ul class="chgs">
 ${changesBody}
-  </ul>`;
+  </ul>
+</div>`;
 
   // History table — daily snapshots (newest first, last 30).
   const historySection = (() => {
@@ -783,6 +785,7 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
   .nums { display: flex; gap: 24px; flex-wrap: wrap; margin: 12px 0 20px; padding: 14px 18px;
     background: #fff; border: 1px solid #e3e3e3; border-radius: 10px; font-size: 0.92rem; }
   .nums b { font-size: 1.1rem; }
+  .mp-explain { font-size: 0.78rem; color: #666; font-weight: 400; }
   table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e3e3e3;
     border-radius: 10px; overflow: hidden; font-size: 0.86rem; }
   th, td { padding: 8px 10px; border-bottom: 1px solid #eee; text-align: left; white-space: nowrap; }
@@ -804,6 +807,8 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
   .scroll { overflow-x: auto; margin: 12px 0; }
   h2 { font-size: 1.15rem; margin: 28px 0 8px; }
   .chgs { list-style: none; margin: 8px 0 4px; padding: 0; font-size: 0.9rem; }
+  .chgcard { border: 1px solid #e3e3e3; border-radius: 10px; padding: 10px 14px 6px; margin: 12px 0 20px; background: #fff; }
+  .chgcard h2 { margin-top: 4px; }
   .chg { padding: 4px 0; border-bottom: 1px dashed #eee; }
   .chg b { font-weight: 600; color: #444; }
   .chg.good { color: #0a7d32; }
@@ -811,8 +816,17 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
   .chg.neu { color: #555; }
   .chg.empty, .chg-issue { color: #888; }
   .chg-issue { color: #b26a00; font-size: 0.9rem; }
+  .periods { display: flex; gap: 8px; margin: 8px 0 12px; flex-wrap: wrap; }
+  .period-btn { font: inherit; font-size: 0.82rem; padding: 4px 12px; border: 1px solid #ddd; background: #fff; color: #555; border-radius: 999px; cursor: pointer; }
+  .period-btn.on { border-color: #2563eb; color: #2563eb; background: #eff6ff; font-weight: 600; }
+  .mup { color: #0a7d32; font-weight: 600; }
+  .mdown { color: #b3261e; font-weight: 600; }
+  .mnew { color: #2563eb; font-weight: 600; }
+  .mgone { color: #999; }
+  .mdr { color: #555; font-size: 0.85rem; }
   @media (prefers-color-scheme: dark) {
     .chg { border-color: #333; }
+    .chgcard { background: #1b1b1b; border-color: #333; }
     .chg b { color: #ccc; }
     .chg.good { color: #4ade80; }
     .chg.bad { color: #f87171; }
@@ -831,6 +845,13 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
     tr:hover { background: #22252e; }
     footer { border-color: #333; color: #999; }
     .sub { color: #aaa; }
+    .mp-explain { color: #aaa; }
+    .period-btn { background: #1b1b1b; border-color: #333; color: #aaa; }
+    .period-btn.on { border-color: #60a5fa; color: #60a5fa; background: #1e293b; }
+    .mup { color: #4ade80; }
+    .mdown { color: #f87171; }
+    .mnew { color: #60a5fa; }
+    .mdr { color: #bbb; }
     footer h3 { color: #ccc; }
   }
   @media (max-width: 640px) {
@@ -871,11 +892,10 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
     <div>Cache-read<br><b>${SESSION.cacheRead.toLocaleString('en-US')} tok.</b></div>
     <div>Output<br><b>${SESSION.output}</b></div>
     <div>Pool<br><b>$60/mo</b></div>
-    <div><b>mp</b> = session price ÷ quota × 100 000</div>
+    <div><b>mp/session</b> = session price ÷ quota × 100 000<br><span class="mp-explain">how much of your monthly quota one typical session eats — higher means more expensive</span></div>
   </div>
 
-  ${changesSection}
-
+  <h2>All tariffs <span class="tt" title="Every OpenCode Go tariff from the price list, priced for a typical session. Click a header to sort.">ⓘ</span></h2>
   <div class="scroll">
     <table class="sortable">
       <thead><tr>
@@ -900,7 +920,26 @@ ${rankedBody}
     </table>
   </div>
 
+  <h2>Top movers <span class="tt" title="Models that moved in the score/mp ranking over the selected period vs a prior snapshot.">ⓘ</span></h2>
+  <div class="periods">
+    <button class="period-btn on" data-days="1">1 day</button>
+    <button class="period-btn" data-days="7">7 days</button>
+    <button class="period-btn" data-days="30">30 days</button>
+  </div>
+  <div class="scroll">
+    <table id="movers" class="sortable">
+      <thead><tr>
+        <th class="num">#</th><th>Model</th>
+        <th class="num">Score/mp now</th><th class="num">Score/mp then</th>
+        <th class="num">Δ Score/mp</th><th class="num">Δ Rank</th><th>Driver</th>
+      </tr></thead>
+      <tbody><tr><td colspan="7" class="muted">Loading history…</td></tr></tbody>
+    </table>
+  </div>
+
   ${historySection}
+
+  ${changesSection}
 
   <footer>
     <h3>Data sources</h3>
@@ -946,6 +985,158 @@ ${rankedBody}
       });
     });
   });
+</script>
+<script>
+(function () {
+  var box = document.getElementById('movers');
+  if (!box) return;
+  var tbody = box.tBodies[0];
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.period-btn'));
+  if (!btns.length) return;
+  var cache = {};
+  var snaps = null, latest = null, curList = null;
+
+  function escTxt(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  function buildList(report) {
+    var out = [];
+    (report.rows || []).forEach(function (r) {
+      var mp = r.mpPerSession;
+      if (r.score != null && r.quotaUsd > 0 && r.tier === 'OK' && mp != null && mp > 0) {
+        out.push({ model: r.model, score: r.score, mp: mp, price: r.priceUsdPerSession, quota: r.quotaUsd, ratio: r.score / mp });
+      }
+    });
+    out.sort(function (a, b) { return (b.ratio - a.ratio) || (b.score - a.score); });
+    out.forEach(function (m, i) { m.rank = i + 1; });
+    return out;
+  }
+
+  function topMovers(cur) {
+    var baseRep = cache[cur.file];
+    if (!baseRep) {
+      tbody.innerHTML = '<tr><td colspan="7" class="muted">Not enough history yet — daily snapshots accumulate over time.</td></tr>';
+      return;
+    }
+    var base = buildList(baseRep);
+    var bmap = {};
+    base.forEach(function (m) { bmap[m.model] = m; });
+    var cmap = {};
+    curList.forEach(function (m) { cmap[m.model] = m; });
+
+    var items = [];
+    curList.forEach(function (m) {
+      var b = bmap[m.model];
+      if (!b) {
+        items.push({ m: m, kind: 'new', dr: null, r: m.ratio, prev: null, dRank: null, dpct: null, qmult: null });
+        return;
+      }
+      items.push({
+        m: m, kind: 'move', dr: m.ratio - b.ratio, r: m.ratio, prev: b.ratio,
+        dRank: b.rank - m.rank,
+        dpct: (m.price != null && b.price != null && b.price > 0) ? (m.price - b.price) / b.price : null,
+        qmult: (m.quota != null && b.quota != null && b.quota > 0) ? m.quota / b.quota : null,
+      });
+    });
+    base.forEach(function (m) {
+      if (!cmap[m.model]) {
+        items.push({ m: m, kind: 'gone', dr: null, r: null, prev: m.ratio, dRank: null, dpct: null, qmult: null });
+      }
+    });
+
+    function prio(it) {
+      if (it.kind === 'new' || it.kind === 'gone') return 3;
+      if (Math.abs(it.dr) >= 0.005) return 2;
+      if (it.dRank !== 0) return 1;
+      return 0;
+    }
+    items = items.filter(function (it) { return prio(it) > 0; });
+    items.sort(function (a, b) {
+      var pa = prio(a), pb = prio(b);
+      if (pa !== pb) return pb - pa;
+      if (pa === 3) return a.m.model.localeCompare(b.m.model);
+      if (pa === 2) return Math.abs(b.dr) - Math.abs(a.dr);
+      return Math.abs(b.dRank) - Math.abs(a.dRank);
+    });
+    items = items.slice(0, 12);
+
+    var html = '';
+    items.forEach(function (it, idx) {
+      var m = it.m;
+      var realDelta = it.dr != null && Math.abs(it.dr) >= 0.005;
+      var nowTxt = it.r != null ? it.r.toFixed(2) : '—';
+      var prevTxt = it.prev != null ? it.prev.toFixed(2) : '—';
+      var dTxt, cls;
+      if (it.kind === 'new') { dTxt = 'new'; cls = 'mnew'; }
+      else if (it.kind === 'gone') { dTxt = 'left'; cls = 'mgone'; }
+      else if (!realDelta) { dTxt = '±0.00'; cls = 'mgone'; }
+      else { dTxt = (it.dr >= 0 ? '+' : '') + it.dr.toFixed(2); cls = it.dr >= 0 ? 'mup' : 'mdown'; }
+      var placeTxt = it.dRank == null ? '—' : it.dRank === 0 ? '—' : (it.dRank > 0 ? '+' + it.dRank : '' + it.dRank);
+      var reasons = [];
+      if (it.kind === 'new') { reasons.push('entered top score/mp'); }
+      else if (it.kind === 'gone') { reasons.push('left top score/mp'); }
+      else if (realDelta) {
+        if (it.dpct != null && Math.abs(it.dpct) >= 0.02) reasons.push('price ' + (it.dpct < 0 ? '−' : '+') + Math.abs(it.dpct * 100).toFixed(0) + '%');
+        if (it.qmult != null && (it.qmult >= 1.5 || it.qmult <= 0.67)) reasons.push('quota ×' + (Math.round(it.qmult * 10) / 10));
+        if (!reasons.length) reasons.push('benchmark score change');
+      }
+      else {
+        reasons.push(it.dRank > 0 ? 'rank up — rivals dropped' : 'outpaced by rivals (own metrics unchanged)');
+      }
+      html += '<tr>'
+        + '<td class="num">' + (idx + 1) + '</td>'
+        + '<td class="model">' + escTxt(m.model) + '</td>'
+        + '<td class="num">' + nowTxt + '</td>'
+        + '<td class="num">' + prevTxt + '</td>'
+        + '<td class="num ' + cls + '">' + dTxt + '</td>'
+        + '<td class="num">' + placeTxt + '</td>'
+        + '<td class="mdr">' + escTxt(reasons.join('; ')) + '</td>'
+        + '</tr>';
+    });
+    tbody.innerHTML = html || '<tr><td colspan="7" class="muted">No score/mp changes in this period.</td></tr>';
+  }
+
+  function load(days) {
+    var limit = new Date(new Date(latest.date + 'T00:00:00Z').getTime() - days * 86400000).toISOString().slice(0, 10);
+    var best = null;
+    snaps.forEach(function (s) { if (s.date <= limit && (!best || s.date > best.date)) best = s; });
+    if (!best) {
+      tbody.innerHTML = '<tr><td colspan="7" class="muted">No snapshot this far back — history accumulates daily.</td></tr>';
+      return;
+    }
+    function go() { topMovers(best); }
+    if (cache[best.file]) go();
+    else {
+      fetch(best.file).then(function (r) { return r.json(); }).then(function (j) {
+        cache[best.file] = j;
+        go();
+      }).catch(function () {
+        tbody.innerHTML = '<tr><td colspan="7" class="muted">Failed to load snapshot.</td></tr>';
+      });
+    }
+  }
+
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) { x.classList.remove('on'); });
+      b.classList.add('on');
+      load(parseInt(b.getAttribute('data-days'), 10));
+    });
+  });
+
+  fetch('history/index.json').then(function (r) { return r.json(); }).then(function (m) {
+    snaps = (m.snapshots || []).slice().sort(function (a, b) { return a.date.localeCompare(b.date); });
+    if (snaps.length < 2) {
+      tbody.innerHTML = '<tr><td colspan="7" class="muted">History is empty — available from the second snapshot onward.</td></tr>';
+      return;
+    }
+    latest = snaps[snaps.length - 1];
+    fetch(latest.file).then(function (r) { return r.json(); }).then(function (j) {
+      cache[latest.file] = j;
+      curList = buildList(j);
+      load(1);
+    });
+  });
+})();
 </script>
 </body>
 </html>
