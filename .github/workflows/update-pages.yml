@@ -39,7 +39,7 @@ jobs:
           PAGES: '1'
           SITE_URL: ${{ vars.SITE_URL }}   # https://USER.github.io/REPO — for SEO (OG/Twitter/JSON-LD)
           # SOCKS: ${{ secrets.SOCKS }}   # uncomment if a proxy is needed
-        run: npm start
+        run: npm ci && npm start
 
       - name: Commit & push if changed
         run: |
