@@ -339,6 +339,53 @@
               "NONE"
             ],
             "description": "Match confidence: OK ≥ 0.85 or substring rescue; AMBIG 0.55–0.85; WEAK 0.50–0.55; NONE — no match."
+          },
+          "peakHours": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Peak/Off-Peak pricing hours for this tariff as stated by OpenCode Go (e.g. DeepSeek V4). null when the note does not apply.",
+            "required": [
+              "tz",
+              "days",
+              "ranges"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "tz": {
+                "type": "string",
+                "description": "Timezone the stated hours are in (always UTC so far)."
+              },
+              "days": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 6
+                },
+                "description": "Inclusive weekday range using JS getDay numbering (0=Sunday); null when every day is affected."
+              },
+              "ranges": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4,
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "description": "One peak window as [fromHour, fromMinute, toHour, toMinute] in tz."
+                },
+                "description": "Peak hour windows within the weekday range; all other hours (incl. weekends) are Off-Peak."
+              }
+            }
           }
         }
       }

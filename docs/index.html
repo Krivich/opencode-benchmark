@@ -22,7 +22,7 @@
 <meta name="twitter:title" content="Which OpenCode Go model gets you the most for your money?">
 <meta name="twitter:description" content="Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.">
 <meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-09-10T16:30:10.921Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-09-10T16:30:10.921Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-09-11T05:00:32.355Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-09-11T05:00:32.355Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -72,6 +72,14 @@
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   tr:hover { background: #f7f9ff; }
   .model { max-width: 260px; white-space: normal; }
+  .pk { display: inline-block; margin-left: 6px; padding: 0 4px; font-size: 0.72rem; line-height: 1.4;
+    border-radius: 5px; cursor: help; opacity: 0.85; vertical-align: 0.08em; }
+  .pk-on { background: #ffd98a; color: #5a3b00; }
+  .pk-off { background: #e4e4e4; color: #666; }
+  @media (prefers-color-scheme: dark) {
+    .pk-on { background: #9a6b00; color: #fff2cf; }
+    .pk-off { background: #3a3a3a; color: #bbb; }
+  }
   .match { max-width: 320px; white-space: normal; }
   .tier { font-weight: 700; cursor: help; }
   .tier-ok { color: #0a7d32; }
@@ -145,7 +153,7 @@
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what a
         typical session actually costs and how smart each model is — side by side, so you can pick.</p>
       <p class="sub">Typical session cost and the share of the monthly quota it consumes.
-        Updated: <time datetime="2026-09-10T16:30:10.921Z">9/10/2026, 7:30:10 PM</time></p>
+        Updated: <time datetime="2026-09-11T05:00:32.355Z">9/11/2026, 8:00:32 AM</time></p>
 
       <p class="datalinks">Data:
         <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
@@ -172,6 +180,7 @@
   </div>
 
   <h2>All tariffs <span class="tt" title="Every OpenCode Go tariff from the price list, priced for a typical session. Click a header to sort.">ⓘ</span></h2>
+  <p class="sub" style="margin-top:-6px">⚡ = Peak/Off-Peak pricing — hover for the hours in your timezone.</p>
   <div class="scroll">
     <table class="sortable">
       <thead><tr>
@@ -227,7 +236,7 @@
     </tr>
 <tr>
       <td class="num">5</td>
-      <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)</td>
+      <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">90</td>
       <td class="num">$0.0018</td>
       <td class="num"><strong>11.9</strong></td>
@@ -238,7 +247,7 @@
     </tr>
 <tr>
       <td class="num">6</td>
-      <td class="model">DeepSeek V4 Flash Vision Exp (Peak)</td>
+      <td class="model">DeepSeek V4 Flash Vision Exp (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">90</td>
       <td class="num">$0.0036</td>
       <td class="num"><strong>23.8</strong></td>
@@ -282,7 +291,7 @@
     </tr>
 <tr>
       <td class="num">10</td>
-      <td class="model">DeepSeek V4 Flash (Off-Peak)</td>
+      <td class="model">DeepSeek V4 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
       <td class="num">$0.0018</td>
       <td class="num"><strong>5.9</strong></td>
@@ -293,7 +302,7 @@
     </tr>
 <tr>
       <td class="num">11</td>
-      <td class="model">DeepSeek V4 Flash (Peak)</td>
+      <td class="model">DeepSeek V4 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
       <td class="num">$0.0036</td>
       <td class="num"><strong>11.9</strong></td>
@@ -326,7 +335,7 @@
     </tr>
 <tr>
       <td class="num">14</td>
-      <td class="model">DeepSeek V4 Pro (Off-Peak)</td>
+      <td class="model">DeepSeek V4 Pro (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
       <td class="num">$0.0089</td>
       <td class="num"><strong>59.7</strong></td>
@@ -337,7 +346,7 @@
     </tr>
 <tr>
       <td class="num">15</td>
-      <td class="model">DeepSeek V4 Pro (Peak)</td>
+      <td class="model">DeepSeek V4 Pro (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
       <td class="num">$0.0179</td>
       <td class="num"><strong>119.3</strong></td>
@@ -469,7 +478,7 @@
     </tr>
 <tr>
       <td class="num">27</td>
-      <td class="model">DeepSeek V4.1 Flash (Off-Peak)</td>
+      <td class="model">DeepSeek V4.1 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">—</td>
       <td class="num">$0.0018</td>
       <td class="num"><strong>11.9</strong></td>
@@ -513,7 +522,7 @@
     </tr>
 <tr>
       <td class="num">31</td>
-      <td class="model">DeepSeek V4.1 Flash (Peak)</td>
+      <td class="model">DeepSeek V4.1 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]]}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">—</td>
       <td class="num">$0.0036</td>
       <td class="num"><strong>23.8</strong></td>
@@ -718,6 +727,12 @@
       <thead><tr><th>Date</th><th class="num">Models</th><th>Best score/mp</th><th class="num">Δ changes</th></tr></thead>
       <tbody>
 <tr>
+        <td><a href="history/2026-09-11.json">2026-09-11</a></td>
+        <td class="num">36</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td class="num">0</td>
+      </tr>
+<tr>
         <td><a href="history/2026-09-10.json">2026-09-10</a></td>
         <td class="num">36</td>
         <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
@@ -738,20 +753,13 @@
   <h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
   
   <ul class="chgs">
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash (Off-Peak) $0.0029 → $0.0018 ▼</li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash (Peak) $0.0059 → $0.0036 ▼</li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash Vision Exp (Off-Peak) $0.0029 → $0.0018 ▼</li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash Vision Exp (Peak) $0.0059 → $0.0036 ▼</li>
-      <li class="chg neu"><b>quota:</b> GLM-5.3-Flash $15 → $60</li>
-      <li class="chg neu"><b>+ new tariff:</b> DeepSeek V4.1 Flash (Off-Peak)</li>
-      <li class="chg neu"><b>+ new tariff:</b> DeepSeek V4.1 Flash (Peak)</li>
-      <li class="chg neu"><b>− removed:</b> Omen Alpha</li>
+      <li class="chg empty">No changes vs 2026-09-11.</li>
   </ul>
 </div>
 
   <footer>
     <h3>Data sources</h3>
-    <p>OpenCode Go model prices and quotas: <a href="https://opencode.ai/docs/ru/go" rel="noopener">opencode.ai/docs/ru/go</a>.</p>
+    <p>OpenCode Go model prices and quotas: <a href="https://opencode.ai/docs/en/go" rel="noopener">opencode.ai/docs/en/go</a>.</p>
     <p>Model benchmark scores: <a href="https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026" rel="noopener">TIMETOACT GROUP — LLM Benchmark, September 2026</a>. Copyright © TIMETOACT GROUP. All benchmark rights belong to their owners.</p>
     <p>Machine-readable data: <a href="report.json" rel="noopener">report.json</a> — the full report as JSON (schema: <a href="report.schema.json" rel="noopener">report.schema.json</a>), regenerated by the same run.</p>
 
@@ -943,6 +951,70 @@
       curList = buildList(j);
       load(1);
     });
+  });
+})();
+</script>
+<script>
+(function () {
+  var nodes = Array.prototype.slice.call(document.querySelectorAll('.pk[data-peak]'));
+  if (!nodes.length) return;
+  var tz = null;
+  try { tz = new Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
+  tz = tz || 'Europe/Moscow';
+  var DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var partCache = {};
+  function localHM(h, m) {
+    var key = h + ':' + m;
+    if (partCache[key]) return partCache[key];
+    var out = pad(h) + ':' + pad(m);
+    try {
+      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+        .formatToParts(new Date(Date.UTC(2000, 0, 10, h, m, 0)));
+      var hh = 0, mm = 0;
+      for (var i = 0; i < parts.length; i++) {
+        if (parts[i].type === 'hour') hh = parseInt(parts[i].value, 10);
+        if (parts[i].type === 'minute') mm = parseInt(parts[i].value, 10);
+      }
+      out = pad(hh) + ':' + pad(mm);
+    } catch (e) {}
+    partCache[key] = out;
+    return out;
+  }
+  function daysText(days) {
+    if (!days || days.length < 2) return '';
+    var a = days[0], b = days[1];
+    return a === b ? DAY[a] : DAY[a] + '–' + DAY[b];
+  }
+  function isPeakNow(n) {
+    var now = new Date();
+    var wd = now.getDay();
+    if (n.days && n.days.length === 2) {
+      var a = n.days[0], b = n.days[1];
+      var inDays = a <= b ? (wd >= a && wd <= b) : (wd >= a || wd <= b);
+      if (!inDays) return false;
+    }
+    var t = now.getHours() * 60 + now.getMinutes();
+    for (var i = 0; i < n.ranges.length; i++) {
+      var r = n.ranges[i];
+      var s = r[0] * 60 + r[1];
+      var e = r[2] * 60 + r[3];
+      if (s <= e ? (t >= s && t < e) : (t >= s || t < e)) return true;
+    }
+    return false;
+  }
+  nodes.forEach(function (el) {
+    var n;
+    try { n = JSON.parse(el.getAttribute('data-peak')); } catch (e) { return; }
+    if (!n || !n.ranges || !n.ranges.length) return;
+    var localRanges = n.ranges.map(function (r) {
+      return localHM(r[0], r[1]) + '–' + localHM(r[2], r[3]);
+    }).join(', ');
+    var peakTxt = 'Peak: ' + (daysText(n.days) ? daysText(n.days) + ' ' : '') + localRanges;
+    var on = isPeakNow(n);
+    el.title = peakTxt + ' (in your timezone, ' + tz + ')\n'
+      + 'The tariff (Peak) / (Off-Peak) prices apply now: ' + (on ? 'Peak' : 'Off-Peak');
+    el.className = 'pk' + (on ? ' pk-on' : ' pk-off');
   });
 })();
 </script>

@@ -30,7 +30,7 @@ const SESSION = {
   output: 300,
 };
 
-const GO_URL = 'https://opencode.ai/docs/ru/go';
+const GO_URL = 'https://opencode.ai/docs/en/go';
 
 // Index page listing all monthly benchmarks. Auto-detects the newest one
 // (by year+month in the URL) so no specific month has to be hardcoded.
@@ -217,6 +217,66 @@ function parseGoTable(html) {
   }
 
   return rows;
+}
+
+// ──────────────────────────────────────────────
+// 2b. Peak/Off-Peak hours notes
+// ──────────────────────────────────────────────
+// OpenCode Go states weekday-specific peak hours for some providers right under the
+// tariff table, e.g. DeepSeek:
+//   <p><strong>DeepSeek V4.1 Flash / V4 Pro / V4 Flash / V4 Flash Vision Exp:</strong>
+//   Peak hours are 01:00-04:00 and 06:00-10:00 UTC, Monday through Friday; ... Off-Peak.</p>
+// We extract the model list (the <strong>), the UTC hour windows and the optional
+// weekday range, then attach the note to every tariff row that names one of those models.
+const PEAK_DAYS = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+
+function parsePeakNotes(html) {
+  const notes = [];
+  const $ = cheerioLoad(html);
+
+  $('p').each((_, el) => {
+    const $p = $(el);
+    const text = $p.text().replace(/\s+/g, ' ').trim();
+    if (!/peak/i.test(text) || !/off\s?[- ]?\s?peak/i.test(text)) return;
+
+    const $strong = $p.find('strong').first();
+    if (!$strong.length) return;
+    const names = $strong.text().split('/').map((s) => s.trim()).filter(Boolean);
+    if (!names.length) return;
+
+    const ranges = [];
+    for (const m of text.matchAll(/(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/g)) {
+      ranges.push([+m[1], +m[2], +m[3], +m[4]]);
+    }
+    if (!ranges.length) return;
+
+    let days = null;
+    const dm = new RegExp(
+      '\\b(' + PEAK_DAYS.join('|') + ')\\b[^.;]*?\\b(?:through|to)\\s+(' + PEAK_DAYS.join('|') + ')\\b', 'i'
+    ).exec(text);
+    if (dm) days = [PEAK_DAYS.indexOf(dm[1].toLowerCase()), PEAK_DAYS.indexOf(dm[2].toLowerCase())];
+
+    notes.push({ names, days, ranges, tz: 'UTC' });
+  });
+
+  return notes;
+}
+
+function escRegEx(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function peakForRow(model, notes) {
+  const mk = normalize(model);
+  if (!mk || !notes.length) return null;
+  for (const note of notes) {
+    for (const name of note.names) {
+      const nk = normalize(name);
+      if (!nk) continue;
+      if (new RegExp('(^|\\s)' + escRegEx(nk) + '(\\s|$)').test(mk)) return note;
+    }
+  }
+  return null;
 }
 
 // ──────────────────────────────────────────────
@@ -508,6 +568,7 @@ function buildReport(goRows, benchRows) {
     const reqPerMonth = go.usage ? Math.floor(go.usage / price) : null;
     return {
       model: go.model,
+      peak: go.peak || null,
       score: bench ? bench.score : null,
       price,
       mp,
@@ -644,9 +705,12 @@ function renderHtml(report, benchUrl, extras = {}) {
     const matched = r.matchedName != null
       ? `<span class="tier tier-${tierClass(r.tier)}" title="${tierTitle[r.tier]}">${tierMark(r.tier)}</span> ${annotateIcons(r.matchedName)}`
       : '<span class="muted" title="Not found in benchmark">—</span>';
+    const peakBadge = r.peak
+      ? `<span class="pk" data-peak='${esc(JSON.stringify({ tz: r.peak.tz, days: r.peak.days, ranges: r.peak.ranges }))}' title="Peak/Off-Peak tariff">⚡</span>`
+      : '';
     return `<tr>
       <td class="num">${i + 1}</td>
-      <td class="model">${annotateIcons(r.model)}</td>
+      <td class="model">${annotateIcons(r.model)}${peakBadge}</td>
       <td class="num">${score}</td>
       <td class="num">$${r.price.toFixed(4)}</td>
       <td class="num"><strong>${mp}</strong></td>
@@ -796,6 +860,14 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   tr:hover { background: #f7f9ff; }
   .model { max-width: 260px; white-space: normal; }
+  .pk { display: inline-block; margin-left: 6px; padding: 0 4px; font-size: 0.72rem; line-height: 1.4;
+    border-radius: 5px; cursor: help; opacity: 0.85; vertical-align: 0.08em; }
+  .pk-on { background: #ffd98a; color: #5a3b00; }
+  .pk-off { background: #e4e4e4; color: #666; }
+  @media (prefers-color-scheme: dark) {
+    .pk-on { background: #9a6b00; color: #fff2cf; }
+    .pk-off { background: #3a3a3a; color: #bbb; }
+  }
   .match { max-width: 320px; white-space: normal; }
   .tier { font-weight: 700; cursor: help; }
   .tier-ok { color: #0a7d32; }
@@ -896,6 +968,7 @@ ${SITE_URL ? `<meta name="twitter:image" content="${imageUrl}">` : ''}
   </div>
 
   <h2>All tariffs <span class="tt" title="Every OpenCode Go tariff from the price list, priced for a typical session. Click a header to sort.">ⓘ</span></h2>
+  <p class="sub" style="margin-top:-6px">⚡ = Peak/Off-Peak pricing — hover for the hours in your timezone.</p>
   <div class="scroll">
     <table class="sortable">
       <thead><tr>
@@ -943,7 +1016,7 @@ ${rankedBody}
 
   <footer>
     <h3>Data sources</h3>
-    <p>OpenCode Go model prices and quotas: <a href="https://opencode.ai/docs/ru/go" rel="noopener">opencode.ai/docs/ru/go</a>.</p>
+    <p>OpenCode Go model prices and quotas: <a href="https://opencode.ai/docs/en/go" rel="noopener">opencode.ai/docs/en/go</a>.</p>
     <p>Model benchmark scores: <a href="${benchUrl}" rel="noopener">TIMETOACT GROUP — LLM Benchmark, ${bTitle}</a>. Copyright © TIMETOACT GROUP. All benchmark rights belong to their owners.</p>
     <p>Machine-readable data: <a href="report.json" rel="noopener">report.json</a> — the full report as JSON (schema: <a href="report.schema.json" rel="noopener">report.schema.json</a>), regenerated by the same run.</p>
 
@@ -1138,6 +1211,70 @@ ${rankedBody}
   });
 })();
 </script>
+<script>
+(function () {
+  var nodes = Array.prototype.slice.call(document.querySelectorAll('.pk[data-peak]'));
+  if (!nodes.length) return;
+  var tz = null;
+  try { tz = new Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
+  tz = tz || 'Europe/Moscow';
+  var DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var partCache = {};
+  function localHM(h, m) {
+    var key = h + ':' + m;
+    if (partCache[key]) return partCache[key];
+    var out = pad(h) + ':' + pad(m);
+    try {
+      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+        .formatToParts(new Date(Date.UTC(2000, 0, 10, h, m, 0)));
+      var hh = 0, mm = 0;
+      for (var i = 0; i < parts.length; i++) {
+        if (parts[i].type === 'hour') hh = parseInt(parts[i].value, 10);
+        if (parts[i].type === 'minute') mm = parseInt(parts[i].value, 10);
+      }
+      out = pad(hh) + ':' + pad(mm);
+    } catch (e) {}
+    partCache[key] = out;
+    return out;
+  }
+  function daysText(days) {
+    if (!days || days.length < 2) return '';
+    var a = days[0], b = days[1];
+    return a === b ? DAY[a] : DAY[a] + '\u2013' + DAY[b];
+  }
+  function isPeakNow(n) {
+    var now = new Date();
+    var wd = now.getDay();
+    if (n.days && n.days.length === 2) {
+      var a = n.days[0], b = n.days[1];
+      var inDays = a <= b ? (wd >= a && wd <= b) : (wd >= a || wd <= b);
+      if (!inDays) return false;
+    }
+    var t = now.getHours() * 60 + now.getMinutes();
+    for (var i = 0; i < n.ranges.length; i++) {
+      var r = n.ranges[i];
+      var s = r[0] * 60 + r[1];
+      var e = r[2] * 60 + r[3];
+      if (s <= e ? (t >= s && t < e) : (t >= s || t < e)) return true;
+    }
+    return false;
+  }
+  nodes.forEach(function (el) {
+    var n;
+    try { n = JSON.parse(el.getAttribute('data-peak')); } catch (e) { return; }
+    if (!n || !n.ranges || !n.ranges.length) return;
+    var localRanges = n.ranges.map(function (r) {
+      return localHM(r[0], r[1]) + '\u2013' + localHM(r[2], r[3]);
+    }).join(', ');
+    var peakTxt = 'Peak: ' + (daysText(n.days) ? daysText(n.days) + ' ' : '') + localRanges;
+    var on = isPeakNow(n);
+    el.title = peakTxt + ' (in your timezone, ' + tz + ')\\n'
+      + 'The tariff (Peak) / (Off-Peak) prices apply now: ' + (on ? 'Peak' : 'Off-Peak');
+    el.className = 'pk' + (on ? ' pk-on' : ' pk-off');
+  });
+})();
+</script>
 </body>
 </html>
 `;
@@ -1169,7 +1306,7 @@ Data for this README is regenerated by the same script that builds the page
 ([docs/index.html](docs/index.html)). No one updates these numbers by hand.
 
 - **Benchmark:** ${bt} — [TIMETOACT GROUP](https://www.timetoact-group.at/en/insights/llm-benchmarks)
-- **OpenCode Go tariffs:** [opencode.ai/docs/ru/go](https://opencode.ai/docs/ru/go)
+- **OpenCode Go tariffs:** [opencode.ai/docs/en/go](https://opencode.ai/docs/en/go)
 - **Generated:** ${updated} UTC
 - **Matched:** ${okCount} of ${report.rows.length} tariffs have a confident match in the benchmark (${noneCount} not found).
 ${changesLine}
@@ -1204,7 +1341,7 @@ function reportToJson(report, benchUrl, siteUrl) {
     sources: {
       pricing: {
         title: 'OpenCode Go tariff prices and quotas',
-        url: 'https://opencode.ai/docs/ru/go',
+        url: 'https://opencode.ai/docs/en/go',
         publisher: 'OpenCode',
       },
       benchmark: {
@@ -1236,6 +1373,9 @@ function reportToJson(report, benchUrl, siteUrl) {
       matchedBenchmarkName: r.matchedName,
       similarity: round(r.sim, 3),
       tier: r.tier,
+      peakHours: r.peak
+        ? { tz: r.peak.tz, days: r.peak.days, ranges: r.peak.ranges }
+        : null,
     })),
     ranked: report.ranked.map((x) => ({
       model: x.model,
@@ -1466,6 +1606,17 @@ function reportSchema(siteUrl) {
             matchedBenchmarkName: { type: ['string', 'null'], description: 'Benchmark row name matched to this tariff; null if unmatched.' },
             similarity: { type: ['number', 'null'], minimum: 0, maximum: 1, description: 'Levenshtein similarity of the normalized names; null if unmatched.' },
             tier: { type: 'string', enum: ['OK', 'AMBIG', 'WEAK', 'NONE'], description: 'Match confidence: OK ≥ 0.85 or substring rescue; AMBIG 0.55–0.85; WEAK 0.50–0.55; NONE — no match.' },
+            peakHours: {
+              type: ['object', 'null'],
+              description: 'Peak/Off-Peak pricing hours for this tariff as stated by OpenCode Go (e.g. DeepSeek V4). null when the note does not apply.',
+              required: ['tz', 'days', 'ranges'],
+              additionalProperties: false,
+              properties: {
+                tz: { type: 'string', description: 'Timezone the stated hours are in (always UTC so far).' },
+                days: { type: ['array', 'null'], minItems: 2, maxItems: 2, items: { type: 'integer', minimum: 0, maximum: 6 }, description: 'Inclusive weekday range using JS getDay numbering (0=Sunday); null when every day is affected.' },
+                ranges: { type: 'array', items: { type: 'array', minItems: 4, maxItems: 4, items: { type: 'integer', minimum: 0 }, description: 'One peak window as [fromHour, fromMinute, toHour, toMinute] in tz.' }, description: 'Peak hour windows within the weekday range; all other hours (incl. weekends) are Off-Peak.' },
+              },
+            },
           },
         },
       },
@@ -1563,10 +1714,15 @@ async function main() {
   const goRows = parseGoTable(goHtml);
   const benchRows = parseBenchmarkTable(benchHtml);
 
+  // Attach Peak/Off-Peak hours notes (e.g. DeepSeek V4) to the matching tariff rows.
+  const peakNotes = parsePeakNotes(goHtml);
+  for (const r of goRows) r.peak = peakForRow(r.model, peakNotes);
+
   // Make sure the fresh pages really contain tables, not a captcha/garbage.
   sanityCheck(goRows, benchRows);
 
-  console.error(`[parse] Go: ${goRows.length} models, Benchmark: ${benchRows.length} rows`);
+  const withPeak = goRows.filter((r) => r.peak).length;
+  console.error(`[parse] Go: ${goRows.length} models, Benchmark: ${benchRows.length} rows, Peak/Off-Peak: ${withPeak}`);
 
   const report = buildReport(goRows, benchRows);
   writeReport(report, latest.url);

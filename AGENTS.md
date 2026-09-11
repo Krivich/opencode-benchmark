@@ -39,10 +39,10 @@ Every `npm start` run regenerates all of these from live external data:
 1. **Fetch** (lines ~52-116) — HTTP fetching with optional SOCKS proxy, browser-like headers to avoid Cloudflare blocks.
 2. **Benchmark discovery** (lines ~120-148) — Auto-detects the newest monthly benchmark from the TIMETOACT index page (URL pattern, not hardcoded month).
 3. **Table extraction** (lines ~156-168) — `extractTableFragments()` pulls `<table>` tags from raw HTML (the benchmark site embeds tables inside `<script>` tags).
-4. **Parsing** (lines ~174-271) — Separate parsers for Go pricing table and benchmark table.
+4. **Parsing** (lines ~174-271) — Separate parsers for Go pricing table and benchmark table. `parsePeakNotes()` listens for `<p>` notes matching `/peak/` + `/off\s?[- ]?\s?peak/` (e.g. DeepSeek on the EN Go page) and attaches the weekday range + UTC hour windows to tariff rows whose normalized name contains a note model token.
 5. **Matching** (lines ~278-424) — Levenshtein-based fuzzy match with hard filters for versions (X.Y) and subtypes (flash/max/pro/etc.). Confidence tiers: OK, AMBIG, WEAK, NONE.
 6. **Computation** (lines ~429-442) — Session cost: 7,750 input + 147,250 cache-read + 300 output tokens.
-7. **HTML rendering** (lines ~538-1130) — Full page with inline CSS/JS, dark mode, sortable tables, SEO metadata, plus a client-side "Top movers" section that fetches `history/index.json` + snapshot JSONs and computes score/mp deltas over 1/7/30-day periods (no server-side rendering of that section).
+7. **HTML rendering** (lines ~538-1130) — Full page with inline CSS/JS, dark mode, sortable tables, SEO metadata, plus two client-side sections: "Top movers" (fetches `history/index.json` + snapshot JSONs and computes score/mp deltas over 1/7/30-day periods) and ⚡ Peak/Off-Peak badges (`data-peak` JSON, converted to the visitor's own timezone via `Intl`, fallback `Europe/Moscow`). No server-side rendering of either section.
 8. **History/diffing** (lines ~1228-1317) — Snapshots + change detection between runs.
 9. **README patching** (lines ~1126-1183, ~1477-1527) — Rewrites the auto section in README.md between markers.
 
