@@ -1218,61 +1218,134 @@ ${rankedBody}
   var tz = null;
   try { tz = new Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
   tz = tz || 'Europe/Moscow';
+  // Short standard abbreviation (MSK, EST, CEST, JST …). Some browser/zones fall back to
+  // "GMT+3" — for those, derive a city label from the IANA name instead.
+  function tzAbbr(t) {
+    var out = t;
+    try {
+      var abrp = new Intl.DateTimeFormat('en-US', { timeZone: t, timeZoneName: 'short' }).formatToParts(new Date());
+      for (var ai = 0; ai < abrp.length; ai++) {
+        if (abrp[ai].type === 'timeZoneName') out = abrp[ai].value;
+      }
+    } catch (e) {}
+    if (/^(GMT|UTC|Etc[-+]|[+\\-]\\d)/.test(out)) {
+      var seg = t.split('/');
+      var last = seg[seg.length - 1] || t;
+      if (!/^(GMT|UTC|Etc)/i.test(last)) out = last.replace(/_/g, ' ');
+    }
+    return out;
+  }
+  var tzLabel = tzAbbr(tz);
   var DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
-  var partCache = {};
-  function localHM(h, m) {
-    var key = h + ':' + m;
-    if (partCache[key]) return partCache[key];
-    var out = pad(h) + ':' + pad(m);
+  var pad2 = function (n) { return (n < 10 ? '0' : '') + n; };
+  function inDayRange(wd, days) {
+    if (!days || days.length < 2) return true;
+    var a = days[0], b = days[1];
+    return a <= b ? (wd >= a && wd <= b) : (wd >= a || wd <= b);
+  }
+  // Local wall clock of a REAL instant (DST-aware, reform-proof): Intl converts the actual
+  // timestamp, so the offset applied is whatever the zone was on that exact day — not a
+  // hardcoded reference date that could rot after a timezone reform.
+  function localAt(ms) {
     try {
       var parts = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
-        .formatToParts(new Date(Date.UTC(2000, 0, 10, h, m, 0)));
+        .formatToParts(new Date(ms));
       var hh = 0, mm = 0;
       for (var i = 0; i < parts.length; i++) {
         if (parts[i].type === 'hour') hh = parseInt(parts[i].value, 10);
         if (parts[i].type === 'minute') mm = parseInt(parts[i].value, 10);
       }
-      out = pad(hh) + ':' + pad(mm);
-    } catch (e) {}
-    partCache[key] = out;
-    return out;
+      return pad2(hh) + ':' + pad2(mm);
+    } catch (e) { return ''; }
+  }
+  // Next future instant (in UTC time-of-week terms) where the hour:minute falls inside the
+  // note's peak windows — used to render each window in local time under the real offset
+  // that will actually be in effect for that occurrence.
+  function scanHM(n, h, m, fromMs) {
+    var t = fromMs == null ? Date.now() : fromMs;
+    for (var i = 0; i <= 10081; i++) {
+      var d = new Date(t + i * 60000);
+      if (d.getUTCHours() === h && d.getUTCMinutes() === m && inDayRange(d.getUTCDay(), n.days)) return d.getTime();
+    }
+    return null;
   }
   function daysText(days) {
     if (!days || days.length < 2) return '';
     var a = days[0], b = days[1];
     return a === b ? DAY[a] : DAY[a] + '\u2013' + DAY[b];
   }
-  function isPeakNow(n) {
-    var now = new Date();
-    var wd = now.getDay();
-    if (n.days && n.days.length === 2) {
-      var a = n.days[0], b = n.days[1];
-      var inDays = a <= b ? (wd >= a && wd <= b) : (wd >= a || wd <= b);
-      if (!inDays) return false;
-    }
-    var t = now.getHours() * 60 + now.getMinutes();
+  function rangeHas(t, r) {
+    var s = r[0] * 60 + r[1], e = r[2] * 60 + r[3];
+    return s <= e ? (t >= s && t < e) : (t >= s || t < e);
+  }
+  // Peak = the expensive (Peak) price window; the discounted (Off-Peak) price is its complement.
+  function isPeakAt(n, d) {
+    var wd = d.getUTCDay();
+    if (!inDayRange(wd, n.days)) return true; // outside the weekday range every hour is Off-Peak
+    var t = d.getUTCHours() * 60 + d.getUTCMinutes();
     for (var i = 0; i < n.ranges.length; i++) {
-      var r = n.ranges[i];
-      var s = r[0] * 60 + r[1];
-      var e = r[2] * 60 + r[3];
-      if (s <= e ? (t >= s && t < e) : (t >= s || t < e)) return true;
+      if (rangeHas(t, n.ranges[i])) return true;
     }
     return false;
+  }
+  function cheapOn(n, d) { return !isPeakAt(n, d); }
+  function nextChange(n, fromMs, on) {
+    for (var i = 1; i <= 10080; i++) {
+      var d = new Date(fromMs + i * 60000);
+      if (cheapOn(n, d) !== on) return d.getTime();
+    }
+    return null;
+  }
+  function fmt(ms) {
+    // Human countdown: hours:minutes only — nobody tracks seconds on a badge.
+    if (ms < 60000) return '0:01';
+    var totalMin = Math.ceil(ms / 60000);
+    var h = Math.floor(totalMin / 60), m = totalMin % 60;
+    return h + ':' + pad2(m);
+  }
+  function windowTxt(n) {
+    var parts = [];
+    for (var wi = 0; wi < n.ranges.length; wi++) {
+      var r = n.ranges[wi];
+      var sMs = scanHM(n, r[0], r[1]);
+      if (sMs == null) continue;
+      var eMs = scanHM(n, r[2], r[3], sMs + 60000);
+      parts.push(localAt(sMs) + '\u2013' + (eMs == null ? '' : localAt(eMs)));
+    }
+    var days = daysText(n.days);
+    return (days ? days + ' ' : '') + parts.join(', ');
   }
   nodes.forEach(function (el) {
     var n;
     try { n = JSON.parse(el.getAttribute('data-peak')); } catch (e) { return; }
     if (!n || !n.ranges || !n.ranges.length) return;
-    var localRanges = n.ranges.map(function (r) {
-      return localHM(r[0], r[1]) + '\u2013' + localHM(r[2], r[3]);
-    }).join(', ');
-    var peakTxt = 'Peak: ' + (daysText(n.days) ? daysText(n.days) + ' ' : '') + localRanges;
-    var on = isPeakNow(n);
-    el.title = peakTxt + ' (in your timezone, ' + tz + ')\\n'
-      + 'The tariff (Peak) / (Off-Peak) prices apply now: ' + (on ? 'Peak' : 'Off-Peak');
-    el.className = 'pk' + (on ? ' pk-on' : ' pk-off');
+    el._pk = n;
+    el._txt = document.createElement('i');
+    el.appendChild(el._txt);
   });
+  function tick() {
+    var now = new Date();
+    nodes.forEach(function (el) {
+      var n = el._pk;
+      if (!n) return;
+      var on = cheapOn(n, now);
+      var next = nextChange(n, now.getTime(), on);
+      var dur = next ? fmt(next - now.getTime()) : '\u2014';
+      var msg;
+      if (on) {
+        el._txt.textContent = dur + ' left \u00b7 ' + tzLabel;
+        msg = 'Discounted price applies now \u00b7 ends in ' + dur;
+      } else {
+        el._txt.textContent = 'in ' + dur + ' \u00b7 ' + tzLabel;
+        msg = 'Discounted price starts in ' + dur;
+      }
+      el.title = msg + '. Window: ' + windowTxt(n) + ' (your zone \u00b7 ' + tz + ')';
+      el.className = 'pk' + (on ? ' pk-on' : ' pk-off');
+      el.setAttribute('aria-label', el.title);
+    });
+  }
+  setInterval(tick, 30 * 1000);
+  tick();
 })();
 </script>
 </body>
