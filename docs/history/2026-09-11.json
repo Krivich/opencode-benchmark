@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-09-11T10:12:05.942Z",
+  "generatedAt": "2026-09-11T20:22:27.985Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -16,9 +16,11 @@
     "benchmark": {
       "title": "TIMETOACT GROUP — LLM Benchmark",
       "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026",
-      "indexUrl": "https://www.timetoact-group.at/en/insights/llm-benchmarks",
       "publisher": "TIMETOACT GROUP",
-      "copyright": "Copyright © TIMETOACT GROUP. All benchmark rights belong to their owners."
+      "copyright": "Copyright © TIMETOACT GROUP. All benchmark rights belong to their owners.",
+      "series": "timetoact",
+      "issue": "september-2026",
+      "issues": 10
     }
   },
   "legal": {
@@ -34,6 +36,8 @@
   "rows": [
     {
       "model": "Qwen3.7 Max",
+      "provider": "opencode-go",
+      "modelId": "qwen3.7-max",
       "score": 95,
       "priceUsdPerSession": 0.09525,
       "mpPerSession": 317.5,
@@ -43,10 +47,14 @@
       "matchedBenchmarkName": "Qwen3.7 Max ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Grok 4.6 (≤ 200K tokens)",
+      "provider": "opencode-go",
+      "modelId": "grok-4.6",
       "score": 94,
       "priceUsdPerSession": 0.090925,
       "mpPerSession": 606.17,
@@ -56,10 +64,14 @@
       "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Grok 4.6 (> 200K tokens)",
+      "provider": "opencode-go",
+      "modelId": "grok-4.6",
       "score": 94,
       "priceUsdPerSession": 0.18185,
       "mpPerSession": 1212.33,
@@ -69,10 +81,14 @@
       "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Qwen3.8 Max",
+      "provider": "opencode-go",
+      "modelId": "qwen3.8-max",
       "score": 91,
       "priceUsdPerSession": 0.054113,
       "mpPerSession": 360.75,
@@ -82,10 +98,14 @@
       "matchedBenchmarkName": "Qwen3.8 Max (reasoning medium) ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash-vision-exp",
       "score": 90,
       "priceUsdPerSession": 0.001784,
       "mpPerSession": 11.9,
@@ -95,6 +115,8 @@
       "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -119,6 +141,8 @@
     },
     {
       "model": "DeepSeek V4 Flash Vision Exp (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash-vision-exp",
       "score": 90,
       "priceUsdPerSession": 0.003569,
       "mpPerSession": 23.79,
@@ -128,6 +152,8 @@
       "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -152,6 +178,8 @@
     },
     {
       "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "provider": "opencode-go",
+      "modelId": "gpt-5.6-luna",
       "score": 90,
       "priceUsdPerSession": 0.004855,
       "mpPerSession": 32.37,
@@ -161,10 +189,14 @@
       "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "GPT 5.6 Luna (> 272K tokens)",
+      "provider": "opencode-go",
+      "modelId": "gpt-5.6-luna",
       "score": 90,
       "priceUsdPerSession": 0.00953,
       "mpPerSession": 63.53,
@@ -174,10 +206,14 @@
       "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "GLM-5.2",
+      "provider": "opencode-go",
+      "modelId": "glm-5.2",
       "score": 90,
       "priceUsdPerSession": 0.050455,
       "mpPerSession": 84.09,
@@ -187,10 +223,14 @@
       "matchedBenchmarkName": "GLM 5.2 ✅ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "DeepSeek V4 Flash (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash",
       "score": 88,
       "priceUsdPerSession": 0.001784,
       "mpPerSession": 5.95,
@@ -200,6 +240,8 @@
       "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -224,6 +266,8 @@
     },
     {
       "model": "DeepSeek V4 Flash (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash",
       "score": 88,
       "priceUsdPerSession": 0.003569,
       "mpPerSession": 11.9,
@@ -233,6 +277,8 @@
       "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -257,6 +303,8 @@
     },
     {
       "model": "Qwen3.7 Plus (≤ 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.7-plus",
       "score": 88,
       "priceUsdPerSession": 0.00947,
       "mpPerSession": 15.78,
@@ -266,10 +314,14 @@
       "matchedBenchmarkName": "Qwen3.7 Plus ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Qwen3.7 Plus (> 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.7-plus",
       "score": 88,
       "priceUsdPerSession": 0.02841,
       "mpPerSession": 47.35,
@@ -279,10 +331,14 @@
       "matchedBenchmarkName": "Qwen3.7 Plus ⚠️",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "DeepSeek V4 Pro (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-pro",
       "score": 88,
       "priceUsdPerSession": 0.008948,
       "mpPerSession": 59.66,
@@ -292,6 +348,8 @@
       "matchedBenchmarkName": "DeepSeek V4 Pro ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -316,6 +374,8 @@
     },
     {
       "model": "DeepSeek V4 Pro (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-pro",
       "score": 88,
       "priceUsdPerSession": 0.017897,
       "mpPerSession": 119.31,
@@ -325,6 +385,8 @@
       "matchedBenchmarkName": "DeepSeek V4 Pro ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -349,6 +411,8 @@
     },
     {
       "model": "Kimi K3",
+      "provider": "opencode-go",
+      "modelId": "kimi-k3",
       "score": 88,
       "priceUsdPerSession": 0.071925,
       "mpPerSession": 479.5,
@@ -358,10 +422,14 @@
       "matchedBenchmarkName": "Kimi K3 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "GLM-5.3-Flash",
+      "provider": "opencode-go",
+      "modelId": "glm-5.3-flash",
       "score": 84,
       "priceUsdPerSession": 0.00573,
       "mpPerSession": 9.55,
@@ -371,10 +439,14 @@
       "matchedBenchmarkName": "GLM 5.3 Flash (reasoning high) ✅",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "GLM-5.1",
+      "provider": "opencode-go",
+      "modelId": "glm-5.1",
       "score": 82,
       "priceUsdPerSession": 0.050455,
       "mpPerSession": 84.09,
@@ -384,10 +456,14 @@
       "matchedBenchmarkName": "GLM 5.1 ✅ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "MiniMax M2.7",
+      "provider": "opencode-go",
+      "modelId": "minimax-m2.7",
       "score": 81,
       "priceUsdPerSession": 0.01152,
       "mpPerSession": 19.2,
@@ -397,10 +473,14 @@
       "matchedBenchmarkName": "MiniMax M2.7 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Hy3",
+      "provider": "opencode-go",
+      "modelId": "hy3",
       "score": 79,
       "priceUsdPerSession": 0.006413,
       "mpPerSession": 10.69,
@@ -410,10 +490,14 @@
       "matchedBenchmarkName": "Tencent Hy3 ⚠️ ⏳",
       "similarity": 0.273,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "MiniMax M3",
+      "provider": "opencode-go",
+      "modelId": "minimax-m3",
       "score": 76,
       "priceUsdPerSession": 0.01152,
       "mpPerSession": 19.2,
@@ -423,10 +507,14 @@
       "matchedBenchmarkName": "MiniMax M3 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Kimi K2.6",
+      "provider": "opencode-go",
+      "modelId": "kimi-k2.6",
       "score": 76,
       "priceUsdPerSession": 0.032122,
       "mpPerSession": 53.54,
@@ -436,10 +524,14 @@
       "matchedBenchmarkName": "Kimi K2.6 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Muse Spark 1.3 Contributor",
+      "provider": "opencode-go",
+      "modelId": "muse-spark-1.3-contributor",
       "score": null,
       "priceUsdPerSession": 0.00113,
       "mpPerSession": 1.88,
@@ -449,10 +541,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Muse Spark 1.2 Contributor",
+      "provider": "opencode-go",
+      "modelId": "muse-spark-1.2-contributor",
       "score": null,
       "priceUsdPerSession": 0.00113,
       "mpPerSession": 1.88,
@@ -462,10 +558,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "MiMo V2.5",
+      "provider": "opencode-go",
+      "modelId": "mimo-v2.5",
       "score": null,
       "priceUsdPerSession": 0.001581,
       "mpPerSession": 2.64,
@@ -475,10 +575,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "LongCat-2.0",
+      "provider": "opencode-go",
+      "modelId": "longcat-2.0",
       "score": null,
       "priceUsdPerSession": 0.003569,
       "mpPerSession": 5.95,
@@ -488,10 +592,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "DeepSeek V4.1 Flash (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
       "score": null,
       "priceUsdPerSession": 0.001784,
       "mpPerSession": 11.9,
@@ -501,6 +609,8 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -525,6 +635,8 @@
     },
     {
       "model": "Qwen3.8 Flash",
+      "provider": "opencode-go",
+      "modelId": "qwen3.8-flash",
       "score": null,
       "priceUsdPerSession": 0.003659,
       "mpPerSession": 12.2,
@@ -534,10 +646,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "MiniMax M2.5",
+      "provider": "opencode-go",
+      "modelId": "minimax-m2.5",
       "score": null,
       "priceUsdPerSession": 0.01152,
       "mpPerSession": 19.2,
@@ -547,10 +663,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Qwen3.6 Plus (≤ 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.6-plus",
       "score": null,
       "priceUsdPerSession": 0.012138,
       "mpPerSession": 20.23,
@@ -560,10 +680,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "DeepSeek V4.1 Flash (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
       "score": null,
       "priceUsdPerSession": 0.003569,
       "mpPerSession": 23.79,
@@ -573,6 +697,8 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -597,6 +723,8 @@
     },
     {
       "model": "MiMo V2.5 Pro",
+      "provider": "opencode-go",
+      "modelId": "mimo-v2.5-pro",
       "score": null,
       "priceUsdPerSession": 0.004166,
       "mpPerSession": 27.77,
@@ -606,10 +734,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Hy4 preview",
+      "provider": "opencode-go",
+      "modelId": "hy4-preview",
       "score": null,
       "priceUsdPerSession": 0.013398,
       "mpPerSession": 44.66,
@@ -619,10 +751,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Kimi K2.7 Code",
+      "provider": "opencode-go",
+      "modelId": "kimi-k2.7-code",
       "score": null,
       "priceUsdPerSession": 0.03654,
       "mpPerSession": 60.9,
@@ -632,10 +768,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "Qwen3.6 Plus (> 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.6-plus",
       "score": null,
       "priceUsdPerSession": 0.04675,
       "mpPerSession": 77.92,
@@ -645,10 +785,14 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     },
     {
       "model": "GLM-5.3",
+      "provider": "opencode-go",
+      "modelId": "glm-5.3",
       "score": null,
       "priceUsdPerSession": 0.050455,
       "mpPerSession": 336.37,
@@ -658,6 +802,8 @@
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
       "peakHours": null
     }
   ],

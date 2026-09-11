@@ -1,0 +1,78 @@
+{
+  "series": "timetoact",
+  "name": "TIMETOACT GROUP — LLM Benchmark",
+  "indexUrl": "https://www.timetoact-group.at/en/insights/llm-benchmarks",
+  "updated": "2026-09-11T09:40:28.495Z",
+  "issues": [
+    {
+      "issue": "september-2026",
+      "file": "benchmarks/timetoact/september-2026.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026",
+      "rows": 225,
+      "generatedAt": "2026-09-11T09:02:37.221Z"
+    },
+    {
+      "issue": "august-2026",
+      "file": "benchmarks/timetoact/august-2026.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/august-2026",
+      "rows": 187,
+      "generatedAt": "2026-09-11T09:02:36.924Z"
+    },
+    {
+      "issue": "july-2026",
+      "file": "benchmarks/timetoact/july-2026.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/llm-benchmarks-july-2026",
+      "rows": 169,
+      "generatedAt": "2026-09-11T09:02:36.678Z"
+    },
+    {
+      "issue": "december-2024",
+      "file": "benchmarks/timetoact/december-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/llm-benchmarks-december-2024",
+      "rows": 118,
+      "generatedAt": "2026-09-11T09:02:35.444Z"
+    },
+    {
+      "issue": "november-2024",
+      "file": "benchmarks/timetoact/november-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/llm-benchmarks-november-2024",
+      "rows": 108,
+      "generatedAt": "2026-09-11T09:02:35.206Z"
+    },
+    {
+      "issue": "october-2024",
+      "file": "benchmarks/timetoact/october-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/llm-benchmarks-october-2024",
+      "rows": 103,
+      "generatedAt": "2026-09-11T09:02:34.920Z"
+    },
+    {
+      "issue": "september-2024",
+      "file": "benchmarks/timetoact/september-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/llm-benchmarks-september-2024",
+      "rows": 93,
+      "generatedAt": "2026-09-11T09:02:34.656Z"
+    },
+    {
+      "issue": "march-2024",
+      "file": "benchmarks/timetoact/march-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/march-2024",
+      "rows": 42,
+      "generatedAt": "2026-09-11T09:02:34.400Z"
+    },
+    {
+      "issue": "february-2024",
+      "file": "benchmarks/timetoact/february-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/february-2024",
+      "rows": 38,
+      "generatedAt": "2026-09-11T09:40:27.306Z"
+    },
+    {
+      "issue": "january-2024",
+      "file": "benchmarks/timetoact/january-2024.json",
+      "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/january-2024",
+      "rows": 28,
+      "generatedAt": "2026-09-11T09:40:27.040Z"
+    }
+  ]
+}

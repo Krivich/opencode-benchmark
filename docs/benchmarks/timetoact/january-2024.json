@@ -1,0 +1,182 @@
+{
+  "series": "timetoact",
+  "source": {
+    "title": "TIMETOACT GROUP — LLM Benchmark",
+    "url": "https://www.timetoact-group.at/en/insights/llm-benchmarks/january-2024",
+    "indexUrl": "https://www.timetoact-group.at/en/insights/llm-benchmarks",
+    "publisher": "TIMETOACT GROUP",
+    "copyright": "Copyright © TIMETOACT GROUP. All benchmark rights belong to their owners."
+  },
+  "issue": "january-2024",
+  "generatedAt": "2026-09-11T09:40:27.040Z",
+  "rows": [
+    {
+      "model": "1. GPT-4 v1/0314 ☁️",
+      "score": 76,
+      "costEuro": 7.19,
+      "speed": 1.26
+    },
+    {
+      "model": "2. GPT-4 v2/0613 ☁️",
+      "score": 74,
+      "costEuro": 7.19,
+      "speed": 2.07
+    },
+    {
+      "model": "3. GPT-4 Turbo v3/1106-preview ☁️",
+      "score": 72,
+      "costEuro": 2.52,
+      "speed": 0.68
+    },
+    {
+      "model": "4. GPT-3.5 v2/0613 ☁️",
+      "score": 70,
+      "costEuro": 0.35,
+      "speed": 1.39
+    },
+    {
+      "model": "5. GPT-3.5 v3/1106 ☁️",
+      "score": 67,
+      "costEuro": 0.24,
+      "speed": 2.29
+    },
+    {
+      "model": "6. GPT-3.5-instruct 0914 ☁️",
+      "score": 64,
+      "costEuro": 0.36,
+      "speed": 2.12
+    },
+    {
+      "model": "7. Mistral 7B OpenChat-3.5 v3 0106 f16 ✅",
+      "score": 62,
+      "costEuro": 0.37,
+      "speed": 2.99
+    },
+    {
+      "model": "8. GPT-3.5 v1/0301 ☁️",
+      "score": 60,
+      "costEuro": 0.36,
+      "speed": 3.93
+    },
+    {
+      "model": "9. Mistral 7B OpenChat-3.5 v1 f16 ✅",
+      "score": 60,
+      "costEuro": 0.51,
+      "speed": 2.14
+    },
+    {
+      "model": "10. Starling 7B-alpha f16 ⚠️",
+      "score": 59,
+      "costEuro": 0.61,
+      "speed": 1.8
+    },
+    {
+      "model": "11. Mistral 7B OpenChat-3.5 v2 1210 f16 ✅",
+      "score": 57,
+      "costEuro": 0.36,
+      "speed": 3.05
+    },
+    {
+      "model": "12. Mistral 7B OpenOrca f16 ☁️",
+      "score": 50,
+      "costEuro": 0.43,
+      "speed": 2.55
+    },
+    {
+      "model": "13. Mistral 7B Instruct v0.1 f16 ☁️",
+      "score": 48,
+      "costEuro": 0.79,
+      "speed": 1.39
+    },
+    {
+      "model": "14. Llama2 13B Vicuna-1.5 f16 🦙",
+      "score": 46,
+      "costEuro": 1.02,
+      "speed": 1.07
+    },
+    {
+      "model": "15. Llama2 13B Hermes f16 🦙",
+      "score": 42,
+      "costEuro": 1.03,
+      "speed": 1.06
+    },
+    {
+      "model": "16. Llama2 13B Hermes b8 🦙",
+      "score": 42,
+      "costEuro": 4.94,
+      "speed": 0.22
+    },
+    {
+      "model": "17. Llama2 13B Puffin f16 🦙",
+      "score": 36,
+      "costEuro": 4.89,
+      "speed": 0.22
+    },
+    {
+      "model": "18. Llama2 13B Puffin b8 🦙",
+      "score": 34,
+      "costEuro": 8.65,
+      "speed": 0.13
+    },
+    {
+      "model": "19. Llama2 13B chat f16 🦙",
+      "score": 30,
+      "costEuro": 0.76,
+      "speed": 1.43
+    },
+    {
+      "model": "20. Llama2 13B chat b8 🦙",
+      "score": 30,
+      "costEuro": 3.35,
+      "speed": 0.33
+    },
+    {
+      "model": "21. Orca 2 13B f16 ⚠️",
+      "score": 29,
+      "costEuro": 0.99,
+      "speed": 1.11
+    },
+    {
+      "model": "22. Llama2 7B chat f16 🦙",
+      "score": 27,
+      "costEuro": 0.59,
+      "speed": 1.86
+    },
+    {
+      "model": "23. Mistral 7B Zephyr-β f16 ✅",
+      "score": 27,
+      "costEuro": 0.51,
+      "speed": 2.14
+    },
+    {
+      "model": "24. Mistral 7B Notus-v1 f16 ⚠️",
+      "score": 26,
+      "costEuro": 0.8,
+      "speed": 1.37
+    },
+    {
+      "model": "25. Mistral 7B Instruct v0.2 f16 ☁️",
+      "score": 24,
+      "costEuro": 1,
+      "speed": 1.1
+    },
+    {
+      "model": "26. Mistral 7B f16 ☁️",
+      "score": 22,
+      "costEuro": 0.93,
+      "speed": 1.17
+    },
+    {
+      "model": "27. Orca 2 7B f16 ⚠️",
+      "score": 18,
+      "costEuro": 0.81,
+      "speed": 1.34
+    },
+    {
+      "model": "28. Llama2 7B f16 🦙",
+      "score": 7,
+      "costEuro": 1.01,
+      "speed": 1.08
+    }
+  ]
+}

@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node opencode-benchmark.js",
     "pages": "PAGES=1 node opencode-benchmark.js",
-    "pages:win": "set PAGES=1&& node opencode-benchmark.js"
+    "pages:win": "set PAGES=1&& node opencode-benchmark.js",
+    "bench:fetch": "node lib/bench/timetoact.js",
+    "price:fetch": "node lib/price/opencode.js"
   },
   "keywords": ["opencode", "benchmark", "pricing", "github-pages"],
   "author": "",

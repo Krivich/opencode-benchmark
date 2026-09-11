@@ -126,6 +126,18 @@
             "copyright": {
               "type": "string",
               "description": "Copyright notice of the benchmark publisher."
+            },
+            "series": {
+              "type": "string",
+              "description": "Identifier of the benchmark series this report scores against."
+            },
+            "issue": {
+              "type": "string",
+              "description": "Slug of the newest issue, e.g. \"september-2026\"."
+            },
+            "issues": {
+              "type": "integer",
+              "description": "Number of issues kept in the benchmark history (docs/benchmarks/<series>/)."
             }
           }
         }
@@ -255,6 +267,8 @@
         "additionalProperties": false,
         "required": [
           "model",
+          "provider",
+          "modelId",
           "score",
           "priceUsdPerSession",
           "mpPerSession",
@@ -269,6 +283,20 @@
           "model": {
             "type": "string",
             "description": "Tariff name exactly as listed on the OpenCode Go pricing page."
+          },
+          "provider": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Provider namespace the tariff belongs to, e.g. \"opencode-go\"; null when unknown."
+          },
+          "modelId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Authoritative provider model id resolved by exact match against the provider's own model list (opencode.ai/zen/go/v1/models), e.g. \"deepseek-v4.1-flash\". Null means the tariff name did not exactly resolve: consumers must do their own matching and must NOT assume the model is unavailable."
           },
           "score": {
             "type": [
@@ -339,6 +367,17 @@
               "NONE"
             ],
             "description": "Match confidence: OK ≥ 0.85 or substring rescue; AMBIG 0.55–0.85; WEAK 0.50–0.55; NONE — no match."
+          },
+          "benchmarkIssue": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Issue slug that measured the matched row, e.g. \"march-2026\"; null if unmatched. Null also implies the newest issue."
+          },
+          "benchmarkFallback": {
+            "type": "boolean",
+            "description": "True when the matched score comes from an older issue (the newest one does not carry this model)."
           },
           "peakHours": {
             "type": [

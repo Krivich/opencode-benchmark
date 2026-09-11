@@ -1,0 +1,573 @@
+{
+  "source": {
+    "provider": "opencode-go",
+    "title": "OpenCode Go tariff prices and quotas",
+    "url": "https://opencode.ai/docs/en/go",
+    "publisher": "OpenCode"
+  },
+  "session": {
+    "inputTokens": 7750,
+    "cacheReadTokens": 147250,
+    "outputTokens": 300,
+    "monthlyPoolUsd": 60
+  },
+  "generatedAt": "2026-09-11T20:22:27.984Z",
+  "tariffs": [
+    {
+      "model": "GLM-5.3-Flash",
+      "provider": "opencode-go",
+      "modelId": "glm-5.3-flash",
+      "inputPerM": 0.15,
+      "outputPerM": 0.5,
+      "cacheReadPerM": 0.03,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "GLM-5.3",
+      "provider": "opencode-go",
+      "modelId": "glm-5.3",
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "GLM-5.2",
+      "provider": "opencode-go",
+      "modelId": "glm-5.2",
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "GLM-5.1",
+      "provider": "opencode-go",
+      "modelId": "glm-5.1",
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Kimi K3",
+      "provider": "opencode-go",
+      "modelId": "kimi-k3",
+      "inputPerM": 3,
+      "outputPerM": 15,
+      "cacheReadPerM": 0.3,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Kimi K2.7 Code",
+      "provider": "opencode-go",
+      "modelId": "kimi-k2.7-code",
+      "inputPerM": 0.95,
+      "outputPerM": 4,
+      "cacheReadPerM": 0.19,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Kimi K2.6",
+      "provider": "opencode-go",
+      "modelId": "kimi-k2.6",
+      "inputPerM": 0.95,
+      "outputPerM": 4,
+      "cacheReadPerM": 0.16,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "LongCat-2.0",
+      "provider": "opencode-go",
+      "modelId": "longcat-2.0",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "MiMo V2.5",
+      "provider": "opencode-go",
+      "modelId": "mimo-v2.5",
+      "inputPerM": 0.14,
+      "outputPerM": 0.28,
+      "cacheReadPerM": 0.0028,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "MiMo V2.5 Pro",
+      "provider": "opencode-go",
+      "modelId": "mimo-v2.5-pro",
+      "inputPerM": 0.435,
+      "outputPerM": 0.87,
+      "cacheReadPerM": 0.003625,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "MiniMax M3",
+      "provider": "opencode-go",
+      "modelId": "minimax-m3",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.06,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "MiniMax M2.7",
+      "provider": "opencode-go",
+      "modelId": "minimax-m2.7",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.06,
+      "cacheWritePerM": 0.375,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "MiniMax M2.5",
+      "provider": "opencode-go",
+      "modelId": "minimax-m2.5",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.06,
+      "cacheWritePerM": 0.375,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Muse Spark 1.3 Contributor",
+      "provider": "opencode-go",
+      "modelId": "muse-spark-1.3-contributor",
+      "inputPerM": 0.1,
+      "outputPerM": 0.2,
+      "cacheReadPerM": 0.002,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Muse Spark 1.2 Contributor",
+      "provider": "opencode-go",
+      "modelId": "muse-spark-1.2-contributor",
+      "inputPerM": 0.1,
+      "outputPerM": 0.2,
+      "cacheReadPerM": 0.002,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "provider": "opencode-go",
+      "modelId": "qwen3.8-max",
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.25,
+      "cacheWritePerM": 2.5,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "provider": "opencode-go",
+      "modelId": "qwen3.8-flash",
+      "inputPerM": 0.15,
+      "outputPerM": 0.47,
+      "cacheReadPerM": 0.016,
+      "cacheWritePerM": 0.2,
+      "quotaUsd": 30,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.7 Max",
+      "provider": "opencode-go",
+      "modelId": "qwen3.7-max",
+      "inputPerM": 2.5,
+      "outputPerM": 7.5,
+      "cacheReadPerM": 0.5,
+      "cacheWritePerM": 3.125,
+      "quotaUsd": 30,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.7 Plus (≤ 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.7-plus",
+      "inputPerM": 0.4,
+      "outputPerM": 1.6,
+      "cacheReadPerM": 0.04,
+      "cacheWritePerM": 0.5,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.7 Plus (> 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.7-plus",
+      "inputPerM": 1.2,
+      "outputPerM": 4.8,
+      "cacheReadPerM": 0.12,
+      "cacheWritePerM": 1.5,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.6 Plus (≤ 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.6-plus",
+      "inputPerM": 0.5,
+      "outputPerM": 3,
+      "cacheReadPerM": 0.05,
+      "cacheWritePerM": 0.625,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen3.6 Plus (> 256K tokens)",
+      "provider": "opencode-go",
+      "modelId": "qwen3.6-plus",
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 2.5,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4 Pro (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-pro",
+      "inputPerM": 0.66,
+      "outputPerM": 1.98,
+      "cacheReadPerM": 0.022,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4 Pro (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-pro",
+      "inputPerM": 1.32,
+      "outputPerM": 3.96,
+      "cacheReadPerM": 0.044,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash",
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "quotaUsd": 30,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "quotaUsd": 30,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash-vision-exp",
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4-flash-vision-exp",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "Hy4 preview",
+      "provider": "opencode-go",
+      "modelId": "hy4-preview",
+      "inputPerM": 0.834,
+      "outputPerM": 2.501,
+      "cacheReadPerM": 0.042,
+      "cacheWritePerM": 0,
+      "quotaUsd": 30,
+      "peakHours": null
+    },
+    {
+      "model": "Hy3",
+      "provider": "opencode-go",
+      "modelId": "hy3",
+      "inputPerM": 0.14,
+      "outputPerM": 0.58,
+      "cacheReadPerM": 0.035,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Grok 4.6 (≤ 200K tokens)",
+      "provider": "opencode-go",
+      "modelId": "grok-4.6",
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.5,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Grok 4.6 (> 200K tokens)",
+      "provider": "opencode-go",
+      "modelId": "grok-4.6",
+      "inputPerM": 4,
+      "outputPerM": 12,
+      "cacheReadPerM": 1,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "provider": "opencode-go",
+      "modelId": "gpt-5.6-luna",
+      "inputPerM": 0.2,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.02,
+      "cacheWritePerM": 0.25,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "GPT 5.6 Luna (> 272K tokens)",
+      "provider": "opencode-go",
+      "modelId": "gpt-5.6-luna",
+      "inputPerM": 0.4,
+      "outputPerM": 1.8,
+      "cacheReadPerM": 0.04,
+      "cacheWritePerM": 0.5,
+      "quotaUsd": 15,
+      "peakHours": null
+    }
+  ]
+}
