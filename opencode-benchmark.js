@@ -1221,19 +1221,26 @@ ${rankedBody}
   // Short standard abbreviation (MSK, EST, CEST, JST …). Some browser/zones fall back to
   // "GMT+3" — for those, derive a city label from the IANA name instead.
   function tzAbbr(t) {
-    var out = t;
+    var out = '';
     try {
       var abrp = new Intl.DateTimeFormat('en-US', { timeZone: t, timeZoneName: 'short' }).formatToParts(new Date());
       for (var ai = 0; ai < abrp.length; ai++) {
         if (abrp[ai].type === 'timeZoneName') out = abrp[ai].value;
       }
     } catch (e) {}
-    if (/^(GMT|UTC|Etc[-+]|[+\\-]\\d)/.test(out)) {
-      var seg = t.split('/');
-      var last = seg[seg.length - 1] || t;
-      if (!/^(GMT|UTC|Etc)/i.test(last)) out = last.replace(/_/g, ' ');
+    // 1) Clean real abbreviation (MSK, EDT, CEST …) — keep it.
+    if (/^[A-Za-z]{2,5}$/.test(out) && !/^(GMT|UTC)$/i.test(out)) return out;
+    // 2) Real IANA city zone → city label ("America/New_York" → "New York").
+    if (t.indexOf('/') !== -1) {
+      var last = t.split('/').pop() || t;
+      if (!/^(GMT|UTC|Etc)/i.test(last)) return last.replace(/_/g, ' ');
     }
-    return out;
+    // 3) Degenerate zone (e.g. "Etc/GMT-3" on some Windows setups) — for a Russian
+    // browser fall back to Moscow, otherwise show whatever the zone reports.
+    var lang = (typeof navigator !== 'undefined' ? String(navigator.language || '') : '').toLowerCase();
+    if (lang.indexOf('ru') === 0) return 'Moscow';
+    // 4) Last resort: numeric short name or the zone string itself.
+    return out || t;
   }
   var tzLabel = tzAbbr(tz);
   var DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -1339,7 +1346,7 @@ ${rankedBody}
         el._txt.textContent = 'in ' + dur + ' \u00b7 ' + tzLabel;
         msg = 'Discounted price starts in ' + dur;
       }
-      el.title = msg + '. Window: ' + windowTxt(n) + ' (your zone \u00b7 ' + tz + ')';
+      el.title = msg + '. Window: ' + windowTxt(n) + ' (your zone \u00b7 ' + tzLabel + ')';
       el.className = 'pk' + (on ? ' pk-on' : ' pk-off');
       el.setAttribute('aria-label', el.title);
     });
