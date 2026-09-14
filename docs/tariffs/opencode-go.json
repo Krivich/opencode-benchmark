@@ -11,7 +11,7 @@
     "outputTokens": 300,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-11T20:22:27.984Z",
+  "generatedAt": "2026-09-14T11:13:24.732Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -263,7 +263,7 @@
       "outputPerM": 0.6,
       "cacheReadPerM": 0.003,
       "cacheWritePerM": 0,
-      "quotaUsd": 15,
+      "quotaUsd": 15604,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -294,7 +294,7 @@
       "outputPerM": 1.2,
       "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
-      "quotaUsd": 15,
+      "quotaUsd": 15604,
       "peakHours": {
         "tz": "UTC",
         "days": [
