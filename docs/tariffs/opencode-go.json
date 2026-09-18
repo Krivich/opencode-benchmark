@@ -11,7 +11,7 @@
     "outputTokens": 300,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-17T10:38:18.154Z",
+  "generatedAt": "2026-09-18T10:14:08.902Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -523,17 +523,6 @@
       "cacheReadPerM": 0.035,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
-      "model": "Union Alpha Free",
-      "provider": "opencode-go",
-      "modelId": null,
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "quotaUsd": 0,
       "peakHours": null
     },
     {
