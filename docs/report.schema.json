@@ -290,9 +290,13 @@
           "maximum": 1,
           "description": "Cache-read tokens as a fraction of processed tokens."
         },
+        "monthlySubscriptionUsd": {
+          "type": "number",
+          "description": "Actual monthly charge in USD — what the card is billed (author-reported, not scraped from the price page). OpenCode accounts it as the virtual monthlyPoolUsd pool with per-tariff multipliers; mp is a share of that pool, i.e. the same percentage of this charge."
+        },
         "monthlyPoolUsd": {
           "type": "number",
-          "description": "Monthly quota pool in USD (OpenCode Go fixed pool)."
+          "description": "Virtual monthly quota pool in USD — OpenCode Go accounting unit, not the price (the real charge is monthlySubscriptionUsd)."
         }
       }
     },
@@ -374,7 +378,15 @@
               "null"
             ],
             "minimum": 0,
-            "description": "Quota multiplier implied by the pool: 60 ÷ quotaUsd."
+            "description": "Vendor scale: 60 ÷ quotaUsd — how much of the virtual pool this tariff draws (OpenCode labels this on its own price page, e.g. 4x). Not the wallet view; see walletMultiplier."
+          },
+          "walletMultiplier": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "description": "Your purchasing-power multiplier: quotaUsd ÷ the actual monthly charge (session.monthlySubscriptionUsd) — ×6/×3/×1.5, how far the payment stretches in list-price work. This is the headline column on the page."
           },
           "sessionsPerMonth": {
             "type": [

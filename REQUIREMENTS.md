@@ -42,6 +42,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-DATA-09**: `docs/report.schema.json` documents `report.json` (and daily snapshots).
 - ⬜ **OB-DATA-10**: A second benchmark series (e.g. one that measures MiMo) can be added so models absent from TIMETOACT are covered.
 - ✅ **OB-DATA-12**: The measured session profile is published as a public artifact (`docs/profiles/measured.json`) with its method, sample size, distribution and reproduce steps — the numbers behind the cost formula are auditable, not buried in a constant.
+- ✅ **OB-DATA-13**: The report states the **real** monthly charge (`session.monthlySubscriptionUsd`, author-reported) beside the **virtual** pool (`monthlyPoolUsd`), so consumers can read `mp` as a share of what is actually billed. The virtual pool is never presented as a price (the hero shows `Plan $10/mo · up to ×6`), and the disclaimer records that $10 is the author's charge, not a scraped list price.
 - ✅ **OB-DATA-11**: Every `report.json` row carries `provider` and the provider's authoritative `modelId`, resolved **only** by exact match against the provider's own model list (`opencode.ai/zen/go/v1/models`, 15s cap). An unresolved name yields `modelId: null` - never a guessed id - and consumers fall back to their own matching (absence is not proof the model is unavailable). On an endpoint outage the last published id per tariff name is kept (no downgrade to null).
 
 ## Pipeline (OB-PIPE)
@@ -79,7 +80,10 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-RENDER-06**: Fallback rows show a "from Month YYYY" note.
 - ✅ **OB-RENDER-07**: ⚡ Peak/Off-Peak badges are shown in every table that lists models with peak pricing — the main tariffs table and the "Top: Score per mp" table.
 - ✅ **OB-RENDER-08**: The peak countdown uses lettered units (`2h 05m`, `47m`, `1m`), never clock-like `HH:MM` — so "hours or minutes?" is never ambiguous.
-- ✅ **OB-RENDER-09**: The main table makes the hidden variable visible: a `Cache-read $/M` column per row, plus a per-row cost decomposition (% new input / % cache-read / % cache-write / % output) shown on the `$/session` cell; `Sessions/mo` (how many average tasks fit the monthly pool) replaces the old request count.
+- ✅ **OB-RENDER-09**: The main table makes the hidden variable visible: per-row `Input $/M`, `Cache-read $/M` and `Output $/M` columns (rates up to 4 decimals, trailing zeros trimmed), plus a per-row cost decomposition (% new input / % cache-read / % cache-write / % output) shown on the `$/session` cell; `session/mo` (how many average tasks fit the monthly pool) replaces the old request count; the `session/mp`/`session/mo`/`$/session` headers wrap to two lines so those columns stay narrow and the model-name column gets the width.
+- ✅ **OB-RENDER-10**: Every data column header carries a native `title` tooltip (no icons) that explains what the field means and when it matters for the price or for comparing tariffs — an explanation, not a restatement of the label; tooltip texts must not contain double quotes (they are injected into `title="…"`).
+
+- ✅ **OB-RENDER-11**: The headline multiplier column shows the **wallet** multiplier — `walletMultiplier` = quota ÷ actual charge (×6/×3/×1.5, how far the payment stretches in list-price work) — not the vendor's reciprocal (`multiplier` = 60 ÷ quota = 1×/2×/4×), which stays in the data labelled as the vendor scale. Outside the disclaimer and the JSON schema, user-facing copy says "plan", never "pool".
 
 ## Tariffs parser (OB-PRICE)
 
