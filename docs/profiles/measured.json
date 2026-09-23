@@ -1,0 +1,42 @@
+{
+  "profile": "agentic",
+  "status": "measured",
+  "generatedAt": "2026-09-16",
+  "artifact": "session-profile",
+  "description": "Measured shape of one typical OpenCode Go task (a full autonomous root session). Consumed by lib/core/pipeline.js as PROFILES.agentic; replaces the former unsourced 7,750/147,250/300 guess.",
+  "instrument": "local OpenCode message store (SQLite 'message' table), aggregate token counts only — no message content, no paths",
+  "window": {
+    "days": 42,
+    "sessions": 61,
+    "selection": "root sessions (session.parent_id IS NULL) of any model, rolling 6-week window"
+  },
+  "definition": "One 'task' = one autonomous root session. Cache reuse and the context growth only emerge across a session, so the profile is expressed per session (turns x per-turn buckets), not per single turn.",
+  "turns": 147,
+  "turnsDistribution": {
+    "p50": 147,
+    "mean": 345,
+    "p90": 585
+  },
+  "perTurn": {
+    "input": 5649,
+    "cacheRead": 120424,
+    "cacheWrite": 137,
+    "output": 728
+  },
+  "contextTokensPerTurn": 126938,
+  "cacheReadShare": 0.9487,
+  "startContextP50": 13587,
+  "sessionCostUsdMean": 1.2959,
+  "notes": [
+    "output is output + reasoning tokens: OpenCode stores them separately, but both bill at the output rate (verified against the per-message cost OpenCode itself computed).",
+    "'turns' is the median (p50) of root sessions; the mean (345) is inflated by a heavy tail (max ~4,820 turns).",
+    "sample is a single developer / machine / workflow — a heavy autonomous-agent profile, NOT representative interactive chat.",
+    "cacheWrite is small on the models measured here (deepseek/glm/kimi report 0); some adapters route fresh tokens to cache_write instead of input (observed on Qwen on OpenCode Go), which the tariff's cacheWritePerM then bills.",
+    "the store keeps per-message model ids, so mixing providers inside one session is handled by attributing each turn to its own model; this profile aggregates all models together.",
+    "prices OpenCode stored in the same rows match the published tariff rates for the models checked (deepseek, qwen), so the token volumes here are the transferable part — not a price fit."
+  ],
+  "reproduce": [
+    "sqlite3 opencode.db \"SELECT json_extract(data,'$.tokens.input'), json_extract(data,'$.tokens.cache.read'), json_extract(data,'$.tokens.cache.write'), json_extract(data,'$.tokens.output'), json_extract(data,'$.tokens.reasoning') FROM message WHERE json_extract(data,'$.role')='assistant' AND json_extract(data,'$.tokens.total')>0\"",
+    "Group rows by session_id (message.session_id), keep sessions whose session.parent_id IS NULL within the last 6 weeks, then divide SUM(bucket) by SUM(turns) and take the median of turns/session."
+  ]
+}

@@ -41,6 +41,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-DATA-08**: Every dataset is public and machine-readable, with manifests (`index.json`); the page links to them with a "free to reuse" note.
 - ✅ **OB-DATA-09**: `docs/report.schema.json` documents `report.json` (and daily snapshots).
 - ⬜ **OB-DATA-10**: A second benchmark series (e.g. one that measures MiMo) can be added so models absent from TIMETOACT are covered.
+- ✅ **OB-DATA-12**: The measured session profile is published as a public artifact (`docs/profiles/measured.json`) with its method, sample size, distribution and reproduce steps — the numbers behind the cost formula are auditable, not buried in a constant.
 - ✅ **OB-DATA-11**: Every `report.json` row carries `provider` and the provider's authoritative `modelId`, resolved **only** by exact match against the provider's own model list (`opencode.ai/zen/go/v1/models`, 15s cap). An unresolved name yields `modelId: null` - never a guessed id - and consumers fall back to their own matching (absence is not proof the model is unavailable). On an endpoint outage the last published id per tariff name is kept (no downgrade to null).
 
 ## Pipeline (OB-PIPE)
@@ -48,7 +49,8 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-PIPE-01**: `sanityCheck` before any write (≥10 Go tariffs, ≥50 rows in the newest benchmark issue); on failure it aborts with `FATAL:` and touches no files.
 - ✅ **OB-PIPE-02**: The effective pool keeps the NEWEST measurement per model name (newer issues override older ones).
 - ✅ **OB-PIPE-03**: A tariff matched only from an older issue is flagged `benchmarkFallback` and shows a "from Month YYYY" note.
-- ✅ **OB-PIPE-04**: Session cost uses a fixed split (7,750 input + 147,250 cache-read + 300 output tokens); `mp = price / quota × 100 000`.
+- ✅ **OB-PIPE-04**: Session cost is `turns × perTurn` over a named **measured** profile (default `agentic`: 147 turns; per turn 5,649 input + 120,424 cache-read + 137 cache-write + 728 output). Handles all four token classes (incl. `cache_write`); `mp = price / quota × 100 000`; `sessionsPerMonth = quota / price`. Method/sample live in `docs/profiles/measured.json`.
+- ✅ **OB-PIPE-06**: The session profile is measured, not assumed: it is derived from a local OpenCode store (aggregate token counts only), published as `docs/profiles/measured.json`, and labelled `agentic` (single-user autonomous workload), never "the typical session". Editing the profile is a deliberate, documented change.
 - ✅ **OB-PIPE-05**: Matching is Levenshtein-based with hard version/subtype filters; confidence tiers OK / AMBIG / WEAK / NONE.
 
 ## Idempotent writes (OB-IDEM)
@@ -65,6 +67,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-HIST-02**: "What changed" shows the 1-day diff against the previous snapshot.
 - ✅ **OB-HIST-03**: "Recent changes" shows a timeline of the last few change-bearing snapshots (newest first), so a critical event (removed model, price jump) stays visible after the day it happened.
 - ✅ **OB-HIST-04**: "Top movers" (client-side) computes 1/7/30-day deltas over the snapshots that exist.
+- ✅ **OB-HIST-05**: A same-day re-run diffs against the previous **day's** snapshot (never against today's own file), so the day's change events are not erased by a self-diff and the run still converges to `[skip]`.
 
 ## Page & rendering (OB-RENDER)
 
@@ -76,12 +79,14 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-RENDER-06**: Fallback rows show a "from Month YYYY" note.
 - ✅ **OB-RENDER-07**: ⚡ Peak/Off-Peak badges are shown in every table that lists models with peak pricing — the main tariffs table and the "Top: Score per mp" table.
 - ✅ **OB-RENDER-08**: The peak countdown uses lettered units (`2h 05m`, `47m`, `1m`), never clock-like `HH:MM` — so "hours or minutes?" is never ambiguous.
+- ✅ **OB-RENDER-09**: The main table makes the hidden variable visible: a `Cache-read $/M` column per row, plus a per-row cost decomposition (% new input / % cache-read / % cache-write / % output) shown on the `$/session` cell; `Sessions/mo` (how many average tasks fit the monthly pool) replaces the old request count.
 
 ## Tariffs parser (OB-PRICE)
 
 - ✅ **OB-PRICE-01**: Parse the Go price table (Model / Input / Output / Cached Read / Cached Write / Usage).
 - ✅ **OB-PRICE-02**: Parse Peak/Off-Peak notes (model list, UTC hour windows, optional weekday range) and attach them to the matching tariff rows.
 - ✅ **OB-PRICE-03**: `npm run price:fetch` refreshes only `docs/tariffs/` (flags `--dir`, `--stdout`).
+- ✅ **OB-PRICE-04**: The quota cell is parsed from its **first `$` amount** — a promo cell like `$15 $60 4x · Ends Sep 20` yields the standing base limit (`15`), never a digit-concatenation (`15604`). `Unlimited`/`Free`/`-` yield `0`.
 
 ## Benchmark parser (OB-BENCH)
 

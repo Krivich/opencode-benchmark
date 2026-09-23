@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="Which OpenCode Go model gets you the most for your money?">
 <meta name="twitter:description" content="Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"index.html#website","url":"index.html","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"index.html#website"},"dateModified":"2026-09-23T10:27:28.058Z","inLanguage":"en","mainEntity":{"@id":"index.html#dataset"}},{"@type":"Dataset","@id":"index.html#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"index.html","dateModified":"2026-09-23T10:27:28.058Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"index.html#website","url":"index.html","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"index.html#website"},"dateModified":"2026-09-23T15:11:27.138Z","inLanguage":"en","mainEntity":{"@id":"index.html#dataset"}},{"@type":"Dataset","@id":"index.html#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"index.html","dateModified":"2026-09-23T15:11:27.138Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -152,10 +152,10 @@
     <div class="cols">
       <p class="kicker">OpenCode Go × TIMETOACT LLM Benchmark</p>
       <h1>Which <span class="brand">OpenCode Go</span> model gets you the most for your money?</h1>
-      <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what a
-        typical session actually costs and how smart each model is — side by side, so you can pick.</p>
-      <p class="sub">Typical session cost and the share of the monthly quota it consumes.
-        Updated: <time datetime="2026-09-23T10:27:28.058Z">9/23/2026, 10:27:28 AM</time></p>
+      <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what one
+        average task actually costs — a full session (~147 turns), not a single request — and how smart each model is.</p>
+      <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
+        Updated: <time datetime="2026-09-23T15:11:27.138Z">9/23/2026, 6:11:27 PM</time></p>
 
       <p class="datalinks">Data:
         <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
@@ -165,10 +165,10 @@
 
       <p class="intro">Picking a model on OpenCode Go means solving a billing puzzle, not an AI one.
         Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into
-        <b>input / cache-read / output</b>, and a tariff named “Flash” can cost four times what its “Max”
+        <b>input / cache-read / cache-write / output</b>, and a tariff named “Flash” can cost four times what its “Max”
         sibling does — with nothing explaining how that relates to how <em>smart</em> the model actually is.
         Good luck comparing anything by eyeballing a price list. This page pairs each tariff with an
-        independent benchmark <a href="https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026" rel="noopener">score</a> and works out the honest number: what one typical session costs in
+        independent benchmark <a href="https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026" rel="noopener">score</a> and works out the honest number: what one average task costs in
         dollars, how many <b>millipercents of your monthly pool</b> it eats, and how much intelligence you get
         per unit. No marketing, no “premium” labels — just price against measured capability.</p>
     </div>
@@ -176,21 +176,23 @@
   </div>
 
   <div class="nums">
-    <div>Typical session<br><b>7,750 input</b></div>
-    <div>Cache-read<br><b>147,250 tok.</b></div>
-    <div>Output<br><b>300</b></div>
+    <div>One session<br><b>≈147 turns</b></div>
+    <div>Fresh input<br><b>5,649<span class="muted"> + 137 cw</span></b> /turn</div>
+    <div>Cache-read<br><b>120,424</b> /turn · <span class="muted">94.9%</span></div>
+    <div>Output<br><b>728</b> /turn</div>
     <div>Pool<br><b>$60/mo</b></div>
-    <div><b>mp/session</b> = session price ÷ quota × 100 000<br><span class="mp-explain">how much of your monthly quota one typical session eats — higher means more expensive</span></div>
+    <div><b>mp/session</b> = session price ÷ quota × 100 000<br><span class="mp-explain">how much of your monthly quota one average task (a full session) eats — higher means more expensive</span></div>
   </div>
 
-  <h2>All tariffs <span class="tt" title="Every OpenCode Go tariff from the price list, priced for a typical session. Click a header to sort.">ⓘ</span></h2>
+  <h2>All tariffs <span class="tt" title="Every OpenCode Go tariff from the price list, priced for one average task — a full session of ~147 turns. Hover $/session for the per-token split. Click a header to sort.">ⓘ</span></h2>
   <p class="sub" style="margin-top:-6px">⚡ = Peak/Off-Peak pricing — hover for the hours in your timezone.</p>
   <div class="scroll">
     <table class="sortable">
       <thead><tr>
         <th class="num sortable">#</th><th class="sortable">Model (Go)</th><th class="num sortable">Score</th>
         <th class="num sortable">$/session</th><th class="num sortable">mp/session</th><th class="num sortable">Quota $</th>
-        <th class="num sortable">Multiplier</th><th class="num sortable">Requests/mo</th>
+        <th class="num sortable">Multiplier</th><th class="num sortable">Sessions/mo</th>
+        <th class="num sortable">Cache-read $/M</th>
         <th class="match sortable">Match in benchmark <span class="tt" title="Matching is Levenshtein-based with strict guards: versions (2.5 ≠ 2.6) and subtypes (Flash ≠ Max, Pro, Plus, …) are hard filters; similarity below 0.50 counts as not found unless one name is an exact substring of the other ("Hy3" → "Tencent Hy3"). Marks: ✓ confident, ⚠ plausible but different, — not in benchmark. Verify names by eye. "from Month YYYY" — measured in an older benchmark issue (the newest one doesn't carry the model).">ⓘ</span></th>
       </tr></thead>
       <tbody>
@@ -198,440 +200,492 @@
       <td class="num">1</td>
       <td class="model">Qwen3.7 Max</td>
       <td class="num">95</td>
-      <td class="num">$0.0953</td>
-      <td class="num"><strong>317.5</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 18% fresh input, 75% cache-read, 1% cache-write, 7% output">$11.793</span></td>
+      <td class="num"><strong>39309</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
-      <td class="num">314</td>
+      <td class="num">2</td>
+      <td class="num">$0.500</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Max <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">2</td>
       <td class="model">Grok 4.6 (≤ 200K tokens)</td>
       <td class="num">94</td>
-      <td class="num">$0.0909</td>
-      <td class="num"><strong>606.2</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 79% cache-read, 0% cache-write, 6% output">$11.154</span></td>
+      <td class="num"><strong>74360</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">164</td>
+      <td class="num">1</td>
+      <td class="num">$0.500</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Grok 4.6 (reasoning medium) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">3</td>
       <td class="model">Grok 4.6 (&gt; 200K tokens)</td>
       <td class="num">94</td>
-      <td class="num">$0.1819</td>
-      <td class="num"><strong>1212.3</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 79% cache-read, 0% cache-write, 6% output">$22.308</span></td>
+      <td class="num"><strong>148721</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">82</td>
+      <td class="num">0</td>
+      <td class="num">$1.000</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Grok 4.6 (reasoning medium) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">4</td>
       <td class="model">Qwen3.8 Max</td>
       <td class="num">91</td>
-      <td class="num">$0.0541</td>
-      <td class="num"><strong>360.8</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 65% cache-read, 1% cache-write, 9% output">$6.779</span></td>
+      <td class="num"><strong>45192</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">277</td>
+      <td class="num">2</td>
+      <td class="num">$0.250</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.8 Max (reasoning medium) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">5</td>
       <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">90</td>
-      <td class="num">$0.0018</td>
-      <td class="num"><strong>11.9</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
+      <td class="num"><strong>1613</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">8,406</td>
+      <td class="num">62</td>
+      <td class="num">$0.003</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash Vision Exp (reasoning low) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">6</td>
       <td class="model">DeepSeek V4 Flash Vision Exp (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">90</td>
-      <td class="num">$0.0036</td>
-      <td class="num"><strong>23.8</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
+      <td class="num"><strong>3225</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">4,203</td>
+      <td class="num">31</td>
+      <td class="num">$0.006</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash Vision Exp (reasoning low) <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">7</td>
       <td class="model">GPT 5.6 Luna (≤ 272K tokens)</td>
       <td class="num">90</td>
-      <td class="num">$0.0049</td>
-      <td class="num"><strong>32.4</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 54% cache-read, 1% cache-write, 20% output">$0.654</span></td>
+      <td class="num"><strong>4357</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">3,089</td>
+      <td class="num">22</td>
+      <td class="num">$0.020</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">8</td>
       <td class="model">GPT 5.6 Luna (&gt; 272K tokens)</td>
       <td class="num">90</td>
-      <td class="num">$0.0095</td>
-      <td class="num"><strong>63.5</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 57% cache-read, 1% cache-write, 16% output">$1.243</span></td>
+      <td class="num"><strong>8286</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">1,573</td>
+      <td class="num">12</td>
+      <td class="num">$0.040</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">9</td>
       <td class="model">GLM-5.2</td>
       <td class="num">90</td>
-      <td class="num">$0.0505</td>
-      <td class="num"><strong>84.1</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 19% fresh input, 74% cache-read, 0% cache-write, 8% output">$6.236</span></td>
+      <td class="num"><strong>10393</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">1,189</td>
+      <td class="num">9</td>
+      <td class="num">$0.260</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GLM 5.2 <span class="ic" title="Open source, unrestricted local use">✅</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">10</td>
       <td class="model">DeepSeek V4 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
-      <td class="num">$0.0018</td>
-      <td class="num"><strong>6.0</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
+      <td class="num"><strong>806</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
-      <td class="num">16,813</td>
+      <td class="num">124</td>
+      <td class="num">$0.003</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash (reasoning high) <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">11</td>
       <td class="model">DeepSeek V4 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
-      <td class="num">$0.0036</td>
-      <td class="num"><strong>11.9</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
+      <td class="num"><strong>1613</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
-      <td class="num">8,406</td>
+      <td class="num">62</td>
+      <td class="num">$0.006</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Flash (reasoning high) <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">12</td>
       <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
       <td class="num">88</td>
-      <td class="num">$0.0095</td>
-      <td class="num"><strong>15.8</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 14% output">$1.222</span></td>
+      <td class="num"><strong>2036</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">6,335</td>
+      <td class="num">49</td>
+      <td class="num">$0.040</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">13</td>
       <td class="model">Qwen3.7 Plus (&gt; 256K tokens)</td>
       <td class="num">88</td>
-      <td class="num">$0.0284</td>
-      <td class="num"><strong>47.4</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 14% output">$3.665</span></td>
+      <td class="num"><strong>6108</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">2,111</td>
+      <td class="num">16</td>
+      <td class="num">$0.120</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
     </tr>
 <tr>
       <td class="num">14</td>
       <td class="model">DeepSeek V4 Pro (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
-      <td class="num">$0.0089</td>
-      <td class="num"><strong>59.7</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 48% fresh input, 34% cache-read, 0% cache-write, 18% output">$1.149</span></td>
+      <td class="num"><strong>7663</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">1,676</td>
+      <td class="num">13</td>
+      <td class="num">$0.022</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Pro <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">15</td>
       <td class="model">DeepSeek V4 Pro (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">88</td>
-      <td class="num">$0.0179</td>
-      <td class="num"><strong>119.3</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 48% fresh input, 34% cache-read, 0% cache-write, 18% output">$2.299</span></td>
+      <td class="num"><strong>15325</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">838</td>
+      <td class="num">6</td>
+      <td class="num">$0.044</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Pro <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">16</td>
       <td class="model">Kimi K3</td>
       <td class="num">88</td>
-      <td class="num">$0.0719</td>
-      <td class="num"><strong>479.5</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 0% cache-write, 17% output">$9.407</span></td>
+      <td class="num"><strong>62714</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">208</td>
+      <td class="num">1</td>
+      <td class="num">$0.300</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Kimi K3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">17</td>
       <td class="model">GLM-5.3-Flash</td>
       <td class="num">84</td>
-      <td class="num">$0.0057</td>
-      <td class="num"><strong>9.6</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 18% fresh input, 75% cache-read, 0% cache-write, 8% output">$0.709</span></td>
+      <td class="num"><strong>1182</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">10,471</td>
+      <td class="num">84</td>
+      <td class="num">$0.030</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GLM 5.3 Flash (reasoning high) <span class="ic" title="Open source, unrestricted local use">✅</span></td>
     </tr>
 <tr>
       <td class="num">18</td>
       <td class="model">GLM-5.1</td>
       <td class="num">82</td>
-      <td class="num">$0.0505</td>
-      <td class="num"><strong>84.1</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 19% fresh input, 74% cache-read, 0% cache-write, 8% output">$6.236</span></td>
+      <td class="num"><strong>10393</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">1,189</td>
+      <td class="num">9</td>
+      <td class="num">$0.260</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GLM 5.1 <span class="ic" title="Open source, unrestricted local use">✅</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">19</td>
       <td class="model">MiniMax M2.7</td>
       <td class="num">81</td>
-      <td class="num">$0.0115</td>
-      <td class="num"><strong>19.2</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 73% cache-read, 1% cache-write, 9% output">$1.447</span></td>
+      <td class="num"><strong>2412</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">5,208</td>
+      <td class="num">41</td>
+      <td class="num">$0.060</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> MiniMax M2.7 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">20</td>
       <td class="model">Hy3</td>
       <td class="num">79</td>
-      <td class="num">$0.0064</td>
-      <td class="num"><strong>10.7</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 78% cache-read, 0% cache-write, 8% output">$0.798</span></td>
+      <td class="num"><strong>1330</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">9,356</td>
+      <td class="num">75</td>
+      <td class="num">$0.035</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Tencent Hy3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">21</td>
       <td class="model">MiniMax M3</td>
       <td class="num">76</td>
-      <td class="num">$0.0115</td>
-      <td class="num"><strong>19.2</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 74% cache-read, 0% cache-write, 9% output">$1.440</span></td>
+      <td class="num"><strong>2399</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">5,208</td>
+      <td class="num">41</td>
+      <td class="num">$0.060</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> MiniMax M3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">22</td>
       <td class="model">Kimi K2.6</td>
       <td class="num">76</td>
-      <td class="num">$0.0321</td>
-      <td class="num"><strong>53.5</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 19% fresh input, 70% cache-read, 0% cache-write, 11% output">$4.049</span></td>
+      <td class="num"><strong>6749</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">1,867</td>
+      <td class="num">14</td>
+      <td class="num">$0.160</td>
       <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Kimi K2.6 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
     </tr>
 <tr>
       <td class="num">23</td>
-      <td class="model">DeepSeek V4.1 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="model">Muse Spark 1.3 Contributor</td>
       <td class="num">—</td>
-      <td class="num">$0.0018</td>
-      <td class="num"><strong>0.0</strong></td>
-      <td class="num">$15604</td>
-      <td class="num">0.00</td>
-      <td class="num">8,745,411</td>
+      <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.140</span></td>
+      <td class="num"><strong>233</strong></td>
+      <td class="num">$60</td>
+      <td class="num">1.00</td>
+      <td class="num">429</td>
+      <td class="num">$0.002</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">24</td>
-      <td class="model">DeepSeek V4.1 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="model">Muse Spark 1.2 Contributor</td>
       <td class="num">—</td>
-      <td class="num">$0.0036</td>
-      <td class="num"><strong>0.0</strong></td>
-      <td class="num">$15604</td>
-      <td class="num">0.00</td>
-      <td class="num">4,372,705</td>
+      <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.140</span></td>
+      <td class="num"><strong>233</strong></td>
+      <td class="num">$60</td>
+      <td class="num">1.00</td>
+      <td class="num">429</td>
+      <td class="num">$0.002</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">25</td>
-      <td class="model">Muse Spark 1.3 Contributor</td>
+      <td class="model">MiMo-V2.6-Flash</td>
       <td class="num">—</td>
-      <td class="num">$0.0011</td>
-      <td class="num"><strong>1.9</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.196</span></td>
+      <td class="num"><strong>326</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">53,120</td>
+      <td class="num">306</td>
+      <td class="num">$0.003</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">26</td>
-      <td class="model">Muse Spark 1.2 Contributor</td>
+      <td class="model">MiMo-V2.5</td>
       <td class="num">—</td>
-      <td class="num">$0.0011</td>
-      <td class="num"><strong>1.9</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.196</span></td>
+      <td class="num"><strong>326</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">53,120</td>
+      <td class="num">306</td>
+      <td class="num">$0.003</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">27</td>
-      <td class="model">MiMo-V2.6-Flash</td>
+      <td class="model">LongCat-2.0</td>
       <td class="num">—</td>
-      <td class="num">$0.0016</td>
-      <td class="num"><strong>2.6</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
+      <td class="num"><strong>806</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">37,943</td>
+      <td class="num">124</td>
+      <td class="num">$0.006</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">28</td>
-      <td class="model">MiMo-V2.5</td>
+      <td class="model">Qwen3.8 Flash</td>
       <td class="num">—</td>
-      <td class="num">$0.0016</td>
-      <td class="num"><strong>2.6</strong></td>
-      <td class="num">$60</td>
-      <td class="num">1.00</td>
-      <td class="num">37,943</td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 61% cache-read, 1% cache-write, 11% output">$0.462</span></td>
+      <td class="num"><strong>1540</strong></td>
+      <td class="num">$30</td>
+      <td class="num">2.00</td>
+      <td class="num">64</td>
+      <td class="num">$0.016</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">29</td>
-      <td class="model">LongCat-2.0</td>
+      <td class="model">DeepSeek V4.1 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">—</td>
-      <td class="num">$0.0036</td>
-      <td class="num"><strong>6.0</strong></td>
-      <td class="num">$60</td>
-      <td class="num">1.00</td>
-      <td class="num">16,813</td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
+      <td class="num"><strong>1613</strong></td>
+      <td class="num">$15</td>
+      <td class="num">4.00</td>
+      <td class="num">62</td>
+      <td class="num">$0.003</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">30</td>
-      <td class="model">Qwen3.8 Flash</td>
+      <td class="model">MiniMax M2.5</td>
       <td class="num">—</td>
-      <td class="num">$0.0037</td>
-      <td class="num"><strong>12.2</strong></td>
-      <td class="num">$30</td>
-      <td class="num">2.00</td>
-      <td class="num">8,197</td>
+      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 73% cache-read, 1% cache-write, 9% output">$1.447</span></td>
+      <td class="num"><strong>2412</strong></td>
+      <td class="num">$60</td>
+      <td class="num">1.00</td>
+      <td class="num">41</td>
+      <td class="num">$0.060</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">31</td>
-      <td class="model">MiniMax M2.5</td>
+      <td class="model">Qwen3.6 Plus (≤ 256K tokens)</td>
       <td class="num">—</td>
-      <td class="num">$0.0115</td>
-      <td class="num"><strong>19.2</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 54% cache-read, 1% cache-write, 20% output">$1.634</span></td>
+      <td class="num"><strong>2723</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">5,208</td>
+      <td class="num">36</td>
+      <td class="num">$0.050</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">32</td>
-      <td class="model">Qwen3.6 Plus (≤ 256K tokens)</td>
+      <td class="model">DeepSeek V4.1 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
       <td class="num">—</td>
-      <td class="num">$0.0121</td>
-      <td class="num"><strong>20.2</strong></td>
-      <td class="num">$60</td>
-      <td class="num">1.00</td>
-      <td class="num">4,943</td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
+      <td class="num"><strong>3225</strong></td>
+      <td class="num">$15</td>
+      <td class="num">4.00</td>
+      <td class="num">31</td>
+      <td class="num">$0.006</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">33</td>
       <td class="model">MiMo-V2.6-Pro</td>
       <td class="num">—</td>
-      <td class="num">$0.0042</td>
-      <td class="num"><strong>27.8</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 70% fresh input, 12% cache-read, 0% cache-write, 18% output">$0.518</span></td>
+      <td class="num"><strong>3457</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">3,600</td>
+      <td class="num">28</td>
+      <td class="num">$0.004</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">34</td>
       <td class="model">MiMo-V2.5-Pro</td>
       <td class="num">—</td>
-      <td class="num">$0.0042</td>
-      <td class="num"><strong>27.8</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 70% fresh input, 12% cache-read, 0% cache-write, 18% output">$0.518</span></td>
+      <td class="num"><strong>3457</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">3,600</td>
+      <td class="num">28</td>
+      <td class="num">$0.004</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">35</td>
       <td class="model">Hy4 preview</td>
       <td class="num">—</td>
-      <td class="num">$0.0134</td>
-      <td class="num"><strong>44.7</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 41% fresh input, 44% cache-read, 0% cache-write, 16% output">$1.704</span></td>
+      <td class="num"><strong>5679</strong></td>
       <td class="num">$30</td>
       <td class="num">2.00</td>
-      <td class="num">2,239</td>
+      <td class="num">17</td>
+      <td class="num">$0.042</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">36</td>
       <td class="model">Kimi K2.7 Code</td>
       <td class="num">—</td>
-      <td class="num">$0.0365</td>
-      <td class="num"><strong>60.9</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 73% cache-read, 0% cache-write, 9% output">$4.580</span></td>
+      <td class="num"><strong>7634</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">1,642</td>
+      <td class="num">13</td>
+      <td class="num">$0.190</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">37</td>
       <td class="model">Qwen3.6 Plus (&gt; 256K tokens)</td>
       <td class="num">—</td>
-      <td class="num">$0.0467</td>
-      <td class="num"><strong>77.9</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 28% fresh input, 60% cache-read, 1% cache-write, 11% output">$5.894</span></td>
+      <td class="num"><strong>9823</strong></td>
       <td class="num">$60</td>
       <td class="num">1.00</td>
-      <td class="num">1,283</td>
+      <td class="num">10</td>
+      <td class="num">$0.200</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">38</td>
       <td class="model">GLM-5.3</td>
       <td class="num">—</td>
-      <td class="num">$0.0505</td>
-      <td class="num"><strong>336.4</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 19% fresh input, 74% cache-read, 0% cache-write, 8% output">$6.236</span></td>
+      <td class="num"><strong>41574</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">297</td>
+      <td class="num">2</td>
+      <td class="num">$0.260</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">39</td>
       <td class="model">Grok 4.7 (≤ 200K tokens)</td>
       <td class="num">—</td>
-      <td class="num">$0.0909</td>
-      <td class="num"><strong>606.2</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 79% cache-read, 0% cache-write, 6% output">$11.154</span></td>
+      <td class="num"><strong>74360</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">164</td>
+      <td class="num">1</td>
+      <td class="num">$0.500</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
       <td class="num">40</td>
       <td class="model">Grok 4.7 (&gt; 200K tokens)</td>
       <td class="num">—</td>
-      <td class="num">$0.1819</td>
-      <td class="num"><strong>1212.3</strong></td>
+      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 79% cache-read, 0% cache-write, 6% output">$22.308</span></td>
+      <td class="num"><strong>148721</strong></td>
       <td class="num">$15</td>
       <td class="num">4.00</td>
-      <td class="num">82</td>
+      <td class="num">0</td>
+      <td class="num">$1.000</td>
+      <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
+    </tr>
+<tr>
+      <td class="num">41</td>
+      <td class="model">Space Bunny Free</td>
+      <td class="num">—</td>
+      <td class="num"><span title="">$0.000</span></td>
+      <td class="num"><strong>—</strong></td>
+      <td class="num">$0</td>
+      <td class="num">—</td>
+      <td class="num">—</td>
+      <td class="num">$0.000</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
       </tbody>
@@ -647,106 +701,106 @@
     <td class="num">1</td>
     <td class="model">DeepSeek V4 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
     <td class="num">88</td>
-    <td class="num">5.9</td>
-    <td class="num"><strong>14.80</strong></td>
+    <td class="num">806</td>
+    <td class="num"><strong>0.109</strong></td>
   </tr>
 <tr>
     <td class="num">2</td>
     <td class="model">GLM-5.3-Flash</td>
     <td class="num">84</td>
-    <td class="num">9.6</td>
-    <td class="num"><strong>8.80</strong></td>
+    <td class="num">1182</td>
+    <td class="num"><strong>0.071</strong></td>
   </tr>
 <tr>
     <td class="num">3</td>
-    <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-    <td class="num">90</td>
-    <td class="num">11.9</td>
-    <td class="num"><strong>7.57</strong></td>
+    <td class="model">Hy3</td>
+    <td class="num">79</td>
+    <td class="num">1330</td>
+    <td class="num"><strong>0.059</strong></td>
   </tr>
 <tr>
     <td class="num">4</td>
-    <td class="model">DeepSeek V4 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-    <td class="num">88</td>
-    <td class="num">11.9</td>
-    <td class="num"><strong>7.40</strong></td>
+    <td class="model">DeepSeek V4 Flash Vision Exp (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+    <td class="num">90</td>
+    <td class="num">1613</td>
+    <td class="num"><strong>0.056</strong></td>
   </tr>
 <tr>
     <td class="num">5</td>
-    <td class="model">Hy3</td>
-    <td class="num">79</td>
-    <td class="num">10.7</td>
-    <td class="num"><strong>7.39</strong></td>
+    <td class="model">DeepSeek V4 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+    <td class="num">88</td>
+    <td class="num">1613</td>
+    <td class="num"><strong>0.055</strong></td>
   </tr>
 <tr>
     <td class="num">6</td>
     <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
     <td class="num">88</td>
-    <td class="num">15.8</td>
-    <td class="num"><strong>5.58</strong></td>
+    <td class="num">2036</td>
+    <td class="num"><strong>0.043</strong></td>
   </tr>
 <tr>
     <td class="num">7</td>
     <td class="model">MiniMax M2.7</td>
     <td class="num">81</td>
-    <td class="num">19.2</td>
-    <td class="num"><strong>4.22</strong></td>
+    <td class="num">2412</td>
+    <td class="num"><strong>0.034</strong></td>
   </tr>
 <tr>
     <td class="num">8</td>
     <td class="model">MiniMax M3</td>
     <td class="num">76</td>
-    <td class="num">19.2</td>
-    <td class="num"><strong>3.96</strong></td>
+    <td class="num">2400</td>
+    <td class="num"><strong>0.032</strong></td>
   </tr>
 <tr>
     <td class="num">9</td>
     <td class="model">DeepSeek V4 Flash Vision Exp (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
     <td class="num">90</td>
-    <td class="num">23.8</td>
-    <td class="num"><strong>3.78</strong></td>
+    <td class="num">3225</td>
+    <td class="num"><strong>0.028</strong></td>
   </tr>
 <tr>
     <td class="num">10</td>
     <td class="model">GPT 5.6 Luna (≤ 272K tokens)</td>
     <td class="num">90</td>
-    <td class="num">32.4</td>
-    <td class="num"><strong>2.78</strong></td>
+    <td class="num">4357</td>
+    <td class="num"><strong>0.021</strong></td>
   </tr>
 <tr>
     <td class="num">11</td>
     <td class="model">Qwen3.7 Plus (&gt; 256K tokens)</td>
     <td class="num">88</td>
-    <td class="num">47.4</td>
-    <td class="num"><strong>1.86</strong></td>
+    <td class="num">6108</td>
+    <td class="num"><strong>0.014</strong></td>
   </tr>
 <tr>
     <td class="num">12</td>
     <td class="model">DeepSeek V4 Pro (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
     <td class="num">88</td>
-    <td class="num">59.7</td>
-    <td class="num"><strong>1.48</strong></td>
+    <td class="num">7663</td>
+    <td class="num"><strong>0.011</strong></td>
   </tr>
 <tr>
     <td class="num">13</td>
     <td class="model">Kimi K2.6</td>
     <td class="num">76</td>
-    <td class="num">53.5</td>
-    <td class="num"><strong>1.42</strong></td>
+    <td class="num">6749</td>
+    <td class="num"><strong>0.011</strong></td>
   </tr>
 <tr>
     <td class="num">14</td>
     <td class="model">GPT 5.6 Luna (&gt; 272K tokens)</td>
     <td class="num">90</td>
-    <td class="num">63.5</td>
-    <td class="num"><strong>1.42</strong></td>
+    <td class="num">8286</td>
+    <td class="num"><strong>0.011</strong></td>
   </tr>
 <tr>
     <td class="num">15</td>
     <td class="model">GLM-5.2</td>
     <td class="num">90</td>
-    <td class="num">84.1</td>
-    <td class="num"><strong>1.07</strong></td>
+    <td class="num">10393</td>
+    <td class="num"><strong>0.009</strong></td>
   </tr>
       </tbody>
     </table>
@@ -776,74 +830,74 @@
       <tbody>
 <tr>
         <td><a href="history/2026-09-23.json">2026-09-23</a></td>
-        <td class="num">40</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
-        <td class="num">8</td>
+        <td class="num">41</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
+        <td class="num">9</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-21.json">2026-09-21</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">0</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-20.json">2026-09-20</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">0</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-19.json">2026-09-19</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">0</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-18.json">2026-09-18</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">1</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-17.json">2026-09-17</a></td>
         <td class="num">37</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
-        <td class="num">1</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
+        <td class="num">2</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-16.json">2026-09-16</a></td>
-        <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
-        <td class="num">0</td>
+        <td class="num">37</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
+        <td class="num">1</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-15.json">2026-09-15</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">0</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-14.json">2026-09-14</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
-        <td class="num">2</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
+        <td class="num">0</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-11.json">2026-09-11</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">0</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-10.json">2026-09-10</a></td>
         <td class="num">36</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 14.80</td>
-        <td class="num">8</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
+        <td class="num">4</td>
       </tr>
 <tr>
         <td><a href="history/2026-09-08.json">2026-09-08</a></td>
         <td class="num">35</td>
-        <td>DeepSeek V4 Flash (Off-Peak) · 9.00</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
         <td class="num">0</td>
       </tr>
       </tbody>
@@ -861,6 +915,7 @@
       <li class="chg neu"><b>+ new tariff:</b> MiMo-V2.5-Pro</li>
       <li class="chg neu"><b>+ new tariff:</b> MiMo-V2.6-Flash</li>
       <li class="chg neu"><b>+ new tariff:</b> MiMo-V2.6-Pro</li>
+      <li class="chg neu"><b>+ new tariff:</b> Space Bunny Free</li>
       <li class="chg neu"><b>− removed:</b> MiMo V2.5</li>
       <li class="chg neu"><b>− removed:</b> MiMo V2.5 Pro</li>
   </ul>
@@ -875,20 +930,17 @@
       <li class="chg neu"><b>+ new tariff:</b> MiMo-V2.5-Pro</li>
       <li class="chg neu"><b>+ new tariff:</b> MiMo-V2.6-Flash</li>
       <li class="chg neu"><b>+ new tariff:</b> MiMo-V2.6-Pro</li>
+      <li class="chg neu"><b>+ new tariff:</b> Space Bunny Free</li>
       <li class="chg neu"><b>− removed:</b> MiMo V2.5</li>
       <li class="chg neu"><b>− removed:</b> MiMo V2.5 Pro</li>
 <li class="chg-date">2026-09-18 <span class="sub">vs 2026-09-17</span></li>
       <li class="chg neu"><b>− removed:</b> Union Alpha Free</li>
 <li class="chg-date">2026-09-17 <span class="sub">vs 2026-09-16</span></li>
       <li class="chg neu"><b>+ new tariff:</b> Union Alpha Free</li>
-<li class="chg-date">2026-09-14 <span class="sub">vs 2026-09-11</span></li>
-      <li class="chg neu"><b>quota:</b> DeepSeek V4.1 Flash (Off-Peak) $15 → $15604</li>
-      <li class="chg neu"><b>quota:</b> DeepSeek V4.1 Flash (Peak) $15 → $15604</li>
+      <li class="chg neu"><b>− removed:</b> Union Alpha</li>
+<li class="chg-date">2026-09-16 <span class="sub">vs 2026-09-15</span></li>
+      <li class="chg neu"><b>+ new tariff:</b> Union Alpha</li>
 <li class="chg-date">2026-09-10 <span class="sub">vs 2026-09-08</span></li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash (Off-Peak) $0.0029 → $0.0018 ▼</li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash (Peak) $0.0059 → $0.0036 ▼</li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash Vision Exp (Off-Peak) $0.0029 → $0.0018 ▼</li>
-      <li class="chg good"><b>price:</b> DeepSeek V4 Flash Vision Exp (Peak) $0.0059 → $0.0036 ▼</li>
       <li class="chg neu"><b>quota:</b> GLM-5.3-Flash $15 → $60</li>
       <li class="chg neu"><b>+ new tariff:</b> DeepSeek V4.1 Flash (Off-Peak)</li>
       <li class="chg neu"><b>+ new tariff:</b> DeepSeek V4.1 Flash (Peak)</li>
@@ -904,7 +956,7 @@
 
     <h3>Disclaimer</h3>
     <p>This site is an unofficial, independent and unaffiliated aggregation of publicly available data. It is not endorsed by or affiliated with OpenCode, TIMETOACT GROUP, any model vendor or their owners.</p>
-    <p>All cost figures are <em>rough estimates</em> based on a typical session with assumed request patterns and publicly stated prices. Actual prices, quotas, multipliers and model capabilities differ and change without notice. Do not make financial or architectural decisions based on these numbers.</p>
+    <p>All cost figures are <em>rough estimates</em> based on a measured session profile (one developer's autonomous-agent workload, see <a href="profiles/measured.json">profiles/measured.json</a>) and publicly stated prices. Actual usage, prices, quotas, multipliers and model capabilities differ and change without notice. Do not make financial or architectural decisions based on these numbers.</p>
     <p>Use of trademarks, logos and model names (OpenAI, Anthropic, Google, DeepSeek, Qwen, GLM, Kimi, MiniMax, Grok, MiMo, Muse and others) is for identification purposes only; all rights belong to their respective owners.</p>
     <p>Neither the author nor this site is liable for any loss, direct or indirect, arising from the use of the information presented here.</p>
     <p>© 2026 opencode-benchmark. Build it yourself: <code>npm start</code> regenerates this file.</p>

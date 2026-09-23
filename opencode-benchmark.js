@@ -98,7 +98,9 @@ async function main() {
     },
   };
   const json = reportToJson(report, sources, siteUrl);
-  const prevSnap = loadPrevSnapshot(OUT_DIR);
+  // excludeDate = today: on a same-day re-run the last snapshot IS today's file, and
+  // diffing against it would erase the day's change events (see loadPrevSnapshot).
+  const prevSnap = loadPrevSnapshot(OUT_DIR, String(json.generatedAt).slice(0, 10));
   const changes = detectChanges(json, prevSnap ? prevSnap.prev : null);
   const full = { ...json, changes };
 

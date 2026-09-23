@@ -28,9 +28,16 @@
     "disclaimer": "Unofficial, independent aggregation of public data; not affiliated with or endorsed by OpenCode, TIMETOACT GROUP or any model vendor. All figures are rough estimates and may change without notice — verify before use."
   },
   "session": {
-    "inputTokens": 7750,
-    "cacheReadTokens": 147250,
-    "outputTokens": 300,
+    "profile": "agentic",
+    "turns": 147,
+    "perTurn": {
+      "inputTokens": 5649,
+      "cacheReadTokens": 120424,
+      "cacheWriteTokens": 137,
+      "outputTokens": 728
+    },
+    "contextTokensPerTurn": 126938,
+    "cacheReadShare": 0.9487,
     "monthlyPoolUsd": 60
   },
   "rows": [
@@ -39,79 +46,118 @@
       "provider": "opencode-go",
       "modelId": "qwen3.7-max",
       "score": 95,
-      "priceUsdPerSession": 0.09525,
-      "mpPerSession": 317.5,
+      "priceUsdPerSession": 11.792726,
+      "mpPerSession": 39309.09,
       "quotaUsd": 30,
       "multiplier": 2,
-      "requestsPerMonth": 314,
       "matchedBenchmarkName": "Qwen3.7 Max ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 2,
+      "inputPerM": 2.5,
+      "outputPerM": 7.5,
+      "cacheReadPerM": 0.5,
+      "cacheWritePerM": 3.125,
+      "costSplit": {
+        "input": 0.176,
+        "cacheRead": 0.7506,
+        "cacheWrite": 0.0053,
+        "output": 0.0681
+      }
     },
     {
       "model": "Grok 4.6 (≤ 200K tokens)",
       "provider": "opencode-go",
       "modelId": "grok-4.6",
       "score": 94,
-      "priceUsdPerSession": 0.090925,
-      "mpPerSession": 606.17,
+      "priceUsdPerSession": 11.154066,
+      "mpPerSession": 74360.44,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 164,
       "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 1,
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.5,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1489,
+        "cacheRead": 0.7935,
+        "cacheWrite": 0,
+        "output": 0.0576
+      }
     },
     {
       "model": "Grok 4.6 (> 200K tokens)",
       "provider": "opencode-go",
       "modelId": "grok-4.6",
       "score": 94,
-      "priceUsdPerSession": 0.18185,
-      "mpPerSession": 1212.33,
+      "priceUsdPerSession": 22.308132,
+      "mpPerSession": 148720.88,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 82,
       "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 0,
+      "inputPerM": 4,
+      "outputPerM": 12,
+      "cacheReadPerM": 1,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1489,
+        "cacheRead": 0.7935,
+        "cacheWrite": 0,
+        "output": 0.0576
+      }
     },
     {
       "model": "Qwen3.8 Max",
       "provider": "opencode-go",
       "modelId": "qwen3.8-max",
       "score": 91,
-      "priceUsdPerSession": 0.054113,
-      "mpPerSession": 360.75,
+      "priceUsdPerSession": 6.778832,
+      "mpPerSession": 45192.21,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 277,
       "matchedBenchmarkName": "Qwen3.8 Max (reasoning medium) ⚠️",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 2,
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.25,
+      "cacheWritePerM": 2.5,
+      "costSplit": {
+        "input": 0.245,
+        "cacheRead": 0.6529,
+        "cacheWrite": 0.0074,
+        "output": 0.0947
+      }
     },
     {
       "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
       "provider": "opencode-go",
       "modelId": "deepseek-v4-flash-vision-exp",
       "score": 90,
-      "priceUsdPerSession": 0.001784,
-      "mpPerSession": 11.9,
+      "priceUsdPerSession": 0.241877,
+      "mpPerSession": 1612.51,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 8406,
       "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
       "similarity": 1,
       "tier": "OK",
@@ -137,6 +183,17 @@
             0
           ]
         ]
+      },
+      "sessionsPerMonth": 62,
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
       }
     },
     {
@@ -144,11 +201,10 @@
       "provider": "opencode-go",
       "modelId": "deepseek-v4-flash-vision-exp",
       "score": 90,
-      "priceUsdPerSession": 0.003569,
-      "mpPerSession": 23.79,
+      "priceUsdPerSession": 0.483754,
+      "mpPerSession": 3225.03,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 4203,
       "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
       "similarity": 1,
       "tier": "OK",
@@ -174,6 +230,17 @@
             0
           ]
         ]
+      },
+      "sessionsPerMonth": 31,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
       }
     },
     {
@@ -181,62 +248,91 @@
       "provider": "opencode-go",
       "modelId": "gpt-5.6-luna",
       "score": 90,
-      "priceUsdPerSession": 0.004855,
-      "mpPerSession": 32.37,
+      "priceUsdPerSession": 0.653581,
+      "mpPerSession": 4357.21,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 3089,
       "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 22,
+      "inputPerM": 0.2,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.02,
+      "cacheWritePerM": 0.25,
+      "costSplit": {
+        "input": 0.2541,
+        "cacheRead": 0.5417,
+        "cacheWrite": 0.0077,
+        "output": 0.1965
+      }
     },
     {
       "model": "GPT 5.6 Luna (> 272K tokens)",
       "provider": "opencode-go",
       "modelId": "gpt-5.6-luna",
       "score": 90,
-      "priceUsdPerSession": 0.00953,
-      "mpPerSession": 63.53,
+      "priceUsdPerSession": 1.242953,
+      "mpPerSession": 8286.35,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 1573,
       "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 12,
+      "inputPerM": 0.4,
+      "outputPerM": 1.8,
+      "cacheReadPerM": 0.04,
+      "cacheWritePerM": 0.5,
+      "costSplit": {
+        "input": 0.2672,
+        "cacheRead": 0.5697,
+        "cacheWrite": 0.0081,
+        "output": 0.155
+      }
     },
     {
       "model": "GLM-5.2",
       "provider": "opencode-go",
       "modelId": "glm-5.2",
       "score": 90,
-      "priceUsdPerSession": 0.050455,
-      "mpPerSession": 84.09,
+      "priceUsdPerSession": 6.23604,
+      "mpPerSession": 10393.4,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 1189,
       "matchedBenchmarkName": "GLM 5.2 ✅ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 9,
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1864,
+        "cacheRead": 0.7381,
+        "cacheWrite": 0,
+        "output": 0.0755
+      }
     },
     {
       "model": "DeepSeek V4 Flash (Off-Peak)",
       "provider": "opencode-go",
       "modelId": "deepseek-v4-flash",
       "score": 88,
-      "priceUsdPerSession": 0.001784,
-      "mpPerSession": 5.95,
+      "priceUsdPerSession": 0.241877,
+      "mpPerSession": 806.26,
       "quotaUsd": 30,
       "multiplier": 2,
-      "requestsPerMonth": 16813,
       "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
@@ -262,6 +358,17 @@
             0
           ]
         ]
+      },
+      "sessionsPerMonth": 124,
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
       }
     },
     {
@@ -269,11 +376,10 @@
       "provider": "opencode-go",
       "modelId": "deepseek-v4-flash",
       "score": 88,
-      "priceUsdPerSession": 0.003569,
-      "mpPerSession": 11.9,
+      "priceUsdPerSession": 0.483754,
+      "mpPerSession": 1612.51,
       "quotaUsd": 30,
       "multiplier": 2,
-      "requestsPerMonth": 8406,
       "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
@@ -299,6 +405,17 @@
             0
           ]
         ]
+      },
+      "sessionsPerMonth": 62,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
       }
     },
     {
@@ -306,45 +423,64 @@
       "provider": "opencode-go",
       "modelId": "qwen3.7-plus",
       "score": 88,
-      "priceUsdPerSession": 0.00947,
-      "mpPerSession": 15.78,
+      "priceUsdPerSession": 1.221549,
+      "mpPerSession": 2035.92,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 6335,
       "matchedBenchmarkName": "Qwen3.7 Plus ⚠️",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 49,
+      "inputPerM": 0.4,
+      "outputPerM": 1.6,
+      "cacheReadPerM": 0.04,
+      "cacheWritePerM": 0.5,
+      "costSplit": {
+        "input": 0.2719,
+        "cacheRead": 0.5797,
+        "cacheWrite": 0.0082,
+        "output": 0.1402
+      }
     },
     {
       "model": "Qwen3.7 Plus (> 256K tokens)",
       "provider": "opencode-go",
       "modelId": "qwen3.7-plus",
       "score": 88,
-      "priceUsdPerSession": 0.02841,
-      "mpPerSession": 47.35,
+      "priceUsdPerSession": 3.664648,
+      "mpPerSession": 6107.75,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 2111,
       "matchedBenchmarkName": "Qwen3.7 Plus ⚠️",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 16,
+      "inputPerM": 1.2,
+      "outputPerM": 4.8,
+      "cacheReadPerM": 0.12,
+      "cacheWritePerM": 1.5,
+      "costSplit": {
+        "input": 0.2719,
+        "cacheRead": 0.5797,
+        "cacheWrite": 0.0082,
+        "output": 0.1402
+      }
     },
     {
       "model": "DeepSeek V4 Pro (Off-Peak)",
       "provider": "opencode-go",
       "modelId": "deepseek-v4-pro",
       "score": 88,
-      "priceUsdPerSession": 0.008948,
-      "mpPerSession": 59.66,
+      "priceUsdPerSession": 1.149409,
+      "mpPerSession": 7662.73,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 1676,
       "matchedBenchmarkName": "DeepSeek V4 Pro ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
@@ -370,6 +506,17 @@
             0
           ]
         ]
+      },
+      "sessionsPerMonth": 13,
+      "inputPerM": 0.66,
+      "outputPerM": 1.98,
+      "cacheReadPerM": 0.022,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.4768,
+        "cacheRead": 0.3388,
+        "cacheWrite": 0,
+        "output": 0.1843
       }
     },
     {
@@ -377,11 +524,10 @@
       "provider": "opencode-go",
       "modelId": "deepseek-v4-pro",
       "score": 88,
-      "priceUsdPerSession": 0.017897,
-      "mpPerSession": 119.31,
+      "priceUsdPerSession": 2.298818,
+      "mpPerSession": 15325.45,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 838,
       "matchedBenchmarkName": "DeepSeek V4 Pro ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
@@ -407,6 +553,17 @@
             0
           ]
         ]
+      },
+      "sessionsPerMonth": 6,
+      "inputPerM": 1.32,
+      "outputPerM": 3.96,
+      "cacheReadPerM": 0.044,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.4768,
+        "cacheRead": 0.3388,
+        "cacheWrite": 0,
+        "output": 0.1843
       }
     },
     {
@@ -414,192 +571,188 @@
       "provider": "opencode-go",
       "modelId": "kimi-k3",
       "score": 88,
-      "priceUsdPerSession": 0.071925,
-      "mpPerSession": 479.5,
+      "priceUsdPerSession": 9.407147,
+      "mpPerSession": 62714.32,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 208,
       "matchedBenchmarkName": "Kimi K3 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 1,
+      "inputPerM": 3,
+      "outputPerM": 15,
+      "cacheReadPerM": 0.3,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.2648,
+        "cacheRead": 0.5645,
+        "cacheWrite": 0,
+        "output": 0.1706
+      }
     },
     {
       "model": "GLM-5.3-Flash",
       "provider": "opencode-go",
       "modelId": "glm-5.3-flash",
       "score": 84,
-      "priceUsdPerSession": 0.00573,
-      "mpPerSession": 9.55,
+      "priceUsdPerSession": 0.709138,
+      "mpPerSession": 1181.9,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 10471,
       "matchedBenchmarkName": "GLM 5.3 Flash (reasoning high) ✅",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 84,
+      "inputPerM": 0.15,
+      "outputPerM": 0.5,
+      "cacheReadPerM": 0.03,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1757,
+        "cacheRead": 0.7489,
+        "cacheWrite": 0,
+        "output": 0.0755
+      }
     },
     {
       "model": "GLM-5.1",
       "provider": "opencode-go",
       "modelId": "glm-5.1",
       "score": 82,
-      "priceUsdPerSession": 0.050455,
-      "mpPerSession": 84.09,
+      "priceUsdPerSession": 6.23604,
+      "mpPerSession": 10393.4,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 1189,
       "matchedBenchmarkName": "GLM 5.1 ✅ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 9,
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1864,
+        "cacheRead": 0.7381,
+        "cacheWrite": 0,
+        "output": 0.0755
+      }
     },
     {
       "model": "MiniMax M2.7",
       "provider": "opencode-go",
       "modelId": "minimax-m2.7",
       "score": 81,
-      "priceUsdPerSession": 0.01152,
-      "mpPerSession": 19.2,
+      "priceUsdPerSession": 1.447232,
+      "mpPerSession": 2412.05,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 5208,
       "matchedBenchmarkName": "MiniMax M2.7 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 41,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.06,
+      "cacheWritePerM": 0.375,
+      "costSplit": {
+        "input": 0.1721,
+        "cacheRead": 0.7339,
+        "cacheWrite": 0.0052,
+        "output": 0.0887
+      }
     },
     {
       "model": "Hy3",
       "provider": "opencode-go",
       "modelId": "hy3",
       "score": 79,
-      "priceUsdPerSession": 0.006413,
-      "mpPerSession": 10.69,
+      "priceUsdPerSession": 0.797907,
+      "mpPerSession": 1329.85,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 9356,
       "matchedBenchmarkName": "Tencent Hy3 ⚠️ ⏳",
       "similarity": 0.273,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 75,
+      "inputPerM": 0.14,
+      "outputPerM": 0.58,
+      "cacheReadPerM": 0.035,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1457,
+        "cacheRead": 0.7765,
+        "cacheWrite": 0,
+        "output": 0.0778
+      }
     },
     {
       "model": "MiniMax M3",
       "provider": "opencode-go",
       "modelId": "minimax-m3",
       "score": 76,
-      "priceUsdPerSession": 0.01152,
-      "mpPerSession": 19.2,
+      "priceUsdPerSession": 1.43968,
+      "mpPerSession": 2399.47,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 5208,
       "matchedBenchmarkName": "MiniMax M3 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 41,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.06,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.173,
+        "cacheRead": 0.7378,
+        "cacheWrite": 0,
+        "output": 0.0892
+      }
     },
     {
       "model": "Kimi K2.6",
       "provider": "opencode-go",
       "modelId": "kimi-k2.6",
       "score": 76,
-      "priceUsdPerSession": 0.032122,
-      "mpPerSession": 53.54,
+      "priceUsdPerSession": 4.049319,
+      "mpPerSession": 6748.87,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 1867,
       "matchedBenchmarkName": "Kimi K2.6 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Off-Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": null,
-      "priceUsdPerSession": 0.001784,
-      "mpPerSession": 0.01,
-      "quotaUsd": 15604,
-      "multiplier": 0.0038,
-      "requestsPerMonth": 8745411,
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": null,
-      "priceUsdPerSession": 0.003569,
-      "mpPerSession": 0.02,
-      "quotaUsd": 15604,
-      "multiplier": 0.0038,
-      "requestsPerMonth": 4372705,
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
+      "peakHours": null,
+      "sessionsPerMonth": 14,
+      "inputPerM": 0.95,
+      "outputPerM": 4,
+      "cacheReadPerM": 0.16,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1948,
+        "cacheRead": 0.6995,
+        "cacheWrite": 0,
+        "output": 0.1057
       }
     },
     {
@@ -607,204 +760,418 @@
       "provider": "opencode-go",
       "modelId": "muse-spark-1.3-contributor",
       "score": null,
-      "priceUsdPerSession": 0.00113,
-      "mpPerSession": 1.88,
+      "priceUsdPerSession": 0.139848,
+      "mpPerSession": 233.08,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 53120,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 429,
+      "inputPerM": 0.1,
+      "outputPerM": 0.2,
+      "cacheReadPerM": 0.002,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.5938,
+        "cacheRead": 0.2532,
+        "cacheWrite": 0,
+        "output": 0.153
+      }
     },
     {
       "model": "Muse Spark 1.2 Contributor",
       "provider": "opencode-go",
       "modelId": "muse-spark-1.2-contributor",
       "score": null,
-      "priceUsdPerSession": 0.00113,
-      "mpPerSession": 1.88,
+      "priceUsdPerSession": 0.139848,
+      "mpPerSession": 233.08,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 53120,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 429,
+      "inputPerM": 0.1,
+      "outputPerM": 0.2,
+      "cacheReadPerM": 0.002,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.5938,
+        "cacheRead": 0.2532,
+        "cacheWrite": 0,
+        "output": 0.153
+      }
     },
     {
       "model": "MiMo V2.5",
       "provider": "opencode-go",
       "modelId": "mimo-v2.5",
       "score": null,
-      "priceUsdPerSession": 0.001581,
-      "mpPerSession": 2.64,
+      "priceUsdPerSession": 0.195787,
+      "mpPerSession": 326.31,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 37943,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 306,
+      "inputPerM": 0.14,
+      "outputPerM": 0.28,
+      "cacheReadPerM": 0.0028,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.5938,
+        "cacheRead": 0.2532,
+        "cacheWrite": 0,
+        "output": 0.153
+      }
     },
     {
       "model": "LongCat-2.0",
       "provider": "opencode-go",
       "modelId": "longcat-2.0",
       "score": null,
-      "priceUsdPerSession": 0.003569,
-      "mpPerSession": 5.95,
+      "priceUsdPerSession": 0.483754,
+      "mpPerSession": 806.26,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 16813,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 124,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
+      }
     },
     {
       "model": "Qwen3.8 Flash",
       "provider": "opencode-go",
       "modelId": "qwen3.8-flash",
       "score": null,
-      "priceUsdPerSession": 0.003659,
-      "mpPerSession": 12.2,
+      "priceUsdPerSession": 0.462123,
+      "mpPerSession": 1540.41,
       "quotaUsd": 30,
       "multiplier": 2,
-      "requestsPerMonth": 8197,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 64,
+      "inputPerM": 0.15,
+      "outputPerM": 0.47,
+      "cacheReadPerM": 0.016,
+      "cacheWritePerM": 0.2,
+      "costSplit": {
+        "input": 0.2695,
+        "cacheRead": 0.6129,
+        "cacheWrite": 0.0087,
+        "output": 0.1088
+      }
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "score": null,
+      "priceUsdPerSession": 0.241877,
+      "mpPerSession": 1612.51,
+      "quotaUsd": 15,
+      "multiplier": 0.0038,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      },
+      "sessionsPerMonth": 62,
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
+      }
     },
     {
       "model": "MiniMax M2.5",
       "provider": "opencode-go",
       "modelId": "minimax-m2.5",
       "score": null,
-      "priceUsdPerSession": 0.01152,
-      "mpPerSession": 19.2,
+      "priceUsdPerSession": 1.447232,
+      "mpPerSession": 2412.05,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 5208,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 41,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.06,
+      "cacheWritePerM": 0.375,
+      "costSplit": {
+        "input": 0.1721,
+        "cacheRead": 0.7339,
+        "cacheWrite": 0.0052,
+        "output": 0.0887
+      }
     },
     {
       "model": "Qwen3.6 Plus (≤ 256K tokens)",
       "provider": "opencode-go",
       "modelId": "qwen3.6-plus",
       "score": null,
-      "priceUsdPerSession": 0.012138,
-      "mpPerSession": 20.23,
+      "priceUsdPerSession": 1.633953,
+      "mpPerSession": 2723.25,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 4943,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 36,
+      "inputPerM": 0.5,
+      "outputPerM": 3,
+      "cacheReadPerM": 0.05,
+      "cacheWritePerM": 0.625,
+      "costSplit": {
+        "input": 0.2541,
+        "cacheRead": 0.5417,
+        "cacheWrite": 0.0077,
+        "output": 0.1965
+      }
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "score": null,
+      "priceUsdPerSession": 0.483754,
+      "mpPerSession": 3225.03,
+      "quotaUsd": 15,
+      "multiplier": 0.0038,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      },
+      "sessionsPerMonth": 31,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
+      }
     },
     {
       "model": "MiMo V2.5 Pro",
       "provider": "opencode-go",
       "modelId": "mimo-v2.5-pro",
       "score": null,
-      "priceUsdPerSession": 0.004166,
-      "mpPerSession": 27.77,
+      "priceUsdPerSession": 0.5185,
+      "mpPerSession": 3456.67,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 3600,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 28,
+      "inputPerM": 0.435,
+      "outputPerM": 0.87,
+      "cacheReadPerM": 0.003625,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.6967,
+        "cacheRead": 0.1238,
+        "cacheWrite": 0,
+        "output": 0.1796
+      }
     },
     {
       "model": "Hy4 preview",
       "provider": "opencode-go",
       "modelId": "hy4-preview",
       "score": null,
-      "priceUsdPerSession": 0.013398,
-      "mpPerSession": 44.66,
+      "priceUsdPerSession": 1.703701,
+      "mpPerSession": 5679,
       "quotaUsd": 30,
       "multiplier": 2,
-      "requestsPerMonth": 2239,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 17,
+      "inputPerM": 0.834,
+      "outputPerM": 2.501,
+      "cacheReadPerM": 0.042,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.4065,
+        "cacheRead": 0.4364,
+        "cacheWrite": 0,
+        "output": 0.1571
+      }
     },
     {
       "model": "Kimi K2.7 Code",
       "provider": "opencode-go",
       "modelId": "kimi-k2.7-code",
       "score": null,
-      "priceUsdPerSession": 0.03654,
-      "mpPerSession": 60.9,
+      "priceUsdPerSession": 4.580389,
+      "mpPerSession": 7633.98,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 1642,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 13,
+      "inputPerM": 0.95,
+      "outputPerM": 4,
+      "cacheReadPerM": 0.19,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1722,
+        "cacheRead": 0.7343,
+        "cacheWrite": 0,
+        "output": 0.0935
+      }
     },
     {
       "model": "Qwen3.6 Plus (> 256K tokens)",
       "provider": "opencode-go",
       "modelId": "qwen3.6-plus",
       "score": null,
-      "priceUsdPerSession": 0.04675,
-      "mpPerSession": 77.92,
+      "priceUsdPerSession": 5.893715,
+      "mpPerSession": 9822.86,
       "quotaUsd": 60,
       "multiplier": 1,
-      "requestsPerMonth": 1283,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 10,
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 2.5,
+      "costSplit": {
+        "input": 0.2818,
+        "cacheRead": 0.6007,
+        "cacheWrite": 0.0085,
+        "output": 0.1089
+      }
     },
     {
       "model": "GLM-5.3",
       "provider": "opencode-go",
       "modelId": "glm-5.3",
       "score": null,
-      "priceUsdPerSession": 0.050455,
-      "mpPerSession": 336.37,
+      "priceUsdPerSession": 6.23604,
+      "mpPerSession": 41573.6,
       "quotaUsd": 15,
       "multiplier": 4,
-      "requestsPerMonth": 297,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": 2,
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1864,
+        "cacheRead": 0.7381,
+        "cacheWrite": 0,
+        "output": 0.0755
+      }
     },
     {
       "model": "Union Alpha Free",
@@ -815,105 +1182,110 @@
       "mpPerSession": null,
       "quotaUsd": 0,
       "multiplier": null,
-      "requestsPerMonth": null,
       "matchedBenchmarkName": null,
       "similarity": 0,
       "tier": "NONE",
       "benchmarkIssue": null,
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": null,
+      "sessionsPerMonth": null,
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "costSplit": null
     }
   ],
   "ranked": [
     {
       "model": "DeepSeek V4 Flash (Off-Peak)",
       "score": 88,
-      "mpPerSession": 5.9,
-      "scorePerMp": 14.8
+      "mpPerSession": 806.3,
+      "scorePerMp": 0.109
     },
     {
       "model": "GLM-5.3-Flash",
       "score": 84,
-      "mpPerSession": 9.6,
-      "scorePerMp": 8.8
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
-      "score": 90,
-      "mpPerSession": 11.9,
-      "scorePerMp": 7.57
-    },
-    {
-      "model": "DeepSeek V4 Flash (Peak)",
-      "score": 88,
-      "mpPerSession": 11.9,
-      "scorePerMp": 7.4
+      "mpPerSession": 1181.9,
+      "scorePerMp": 0.071
     },
     {
       "model": "Hy3",
       "score": 79,
-      "mpPerSession": 10.7,
-      "scorePerMp": 7.39
+      "mpPerSession": 1329.8,
+      "scorePerMp": 0.059
+    },
+    {
+      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
+      "score": 90,
+      "mpPerSession": 1612.5,
+      "scorePerMp": 0.056
+    },
+    {
+      "model": "DeepSeek V4 Flash (Peak)",
+      "score": 88,
+      "mpPerSession": 1612.5,
+      "scorePerMp": 0.055
     },
     {
       "model": "Qwen3.7 Plus (≤ 256K tokens)",
       "score": 88,
-      "mpPerSession": 15.8,
-      "scorePerMp": 5.58
+      "mpPerSession": 2035.9,
+      "scorePerMp": 0.043
     },
     {
       "model": "MiniMax M2.7",
       "score": 81,
-      "mpPerSession": 19.2,
-      "scorePerMp": 4.22
+      "mpPerSession": 2412.1,
+      "scorePerMp": 0.034
     },
     {
       "model": "MiniMax M3",
       "score": 76,
-      "mpPerSession": 19.2,
-      "scorePerMp": 3.96
+      "mpPerSession": 2399.5,
+      "scorePerMp": 0.032
     },
     {
       "model": "DeepSeek V4 Flash Vision Exp (Peak)",
       "score": 90,
-      "mpPerSession": 23.8,
-      "scorePerMp": 3.78
+      "mpPerSession": 3225,
+      "scorePerMp": 0.028
     },
     {
       "model": "GPT 5.6 Luna (≤ 272K tokens)",
       "score": 90,
-      "mpPerSession": 32.4,
-      "scorePerMp": 2.78
+      "mpPerSession": 4357.2,
+      "scorePerMp": 0.021
     },
     {
       "model": "Qwen3.7 Plus (> 256K tokens)",
       "score": 88,
-      "mpPerSession": 47.4,
-      "scorePerMp": 1.86
-    },
-    {
-      "model": "DeepSeek V4 Pro (Off-Peak)",
-      "score": 88,
-      "mpPerSession": 59.7,
-      "scorePerMp": 1.48
-    },
-    {
-      "model": "Kimi K2.6",
-      "score": 76,
-      "mpPerSession": 53.5,
-      "scorePerMp": 1.42
+      "mpPerSession": 6107.8,
+      "scorePerMp": 0.014
     },
     {
       "model": "GPT 5.6 Luna (> 272K tokens)",
       "score": 90,
-      "mpPerSession": 63.5,
-      "scorePerMp": 1.42
+      "mpPerSession": 8286.4,
+      "scorePerMp": 0.011
+    },
+    {
+      "model": "DeepSeek V4 Pro (Off-Peak)",
+      "score": 88,
+      "mpPerSession": 7662.7,
+      "scorePerMp": 0.011
+    },
+    {
+      "model": "Kimi K2.6",
+      "score": 76,
+      "mpPerSession": 6748.9,
+      "scorePerMp": 0.011
     },
     {
       "model": "GLM-5.2",
       "score": 90,
-      "mpPerSession": 84.1,
-      "scorePerMp": 1.07
+      "mpPerSession": 10393.4,
+      "scorePerMp": 0.009
     }
   ],
   "changes": {
@@ -923,6 +1295,12 @@
       {
         "kind": "added",
         "model": "Union Alpha Free",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Union Alpha",
         "from": null,
         "to": null
       }

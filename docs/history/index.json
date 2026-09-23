@@ -1,12 +1,12 @@
 {
-  "updated": "2026-09-23T10:27:28.058Z",
+  "updated": "2026-09-23T14:58:43.497Z",
   "snapshots": [
     {
       "date": "2026-09-08",
       "file": "history/2026-09-08.json",
       "generatedAt": "2026-09-08T17:22:12.747Z",
       "models": 35,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 9.00",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
     },
     {
@@ -14,15 +14,15 @@
       "file": "history/2026-09-10.json",
       "generatedAt": "2026-09-10T16:30:10.907Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
-      "changes": 8
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
+      "changes": 4
     },
     {
       "date": "2026-09-11",
       "file": "history/2026-09-11.json",
       "generatedAt": "2026-09-11T09:02:37.324Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
     },
     {
@@ -30,39 +30,39 @@
       "file": "history/2026-09-14.json",
       "generatedAt": "2026-09-14T11:13:24.733Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
-      "changes": 2
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
+      "changes": 0
     },
     {
       "date": "2026-09-15",
       "file": "history/2026-09-15.json",
       "generatedAt": "2026-09-15T10:40:17.763Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
     },
     {
       "date": "2026-09-16",
       "file": "history/2026-09-16.json",
       "generatedAt": "2026-09-16T10:28:36.893Z",
-      "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
-      "changes": 0
+      "models": 37,
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
+      "changes": 1
     },
     {
       "date": "2026-09-17",
       "file": "history/2026-09-17.json",
       "generatedAt": "2026-09-17T10:38:18.155Z",
       "models": 37,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
-      "changes": 1
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
+      "changes": 2
     },
     {
       "date": "2026-09-18",
       "file": "history/2026-09-18.json",
       "generatedAt": "2026-09-18T10:14:08.902Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 1
     },
     {
@@ -70,7 +70,7 @@
       "file": "history/2026-09-19.json",
       "generatedAt": "2026-09-19T09:56:02.599Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
     },
     {
@@ -78,7 +78,7 @@
       "file": "history/2026-09-20.json",
       "generatedAt": "2026-09-20T10:16:48.754Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
     },
     {
@@ -86,16 +86,16 @@
       "file": "history/2026-09-21.json",
       "generatedAt": "2026-09-21T11:24:45.564Z",
       "models": 36,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
     },
     {
       "date": "2026-09-23",
       "file": "history/2026-09-23.json",
       "generatedAt": "2026-09-23T10:27:28.058Z",
-      "models": 40,
-      "best": "DeepSeek V4 Flash (Off-Peak) · 14.80",
-      "changes": 8
+      "models": 41,
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
+      "changes": 9
     }
   ]
 }

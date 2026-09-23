@@ -6,12 +6,18 @@
     "publisher": "OpenCode"
   },
   "session": {
-    "inputTokens": 7750,
-    "cacheReadTokens": 147250,
-    "outputTokens": 300,
+    "profile": "agentic",
+    "turns": 147,
+    "perTurn": {
+      "inputTokens": 5649,
+      "cacheReadTokens": 120424,
+      "cacheWriteTokens": 137,
+      "outputTokens": 728
+    },
+    "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-23T10:27:28.057Z",
+  "generatedAt": "2026-09-23T14:48:09.313Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -285,7 +291,7 @@
       "outputPerM": 0.6,
       "cacheReadPerM": 0.003,
       "cacheWritePerM": 0,
-      "quotaUsd": 15604,
+      "quotaUsd": 15,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -316,7 +322,7 @@
       "outputPerM": 1.2,
       "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
-      "quotaUsd": 15604,
+      "quotaUsd": 15,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -545,6 +551,17 @@
       "cacheReadPerM": 0.035,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Space Bunny Free",
+      "provider": "opencode-go",
+      "modelId": "space-bunny-free",
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "quotaUsd": 0,
       "peakHours": null
     },
     {
