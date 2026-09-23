@@ -11,7 +11,7 @@
     "outputTokens": 300,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-18T10:14:08.902Z",
+  "generatedAt": "2026-09-23T10:27:28.057Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -102,7 +102,29 @@
       "peakHours": null
     },
     {
-      "model": "MiMo V2.5",
+      "model": "MiMo-V2.6-Flash",
+      "provider": "opencode-go",
+      "modelId": "mimo-v2.6-flash",
+      "inputPerM": 0.14,
+      "outputPerM": 0.28,
+      "cacheReadPerM": 0.0028,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "MiMo-V2.6-Pro",
+      "provider": "opencode-go",
+      "modelId": "mimo-v2.6-pro",
+      "inputPerM": 0.435,
+      "outputPerM": 0.87,
+      "cacheReadPerM": 0.003625,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "MiMo-V2.5",
       "provider": "opencode-go",
       "modelId": "mimo-v2.5",
       "inputPerM": 0.14,
@@ -113,7 +135,7 @@
       "peakHours": null
     },
     {
-      "model": "MiMo V2.5 Pro",
+      "model": "MiMo-V2.5-Pro",
       "provider": "opencode-go",
       "modelId": "mimo-v2.5-pro",
       "inputPerM": 0.435,
@@ -523,6 +545,28 @@
       "cacheReadPerM": 0.035,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Grok 4.7 (≤ 200K tokens)",
+      "provider": "opencode-go",
+      "modelId": "grok-4.7",
+      "inputPerM": 2,
+      "outputPerM": 6,
+      "cacheReadPerM": 0.5,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Grok 4.7 (> 200K tokens)",
+      "provider": "opencode-go",
+      "modelId": "grok-4.7",
+      "inputPerM": 4,
+      "outputPerM": 12,
+      "cacheReadPerM": 1,
+      "cacheWritePerM": 0,
+      "quotaUsd": 15,
       "peakHours": null
     },
     {
