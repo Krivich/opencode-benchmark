@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-23T14:48:09.313Z",
+  "generatedAt": "2026-09-24T10:43:59.089Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -605,6 +605,28 @@
       "outputPerM": 12,
       "cacheReadPerM": 1,
       "cacheWritePerM": 0,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "GPT 6 Luna (≤ 272K tokens)",
+      "provider": "opencode-go",
+      "modelId": "gpt-6-luna",
+      "inputPerM": 0.1,
+      "outputPerM": 0.5,
+      "cacheReadPerM": 0.01,
+      "cacheWritePerM": 0.125,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "GPT 6 Luna (> 272K tokens)",
+      "provider": "opencode-go",
+      "modelId": "gpt-6-luna",
+      "inputPerM": 0.2,
+      "outputPerM": 0.75,
+      "cacheReadPerM": 0.02,
+      "cacheWritePerM": 0.25,
       "quotaUsd": 15,
       "peakHours": null
     },
