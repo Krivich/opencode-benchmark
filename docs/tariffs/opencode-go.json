@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-24T10:43:59.089Z",
+  "generatedAt": "2026-09-26T10:29:37.735Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -291,7 +291,7 @@
       "outputPerM": 0.6,
       "cacheReadPerM": 0.003,
       "cacheWritePerM": 0,
-      "quotaUsd": 15,
+      "quotaUsd": 60,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -322,7 +322,7 @@
       "outputPerM": 1.2,
       "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
-      "quotaUsd": 15,
+      "quotaUsd": 60,
       "peakHours": {
         "tz": "UTC",
         "days": [

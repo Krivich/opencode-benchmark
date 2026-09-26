@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="Which OpenCode Go model gets you the most for your money?">
 <meta name="twitter:description" content="Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"index.html#website","url":"index.html","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"index.html#website"},"dateModified":"2026-09-25T10:47:58.581Z","inLanguage":"en","mainEntity":{"@id":"index.html#dataset"}},{"@type":"Dataset","@id":"index.html#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"index.html","dateModified":"2026-09-25T10:47:58.581Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"index.html#website","url":"index.html","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"index.html#webpage","url":"index.html","name":"Which OpenCode Go model gets you the most for your money?","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"index.html#website"},"dateModified":"2026-09-26T10:29:37.735Z","inLanguage":"en","mainEntity":{"@id":"index.html#dataset"}},{"@type":"Dataset","@id":"index.html#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"Session cost and independent benchmark score for every OpenCode Go tariff — quotas, multipliers and context splits decoded, side by side.","url":"index.html","dateModified":"2026-09-26T10:29:37.735Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -158,7 +158,7 @@
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what one
         average task actually costs — a full session (~147 turns), not a single request — and how smart each model is.</p>
       <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
-        Updated: <time datetime="2026-09-25T10:47:58.581Z">9/25/2026, 10:47:58 AM</time></p>
+        Updated: <time datetime="2026-09-26T10:29:37.735Z">9/26/2026, 10:29:37 AM</time></p>
 
       <p class="datalinks">Data:
         <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
@@ -567,6 +567,20 @@
     </tr>
 <tr>
       <td class="num">27</td>
+      <td class="model">DeepSeek V4.1 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="num">—</td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
+      <td class="num"><strong>403</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">248</td>
+      <td class="num">$0.15</td>
+      <td class="num">$0.003</td>
+      <td class="num">$0.6</td>
+      <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
+    </tr>
+<tr>
+      <td class="num">28</td>
       <td class="model">LongCat-2.0</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
@@ -580,7 +594,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">28</td>
+      <td class="num">29</td>
+      <td class="model">DeepSeek V4.1 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="num">—</td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
+      <td class="num"><strong>806</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">124</td>
+      <td class="num">$0.3</td>
+      <td class="num">$0.006</td>
+      <td class="num">$1.2</td>
+      <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
+    </tr>
+<tr>
+      <td class="num">30</td>
       <td class="model">Qwen3.8 Flash</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 61% cache-read, 1% cache-write, 11% output">$0.462</span></td>
@@ -594,21 +622,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">29</td>
-      <td class="model">DeepSeek V4.1 Flash (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-      <td class="num">—</td>
-      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
-      <td class="num"><strong>1613</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">62</td>
-      <td class="num">$0.15</td>
-      <td class="num">$0.003</td>
-      <td class="num">$0.6</td>
-      <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
-    </tr>
-<tr>
-      <td class="num">30</td>
+      <td class="num">31</td>
       <td class="model">GPT 6 Luna (≤ 272K tokens)</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$0.316</span></td>
@@ -622,7 +636,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">31</td>
+      <td class="num">32</td>
       <td class="model">MiniMax M2.5</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 73% cache-read, 1% cache-write, 9% output">$1.447</span></td>
@@ -636,7 +650,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">32</td>
+      <td class="num">33</td>
       <td class="model">Qwen3.6 Plus (≤ 256K tokens)</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 54% cache-read, 1% cache-write, 20% output">$1.634</span></td>
@@ -647,20 +661,6 @@
       <td class="num">$0.5</td>
       <td class="num">$0.05</td>
       <td class="num">$3</td>
-      <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
-    </tr>
-<tr>
-      <td class="num">33</td>
-      <td class="model">DeepSeek V4.1 Flash (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-      <td class="num">—</td>
-      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
-      <td class="num"><strong>3225</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">31</td>
-      <td class="num">$0.3</td>
-      <td class="num">$0.006</td>
-      <td class="num">$1.2</td>
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
@@ -944,6 +944,12 @@
       <thead><tr><th title="Link to that day’s full report JSON. History is sparse — a day with no data change adds no file, so a gap means unchanged, not lost.">Date</th><th class="num" title="Tariff rows that day — a jump means the price page grew new tariffs, which usually reshuffles every ranking below.">Models</th><th title="Top Score/mp of that day — the lead can change on a price edit alone, even with identical benchmark scores.">Best score/mp</th><th class="num" title="Change events versus the previous snapshot (added, removed, score, price, quota).">Δ changes</th></tr></thead>
       <tbody>
 <tr>
+        <td><a href="history/2026-09-26.json">2026-09-26</a></td>
+        <td class="num">43</td>
+        <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
+        <td class="num">2</td>
+      </tr>
+<tr>
         <td><a href="history/2026-09-25.json">2026-09-25</a></td>
         <td class="num">43</td>
         <td>DeepSeek V4 Flash (Off-Peak) · 0.109</td>
@@ -1036,12 +1042,16 @@
   <h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
   
   <ul class="chgs">
-      <li class="chg empty">No changes vs 2026-09-24.</li>
+      <li class="chg neu"><b>quota:</b> DeepSeek V4.1 Flash (Off-Peak) $15 → $60</li>
+      <li class="chg neu"><b>quota:</b> DeepSeek V4.1 Flash (Peak) $15 → $60</li>
   </ul>
 </div>
   <div class="chgcard">
   <h2>Recent changes <span class="tt" title="The last days on which something actually changed. Unchanged days are not snapshotted, so a critical event stays listed here until newer changes push it out.">ⓘ</span></h2>
   <ul class="chgs">
+<li class="chg-date">2026-09-26 <span class="sub">vs 2026-09-25</span></li>
+      <li class="chg neu"><b>quota:</b> DeepSeek V4.1 Flash (Off-Peak) $15 → $60</li>
+      <li class="chg neu"><b>quota:</b> DeepSeek V4.1 Flash (Peak) $15 → $60</li>
 <li class="chg-date">2026-09-24 <span class="sub">vs 2026-09-23</span></li>
       <li class="chg neu"><b>+ new tariff:</b> GPT 6 Luna (&gt; 272K tokens)</li>
       <li class="chg neu"><b>+ new tariff:</b> GPT 6 Luna (≤ 272K tokens)</li>
@@ -1060,8 +1070,6 @@
 <li class="chg-date">2026-09-17 <span class="sub">vs 2026-09-16</span></li>
       <li class="chg neu"><b>+ new tariff:</b> Union Alpha Free</li>
       <li class="chg neu"><b>− removed:</b> Union Alpha</li>
-<li class="chg-date">2026-09-16 <span class="sub">vs 2026-09-15</span></li>
-      <li class="chg neu"><b>+ new tariff:</b> Union Alpha</li>
   </ul>
 </div>
 

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T10:47:58.581Z",
+  "updated": "2026-09-26T10:29:37.735Z",
   "snapshots": [
     {
       "date": "2026-09-08",
@@ -112,6 +112,14 @@
       "models": 43,
       "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
       "changes": 0
+    },
+    {
+      "date": "2026-09-26",
+      "file": "history/2026-09-26.json",
+      "generatedAt": "2026-09-26T10:29:37.735Z",
+      "models": 43,
+      "best": "DeepSeek V4 Flash (Off-Peak) · 0.109",
+      "changes": 2
     }
   ]
 }
