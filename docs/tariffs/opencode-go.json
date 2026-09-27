@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-26T10:29:37.735Z",
+  "generatedAt": "2026-09-27T11:00:48.937Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -557,6 +557,17 @@
       "model": "Space Bunny Free",
       "provider": "opencode-go",
       "modelId": "space-bunny-free",
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "quotaUsd": 0,
+      "peakHours": null
+    },
+    {
+      "model": "LongCat 2.5 Preview Free",
+      "provider": "opencode-go",
+      "modelId": "longcat-2.5-preview-free",
       "inputPerM": 0,
       "outputPerM": 0,
       "cacheReadPerM": 0,
