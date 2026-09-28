@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-09-27T11:00:48.937Z",
+  "generatedAt": "2026-09-28T12:20:18.509Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -45,17 +45,6 @@
       "model": "GLM-5.2",
       "provider": "opencode-go",
       "modelId": "glm-5.2",
-      "inputPerM": 1.4,
-      "outputPerM": 4.4,
-      "cacheReadPerM": 0.26,
-      "cacheWritePerM": 0,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
-      "model": "GLM-5.1",
-      "provider": "opencode-go",
-      "modelId": "glm-5.1",
       "inputPerM": 1.4,
       "outputPerM": 4.4,
       "cacheReadPerM": 0.26,
@@ -105,6 +94,17 @@
       "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "LongCat 2.5 Preview Free",
+      "provider": "opencode-go",
+      "modelId": "longcat-2.5-preview-free",
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "quotaUsd": 0,
       "peakHours": null
     },
     {
@@ -174,17 +174,6 @@
       "peakHours": null
     },
     {
-      "model": "MiniMax M2.5",
-      "provider": "opencode-go",
-      "modelId": "minimax-m2.5",
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.06,
-      "cacheWritePerM": 0.375,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
       "model": "Muse Spark 1.3 Contributor",
       "provider": "opencode-go",
       "modelId": "muse-spark-1.3-contributor",
@@ -229,17 +218,6 @@
       "peakHours": null
     },
     {
-      "model": "Qwen3.7 Max",
-      "provider": "opencode-go",
-      "modelId": "qwen3.7-max",
-      "inputPerM": 2.5,
-      "outputPerM": 7.5,
-      "cacheReadPerM": 0.5,
-      "cacheWritePerM": 3.125,
-      "quotaUsd": 30,
-      "peakHours": null
-    },
-    {
       "model": "Qwen3.7 Plus (≤ 256K tokens)",
       "provider": "opencode-go",
       "modelId": "qwen3.7-plus",
@@ -258,28 +236,6 @@
       "outputPerM": 4.8,
       "cacheReadPerM": 0.12,
       "cacheWritePerM": 1.5,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
-      "model": "Qwen3.6 Plus (≤ 256K tokens)",
-      "provider": "opencode-go",
-      "modelId": "qwen3.6-plus",
-      "inputPerM": 0.5,
-      "outputPerM": 3,
-      "cacheReadPerM": 0.05,
-      "cacheWritePerM": 0.625,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
-      "model": "Qwen3.6 Plus (> 256K tokens)",
-      "provider": "opencode-go",
-      "modelId": "qwen3.6-plus",
-      "inputPerM": 2,
-      "outputPerM": 6,
-      "cacheReadPerM": 0.2,
-      "cacheWritePerM": 2.5,
       "quotaUsd": 60,
       "peakHours": null
     },
@@ -557,17 +513,6 @@
       "model": "Space Bunny Free",
       "provider": "opencode-go",
       "modelId": "space-bunny-free",
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "quotaUsd": 0,
-      "peakHours": null
-    },
-    {
-      "model": "LongCat 2.5 Preview Free",
-      "provider": "opencode-go",
-      "modelId": "longcat-2.5-preview-free",
       "inputPerM": 0,
       "outputPerM": 0,
       "cacheReadPerM": 0,
