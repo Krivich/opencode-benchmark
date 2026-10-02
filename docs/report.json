@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-02T11:33:58.659Z",
+  "generatedAt": "2026-10-02T22:06:50.267Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -40,6 +40,10 @@
     "cacheReadShare": 0.9487,
     "monthlySubscriptionUsd": 10,
     "monthlyPoolUsd": 60
+  },
+  "refresh": {
+    "everyHours": 6,
+    "anchorHourUtc": 0
   },
   "rows": [
     {
