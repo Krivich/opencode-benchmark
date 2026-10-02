@@ -31,6 +31,7 @@ No tests, no lint, no typecheck, no formatter configured. The only verification 
 | `docs/benchmarks/<series>/<month>-<year>.json` | Parsed benchmark issues (backfilled on first run) |
 | `docs/benchmarks/<series>/index.json` · `docs/benchmarks/index.json` | Benchmark manifests (per-series + registry) |
 | `docs/tariffs/opencode-go.json` · `docs/tariffs/index.json` | Normalized OpenCode Go tariffs + manifest |
+| `docs/refresh.json` | Refresh heartbeat (`checkedAt`, `everyHours`, `anchorHourUtc`, `generatedAt`) — rewritten every run, the one non-idempotent artifact; the page's freshness indicator reads it |
 | `docs/profiles/measured.json` | Measured session profile (turns + per-turn tokens) + method/sample; the provenance behind the cost formula (hand-maintained, not generated) |
 | `README.md` (auto section) | Rewrites between `<!-- AUTO-DATA -->` markers |
 | `og-image.svg` | Open Graph image |
@@ -57,7 +58,8 @@ Issues of a series are cached forever (first run fetches every one). The NEWEST 
 Every artifact (JSON, HTML, SVG, README auto section) is written only when its **data** actually changed. Volatile timestamps (`updated`/`generatedAt`/`savedAt`) are stripped before the comparison, so a run with identical numbers leaves the working tree byte-identical. The log is the contract:
 - `[write] <file>` — data changed, file rewritten;
 - `[skip] <file> (unchanged)` — same data, file kept as-is;
-- `FATAL: …` — fetch/parse broke (sanityCheck), nothing was touched.
+- `[write] <file> (heartbeat)` — `docs/refresh.json`, the **sole** non-idempotent artifact (OB-DATA-14): rewritten every run so the page can say "checked N ago". Its `checkedAt` is deliberately NOT embedded in `docs/index.html` (that would rewrite the page every run) — the client fetches the file. CI excludes it from the data-change test and commits it on its own;
+- `FATAL: …` — fetch/parse broke (sanityCheck), nothing was touched. A failed run leaves `refresh.json` untouched, so its age grows — that *is* the failure signal, no separate alert needed.
 
 Daily history snapshots are sparse: a day whose report equals the previous snapshot adds **no** new `docs/history/YYYY-MM-DD.json` (the skip is logged). "Top movers" compares the snapshots that exist, and the server-side "Recent changes" timeline (`loadRecentChanges`) lists the last change-bearing snapshots, so an event stays visible after the day it happened.
 
@@ -82,6 +84,6 @@ Everything is fetched live; none of the read-only sources below needs a key.
 - **README auto section** — `<!-- AUTO-DATA -->` and `<!-- /AUTO-DATA -->` markers must exist in `README.md`. Manual text outside these markers is preserved. Do not edit the auto section by hand; it is regenerated.
 - **Windows** — use `npm run pages:win` for the `PAGES=1` env var (`set PAGES=1&& node opencode-benchmark.js`). PowerShell doesn't support inline env vars like Unix shells.
 - **`index.html` in root is gitignored** — only `docs/index.html` is committed. The root copy is for local dev preview.
-- **CI workflow exists** — `.github/workflows/update-pages.yml` runs daily (06:00 UTC) and on `workflow_dispatch`: `npm ci && npm start` with `PAGES=1`, then commits `docs/` + `README.md` back to main. Because writes are idempotent, a run where nothing actually changed leaves `git status` empty and the workflow skips the commit (`no changes — docs are up to date`, no push). `SITE_URL` comes from the repo variable (`vars.SITE_URL`); if empty, the generated HTML uses relative URLs — don't "fix" those by hand, the next CI run would overwrite them.
+- **CI workflow exists** — `.github/workflows/update-pages.yml` runs every 6 h (00/06/12/18 UTC) and on `workflow_dispatch`: `npm ci && npm start` with `PAGES=1`. It then makes two commits: a data commit only when `git status docs README.md` is non-empty **excluding `docs/refresh.json`**, and an always-on `chore: heartbeat` commit for the heartbeat file (OB-DATA-14) — so a no-data-change run still advances the page's "checked N ago". It pushes whenever either commit happened (`nothing to push` when neither did). `SITE_URL` comes from the repo variable (`vars.SITE_URL`); if empty, the generated HTML uses relative URLs — don't "fix" those by hand, the next CI run would overwrite them.
 - **Local fetch may hang** — on some networks `timetoact-group.at` stalls mid-body (HTTP 200, never finishes). If `npm start` dies with `FATAL: terminated`, set `SOCKS=socks5h://127.0.0.1:1080` (or your proxy) and re-run. GitHub runners fetch directly and are unaffected.
 - **Top movers needs old snapshots** — the client-side movers table compares against `docs/history/*.json`; snapshots are sparse (only days whose data changed), and with fewer than two snapshots it shows an empty-state message (no crash).

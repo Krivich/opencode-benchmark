@@ -25,6 +25,7 @@ import { fetchText } from './lib/core/fetch.js';
 import { buildBenchPool } from './lib/core/match.js';
 import {
   sanityCheck, buildReport, reportToJson, detectChanges, writeSnapshot, loadPrevSnapshot, loadRecentChanges,
+  writeRefreshState,
 } from './lib/core/pipeline.js';
 import {
   renderHtml, renderReadmeAuto, reportSchema, OG_IMAGE,
@@ -117,6 +118,10 @@ async function main() {
   const recentChanges = loadRecentChanges(OUT_DIR, snapshots, 5);
 
   // 5. Render the page from the ready data (also serves as the offline renderer).
+  // The heartbeat is written separately (docs/refresh.json) and deliberately NOT embedded
+  // in the HTML: a per-run timestamp in the page would break the byte-identical no-op
+  // contract. The client fetches refresh.json at load time instead.
+  writeRefreshState(OUT_DIR, { generatedAt: full.generatedAt });
   const html = renderHtml(full, { history: snapshots, recentChanges });
 
   writeTextIfChanged(path.join(OUT_DIR, 'index.html'), html);

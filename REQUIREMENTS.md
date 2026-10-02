@@ -41,9 +41,9 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-DATA-08**: Every dataset is public and machine-readable, with manifests (`index.json`); the page links to them with a "free to reuse" note.
 - ✅ **OB-DATA-09**: `docs/report.schema.json` documents `report.json` (and daily snapshots).
 - ⬜ **OB-DATA-10**: A second benchmark series (e.g. one that measures MiMo) can be added so models absent from TIMETOACT are covered.
-- ✅ **OB-DATA-12**: The measured session profile is published as a public artifact (`docs/profiles/measured.json`) with its method, sample size, distribution and reproduce steps — the numbers behind the cost formula are auditable, not buried in a constant.
-- ✅ **OB-DATA-13**: The report states the **real** monthly charge (`session.monthlySubscriptionUsd`, author-reported) beside the **virtual** pool (`monthlyPoolUsd`), so consumers can read `mp` as a share of what is actually billed. The virtual pool is never presented as a price (the hero shows `Plan $10/mo · up to ×6`), and the disclaimer records that $10 is the author's charge, not a scraped list price.
+- ✅ **OB-DATA-12**: The measured session profile is published as a public artifact (`docs/profiles/measured.json`) with its method, sample size, distribution and reproduce steps — the numbers behind the cost formula are auditable, not buried in a constant.- ✅ **OB-DATA-13**: The report states the **real** monthly charge (`session.monthlySubscriptionUsd`, author-reported) beside the **virtual** pool (`monthlyPoolUsd`), so consumers can read `mp` as a share of what is actually billed. The virtual pool is never presented as a price (the hero shows `Plan $10/mo · up to ×6`), and the disclaimer records that $10 is the author's charge, not a scraped list price.
 - ✅ **OB-DATA-11**: Every `report.json` row carries `provider` and the provider's authoritative `modelId`, resolved **only** by exact match against the provider's own model list (`opencode.ai/zen/go/v1/models`, 15s cap). An unresolved name yields `modelId: null` - never a guessed id - and consumers fall back to their own matching (absence is not proof the model is unavailable). On an endpoint outage the last published id per tariff name is kept (no downgrade to null).
+- ✅ **OB-DATA-14**: A refresh heartbeat is published as `docs/refresh.json` (`checkedAt`, `everyHours`, `anchorHourUtc`, plus the report's `generatedAt`). It is written on **every** run — the one deliberate exception to the idempotent-write contract (OB-IDEM-01) — so the page can show a truthful "checked N ago / numbers changed M ago / next check in T" and a stopped pipeline is visible as a stale heartbeat. It carries **no** report data, so it never counts as a data change; after a failed run it stays untouched (age grows), which is exactly the failure signal.
 
 ## Pipeline (OB-PIPE)
 
@@ -61,6 +61,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-IDEM-03**: The log is the contract: `[write] <file>`, `[skip] <file> (unchanged)`, `[skip] <file> (no changes since snapshot …)`, `FATAL: …` — no ambiguous silence.
 - ✅ **OB-IDEM-04**: Daily history snapshots are sparse: a day equal to the previous snapshot adds no new file.
 - ✅ **OB-IDEM-05**: HTML/README embed the preserved `generatedAt` (the last real change), so a no-change run leaves them byte-identical.
+- ✅ **OB-IDEM-06**: `docs/refresh.json` (the heartbeat, OB-DATA-14) is the **sole** exception: it is rewritten every run by design. Its `checkedAt` is deliberately **not** embedded in `docs/index.html` (that would rewrite the page every run); the client fetches the file instead, so every other artifact stays byte-identical on a no-op run. Its write is logged as `[write] … (heartbeat)` and CI excludes it from the data-change test.
 
 ## History & changes (OB-HIST)
 
@@ -84,6 +85,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-RENDER-10**: Every data column header carries a native `title` tooltip (no icons) that explains what the field means and when it matters for the price or for comparing tariffs — an explanation, not a restatement of the label; tooltip texts must not contain double quotes (they are injected into `title="…"`).
 
 - ✅ **OB-RENDER-11**: The headline multiplier column shows the **wallet** multiplier — `walletMultiplier` = quota ÷ actual charge (×6/×3/×1.5, how far the payment stretches in list-price work) — not the vendor's reciprocal (`multiplier` = 60 ÷ quota = 1×/2×/4×), which stays in the data labelled as the vendor scale. Outside the disclaimer and the JSON schema, user-facing copy says "plan", never "pool".
+- ✅ **OB-RENDER-12**: The page shows a freshness indicator (client-side, from `docs/refresh.json`): "checked N ago · numbers changed M ago · next check in T", ticking every 30s. `checked` = last run (heartbeat), `changed` = `generatedAt`, `next check` computed on the UTC schedule grid (`everyHours` + `anchorHourUtc`). The status dot is green within ~1.5 intervals, amber past that, red past 3 — so a stopped updater is visible. With no heartbeat yet (file missing) it degrades to "numbers changed … · next check …".
 
 ## Tariffs parser (OB-PRICE)
 
@@ -100,8 +102,8 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 
 ## CI (OB-CI)
 
-- ✅ **OB-CI-01**: A daily workflow (06:00 UTC) plus manual dispatch runs `npm ci && npm start` with `PAGES=1`.
-- ✅ **OB-CI-02**: The workflow pushes only when `git status` for `docs/` + `README.md` is non-empty; an idempotent run commits nothing.
+- ✅ **OB-CI-01**: A scheduled workflow runs `npm ci && npm start` with `PAGES=1` every 6 hours (00/06/12/18 UTC) plus manual dispatch.
+- ✅ **OB-CI-02**: The workflow commits data only when `git status` for `docs/` + `README.md` is non-empty **excluding `docs/refresh.json`**; the heartbeat is committed on its own `chore: heartbeat` commit even when no data changed. It pushes whenever it has committed anything; an all-`[skip]` data run with an unchanged heartbeat still pushes nothing.
 - ✅ **OB-CI-03**: `SITE_URL` comes from a repository variable; when empty the page uses relative URLs.
 
 ---

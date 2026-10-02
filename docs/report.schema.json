@@ -12,6 +12,7 @@
     "sources",
     "legal",
     "session",
+    "refresh",
     "rows",
     "ranked",
     "changes"
@@ -227,6 +228,28 @@
               }
             }
           }
+        }
+      }
+    },
+    "refresh": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "everyHours",
+        "anchorHourUtc"
+      ],
+      "description": "The refresh cadence the page promises visitors (mirrors the CI cron). The page counts up from generatedAt — the last real change — so idempotent no-change runs never reset the displayed timer.",
+      "properties": {
+        "everyHours": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Hours between scheduled refreshes (matches the CI cron, e.g. 6)."
+        },
+        "anchorHourUtc": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23,
+          "description": "UTC hour the schedule anchors to, so the expected next run lands on the same wall-clock grid as the cron (runs at 00/06/12/18 → 0)."
         }
       }
     },

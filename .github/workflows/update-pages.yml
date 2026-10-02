@@ -10,8 +10,10 @@ name: Update benchmark page
 
 on:
   schedule:
-    # UTC, every day at 06:00. Format: minute hour day month day-of-week
-    - cron: '0 6 * * *'
+    # UTC, every 6 hours (00:00, 06:00, 12:00, 18:00). The change-detection
+    # machinery keeps the tree byte-identical when nothing changed, so most of
+    # these runs fetch and then commit nothing. Format: minute hour day month dow
+    - cron: '0 */6 * * *'
   workflow_dispatch:   # manual run
 
 permissions:
@@ -43,13 +45,32 @@ jobs:
 
       - name: Commit & push if changed
         run: |
-          if [ -z "$(git status --porcelain docs README.md)" ]; then
-            echo "no changes — docs are up to date"
-          else
+          # Data diff = everything under docs/ EXCEPT the heartbeat, which is rewritten
+          # every run by design (see docs/refresh.json) and must never count as "changed".
+          DATA_CHANGED="$(git status --porcelain docs README.md | grep -v 'docs/refresh\.json' || true)"
+          if [ -n "$DATA_CHANGED" ]; then
             git config user.name "opencode-benchmark bot"
             git config user.email "actions@users.noreply.github.com"
             git add docs README.md
             git commit -m "chore: refresh benchmark page ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+            echo "docs updated"
+          else
+            echo "no data changes — only heartbeat (if any)"
+          fi
+
+          # Heartbeat is committed on its own even when no data changed, so the page can
+          # show a truthful "checked N ago" and a stopped pipeline visibly goes stale.
+          git add -f docs/refresh.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git config user.name "opencode-benchmark bot"
+            git config user.email "actions@users.noreply.github.com"
+            git commit -m "chore: heartbeat ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+            echo "heartbeat updated"
+          fi
+
+          if [ -n "$(git log origin/main..HEAD)" ]; then
             git push
-            echo "docs updated and pushed"
+            echo "pushed"
+          else
+            echo "nothing to push — docs are up to date"
           fi
