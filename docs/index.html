@@ -46,6 +46,13 @@
     .tagline { color: #bbb; }
   }
   .sub { color: #666; margin: 0 0 20px; font-size: 0.9rem; }
+  /* Refresh/metadata footnote: a left rule (asides in articles) so the block reads as
+     secondary to the headline copy and does not compete with it. Inner margins reset. */
+  .meta { border-left: 3px solid #e3e3e3; padding: 2px 0 2px 14px; margin: 0 0 18px; }
+  .meta .sub { margin: 0 0 6px; font-size: 0.82rem; }
+  .meta .sub:last-child { margin-bottom: 0; }
+  .meta .datalinks { margin: 0; }
+  .meta .fresh { margin-top: 0; }
   .fresh { display: flex; align-items: center; gap: 7px; margin-top: -12px; }
   .fresh .dot { width: 8px; height: 8px; border-radius: 50%; background: #0a7d32; flex: 0 0 auto; }
   .fresh.stale .dot { background: #b26a00; }
@@ -54,6 +61,7 @@
     .fresh .dot { background: #4ade80; }
     .fresh.stale .dot { background: #fb923c; }
     .fresh.old .dot { background: #f87171; }
+    .meta { border-color: #333; }
   }
   .datalinks { font-size: 0.82rem; color: #888; margin: -12px 0 16px; }
   .datalinks a { color: #2563eb; }
@@ -166,22 +174,24 @@
       <h1>Which <span class="brand">OpenCode Go</span> model gets you the most for your money?</h1>
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what one
         average task actually costs — a full session (~147 turns), not a single request — and how smart each model is.</p>
-      <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
-        Updated: <time datetime="2026-10-03T03:52:55.655Z">10/3/2026, 3:52:55 AM</time></p>
-      <p class="sub fresh" id="fresh"
-        data-changed="2026-10-03T03:52:55.655Z"
-        data-every="6"
-        data-anchor="0"
-        title="The page is rebuilt on a schedule. 'Checked' is when the updater last ran (even with no data changes); 'numbers changed' is when the values actually moved; 'next check' is the next scheduled run. A stale 'checked' means the updater is not running.">
-        <span class="dot" aria-hidden="true"></span>
-        <span id="fresh-age">…</span>
-      </p>
+      <div class="meta">
+        <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
+          Updated: <time datetime="2026-10-03T03:52:55.655Z">10/3/2026, 6:52:55 AM</time></p>
+        <p class="sub fresh" id="fresh"
+          data-changed="2026-10-03T03:52:55.655Z"
+          data-every="6"
+          data-anchor="0"
+          title="The page is rebuilt on a schedule. 'Checked' is when the updater last ran (even with no data changes); 'numbers changed' is when the values actually moved; 'next check' is the next scheduled run. A stale 'checked' means the updater is not running.">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="fresh-age">…</span>
+        </p>
 
-      <p class="datalinks">Data:
-        <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
-        <a href="tariffs/index.json">tariffs/</a> · <a href="benchmarks/index.json">benchmarks/</a> —
-        raw normalized datasets, free to reuse ·
-        <a href="history/index.json">history/index.json</a> — daily snapshots with change diffs</p>
+        <p class="datalinks">Data:
+          <a href="report.json">report.json</a> — full export (<a href="report.schema.json">JSON Schema</a>) ·
+          <a href="tariffs/index.json">tariffs/</a> · <a href="benchmarks/index.json">benchmarks/</a> —
+          raw normalized datasets, free to reuse ·
+          <a href="history/index.json">history/index.json</a> — daily snapshots with change diffs</p>
+      </div>
 
       <p class="intro">Picking a model on OpenCode Go means solving a billing puzzle, not an AI one.
         Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into
