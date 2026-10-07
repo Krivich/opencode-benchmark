@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-06T12:47:11.806Z",
+  "generatedAt": "2026-10-07T22:44:33.379Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -605,6 +605,28 @@
       "outputPerM": 1.8,
       "cacheReadPerM": 0.04,
       "cacheWritePerM": 0.5,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Claude Haiku 5.5 (≤ 100K tokens)",
+      "provider": "opencode-go",
+      "modelId": null,
+      "inputPerM": 0.1,
+      "outputPerM": 0.5,
+      "cacheReadPerM": 0.01,
+      "cacheWritePerM": 0.125,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Claude Haiku 5.5 (> 100K tokens)",
+      "provider": "opencode-go",
+      "modelId": null,
+      "inputPerM": 0.5,
+      "outputPerM": 2.5,
+      "cacheReadPerM": 0.05,
+      "cacheWritePerM": 0.625,
       "quotaUsd": 15,
       "peakHours": null
     }

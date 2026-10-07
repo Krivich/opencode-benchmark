@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-07T04:25:49.933Z",
+  "generatedAt": "2026-10-07T22:44:33.379Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -179,6 +179,34 @@
       }
     },
     {
+      "model": "Claude Haiku 5.5 (≤ 100K tokens)",
+      "provider": "opencode-go",
+      "modelId": null,
+      "score": 90,
+      "priceUsdPerSession": 0.316089,
+      "mpPerSession": 2107.26,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "walletMultiplier": 1.5,
+      "sessionsPerMonth": 47,
+      "inputPerM": 0.1,
+      "outputPerM": 0.5,
+      "cacheReadPerM": 0.01,
+      "cacheWritePerM": 0.125,
+      "costSplit": {
+        "input": 0.2627,
+        "cacheRead": 0.56,
+        "cacheWrite": 0.008,
+        "output": 0.1693
+      },
+      "matchedBenchmarkName": "Claude Fable 5 (reasoning max) ☁️ ⏳",
+      "similarity": 0.625,
+      "tier": "AMBIG",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "DeepSeek V4 Flash Vision Exp (Peak)",
       "provider": "opencode-go",
       "modelId": "deepseek-v4-flash-vision-exp",
@@ -306,6 +334,34 @@
       "matchedBenchmarkName": "GLM 5.2 ✅ ⏳",
       "similarity": 1,
       "tier": "OK",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
+      "model": "Claude Haiku 5.5 (> 100K tokens)",
+      "provider": "opencode-go",
+      "modelId": null,
+      "score": 90,
+      "priceUsdPerSession": 1.580445,
+      "mpPerSession": 10536.3,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "walletMultiplier": 1.5,
+      "sessionsPerMonth": 9,
+      "inputPerM": 0.5,
+      "outputPerM": 2.5,
+      "cacheReadPerM": 0.05,
+      "cacheWritePerM": 0.625,
+      "costSplit": {
+        "input": 0.2627,
+        "cacheRead": 0.56,
+        "cacheWrite": 0.008,
+        "output": 0.1693
+      },
+      "matchedBenchmarkName": "Claude Fable 5 (reasoning max) ☁️ ⏳",
+      "similarity": 0.625,
+      "tier": "AMBIG",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
       "peakHours": null
@@ -1389,6 +1445,19 @@
   "changes": {
     "vs": "2026-10-06",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "Claude Haiku 5.5 (> 100K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "Claude Haiku 5.5 (≤ 100K tokens)",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
