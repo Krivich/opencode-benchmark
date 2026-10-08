@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-08T04:37:04.530Z",
+  "generatedAt": "2026-10-08T22:55:32.664Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1348,6 +1348,29 @@
       "benchmarkIssue": null,
       "benchmarkFallback": false,
       "peakHours": null
+    },
+    {
+      "model": "Step 5 Preview Free",
+      "provider": "opencode-go",
+      "modelId": "step-5-preview-free",
+      "score": null,
+      "priceUsdPerSession": 0,
+      "mpPerSession": null,
+      "quotaUsd": 0,
+      "multiplier": null,
+      "walletMultiplier": null,
+      "sessionsPerMonth": null,
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "costSplit": null,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
     }
   ],
   "ranked": [
@@ -1445,6 +1468,13 @@
   "changes": {
     "vs": "2026-10-07",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "Step 5 Preview Free",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
