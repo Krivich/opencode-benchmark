@@ -2,7 +2,7 @@
   "source": {
     "provider": "opencode-go",
     "title": "OpenCode Go tariff prices and quotas",
-    "url": "https://opencode.ai/docs/en/go",
+    "url": "https://opencode.ai/v2/docs/console/go/",
     "publisher": "OpenCode"
   },
   "session": {
@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-08T22:55:32.664Z",
+  "generatedAt": "2026-10-13T08:42:15.950Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -258,7 +258,7 @@
       "outputPerM": 0.6,
       "cacheReadPerM": 0.003,
       "cacheWritePerM": 0,
-      "quotaUsd": 60,
+      "quotaUsd": 80,
       "peakHours": {
         "tz": "UTC",
         "days": [
@@ -289,7 +289,7 @@
       "outputPerM": 1.2,
       "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
-      "quotaUsd": 60,
+      "quotaUsd": 80,
       "peakHours": {
         "tz": "UTC",
         "days": [

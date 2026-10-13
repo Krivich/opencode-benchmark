@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-12T04:26:24.115Z",
+  "generatedAt": "2026-10-13T08:42:15.950Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -10,7 +10,7 @@
   "sources": {
     "pricing": {
       "title": "OpenCode Go tariff prices and quotas",
-      "url": "https://opencode.ai/docs/en/go",
+      "url": "https://opencode.ai/v2/docs/console/go/",
       "publisher": "OpenCode"
     },
     "benchmark": {
@@ -839,6 +839,54 @@
       "peakHours": null
     },
     {
+      "model": "DeepSeek V4.1 Flash (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "score": null,
+      "priceUsdPerSession": 0.241877,
+      "mpPerSession": 302.35,
+      "quotaUsd": 80,
+      "multiplier": 0.75,
+      "walletMultiplier": 8,
+      "sessionsPerMonth": 330,
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
       "model": "MiMo-V2.6-Flash",
       "provider": "opencode-go",
       "modelId": "mimo-v2.6-flash",
@@ -895,19 +943,19 @@
       "peakHours": null
     },
     {
-      "model": "DeepSeek V4.1 Flash (Off-Peak)",
+      "model": "DeepSeek V4.1 Flash (Peak)",
       "provider": "opencode-go",
       "modelId": "deepseek-v4.1-flash",
       "score": null,
-      "priceUsdPerSession": 0.241877,
-      "mpPerSession": 403.13,
-      "quotaUsd": 60,
-      "multiplier": 1,
-      "walletMultiplier": 6,
-      "sessionsPerMonth": 248,
-      "inputPerM": 0.15,
-      "outputPerM": 0.6,
-      "cacheReadPerM": 0.003,
+      "priceUsdPerSession": 0.483754,
+      "mpPerSession": 604.69,
+      "quotaUsd": 80,
+      "multiplier": 0.75,
+      "walletMultiplier": 8,
+      "sessionsPerMonth": 165,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
       "costSplit": {
         "input": 0.515,
@@ -969,54 +1017,6 @@
       "benchmarkIssue": null,
       "benchmarkFallback": false,
       "peakHours": null
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": null,
-      "priceUsdPerSession": 0.483754,
-      "mpPerSession": 806.26,
-      "quotaUsd": 60,
-      "multiplier": 1,
-      "walletMultiplier": 6,
-      "sessionsPerMonth": 124,
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
     },
     {
       "model": "Qwen3.8 Flash",
@@ -1466,8 +1466,21 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-11",
+    "vs": "2026-10-12",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "quota",
+        "model": "DeepSeek V4.1 Flash (Off-Peak)",
+        "from": 60,
+        "to": 80
+      },
+      {
+        "kind": "quota",
+        "model": "DeepSeek V4.1 Flash (Peak)",
+        "from": 60,
+        "to": 80
+      }
+    ]
   }
 }
