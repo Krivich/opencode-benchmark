@@ -42,7 +42,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 - ✅ **OB-DATA-09**: `docs/report.schema.json` documents `report.json` (and daily snapshots).
 - ⬜ **OB-DATA-10**: A second benchmark series (e.g. one that measures MiMo) can be added so models absent from TIMETOACT are covered.
 - ✅ **OB-DATA-12**: The measured session profile is published as a public artifact (`docs/profiles/measured.json`) with its method, sample size, distribution and reproduce steps — the numbers behind the cost formula are auditable, not buried in a constant.- ✅ **OB-DATA-13**: The report states the **real** monthly charge (`session.monthlySubscriptionUsd`, author-reported) beside the **virtual** pool (`monthlyPoolUsd`), so consumers can read `mp` as a share of what is actually billed. The virtual pool is never presented as a price (the hero shows `Plan $10/mo · up to ×6`), and the disclaimer records that $10 is the author's charge, not a scraped list price.
-- ✅ **OB-DATA-11**: Every `report.json` row carries `provider` and the provider's authoritative `modelId`, resolved **only** by exact match against the provider's own model list (`opencode.ai/zen/go/v1/models`, 15s cap). An unresolved name yields `modelId: null` - never a guessed id - and consumers fall back to their own matching (absence is not proof the model is unavailable). On an endpoint outage the last published id per tariff name is kept (no downgrade to null).
+- ✅ **OB-DATA-11**: Every `report.json` row carries `provider` and the provider's authoritative `modelId`, resolved **only** by exact match against the provider's own model list (`opencode.ai/inference/go/v1/models`, 15s cap). An unresolved name yields `modelId: null` - never a guessed id - and consumers fall back to their own matching (absence is not proof the model is unavailable). On an endpoint outage the last published id per tariff name is kept (no downgrade to null).
 - ✅ **OB-DATA-14**: A refresh heartbeat is published as `docs/refresh.json` (`checkedAt`, `everyHours`, `anchorHourUtc`, plus the report's `generatedAt`). It is written on **every** run — the one deliberate exception to the idempotent-write contract (OB-IDEM-01) — so the page can show a truthful "checked N ago / numbers changed M ago / next check in T" and a stopped pipeline is visible as a stale heartbeat. It carries **no** report data, so it never counts as a data change; after a failed run it stays untouched (age grows), which is exactly the failure signal.
 
 ## Pipeline (OB-PIPE)
@@ -89,7 +89,7 @@ idempotent re-run (second run must log `0 writes`, all `[skip]`).
 
 ## Tariffs parser (OB-PRICE)
 
-- ✅ **OB-PRICE-01**: Parse the Go price table (Model / Input / Output / Cached Read / Cached Write / Usage).
+- ✅ **OB-PRICE-01**: Parse the Go price table (Model / Input / Output / Cached Read / Cached Write / Monthly limit). The page now carries a Go **and** a Go Plus panel behind a tab; we take the first (Go) table.
 - ✅ **OB-PRICE-02**: Parse Peak/Off-Peak notes (model list, UTC hour windows, optional weekday range) and attach them to the matching tariff rows.
 - ✅ **OB-PRICE-03**: `npm run price:fetch` refreshes only `docs/tariffs/` (flags `--dir`, `--stdout`).
 - ✅ **OB-PRICE-04**: The quota cell is parsed from its **first `$` amount** — a promo cell like `$15 $60 4x · Ends Sep 20` yields the standing base limit (`15`), never a digit-concatenation (`15604`). `Unlimited`/`Free`/`-` yield `0`.
