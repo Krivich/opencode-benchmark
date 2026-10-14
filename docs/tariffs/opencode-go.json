@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-13T08:42:15.950Z",
+  "generatedAt": "2026-10-14T03:37:46.299Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -111,6 +111,17 @@
       "model": "Step 5 Preview Free",
       "provider": "opencode-go",
       "modelId": "step-5-preview-free",
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "quotaUsd": 0,
+      "peakHours": null
+    },
+    {
+      "model": "Cat Jam Free",
+      "provider": "opencode-go",
+      "modelId": "cat-jam-free",
       "inputPerM": 0,
       "outputPerM": 0,
       "cacheReadPerM": 0,
