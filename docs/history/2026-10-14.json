@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-14T03:37:46.299Z",
+  "generatedAt": "2026-10-14T11:14:24.742Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -131,54 +131,6 @@
       "peakHours": null
     },
     {
-      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash-vision-exp",
-      "score": 90,
-      "priceUsdPerSession": 0.241877,
-      "mpPerSession": 1612.51,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 62,
-      "inputPerM": 0.15,
-      "outputPerM": 0.6,
-      "cacheReadPerM": 0.003,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
       "model": "Claude Haiku 5.5 (≤ 100K tokens)",
       "provider": "opencode-go",
       "modelId": null,
@@ -205,54 +157,6 @@
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
       "peakHours": null
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash-vision-exp",
-      "score": 90,
-      "priceUsdPerSession": 0.483754,
-      "mpPerSession": 3225.03,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 31,
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": "DeepSeek V4 Flash Vision Exp (reasoning low) ⚠️",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
     },
     {
       "model": "GPT 5.6 Luna (≤ 272K tokens)",
@@ -367,16 +271,16 @@
       "peakHours": null
     },
     {
-      "model": "DeepSeek V4 Flash (Off-Peak)",
+      "model": "DeepSeek V4.1 Flash (Off-Peak)",
       "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash",
+      "modelId": "deepseek-v4.1-flash",
       "score": 88,
       "priceUsdPerSession": 0.241877,
-      "mpPerSession": 806.26,
-      "quotaUsd": 30,
-      "multiplier": 2,
-      "walletMultiplier": 3,
-      "sessionsPerMonth": 124,
+      "mpPerSession": 302.35,
+      "quotaUsd": 80,
+      "multiplier": 0.75,
+      "walletMultiplier": 8,
+      "sessionsPerMonth": 330,
       "inputPerM": 0.15,
       "outputPerM": 0.6,
       "cacheReadPerM": 0.003,
@@ -388,7 +292,7 @@
         "output": 0.2655
       },
       "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
-      "similarity": 1,
+      "similarity": 0.895,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
@@ -415,16 +319,16 @@
       }
     },
     {
-      "model": "DeepSeek V4 Flash (Peak)",
+      "model": "DeepSeek V4.1 Flash (Peak)",
       "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash",
+      "modelId": "deepseek-v4.1-flash",
       "score": 88,
       "priceUsdPerSession": 0.483754,
-      "mpPerSession": 1612.51,
-      "quotaUsd": 30,
-      "multiplier": 2,
-      "walletMultiplier": 3,
-      "sessionsPerMonth": 62,
+      "mpPerSession": 604.69,
+      "quotaUsd": 80,
+      "multiplier": 0.75,
+      "walletMultiplier": 8,
+      "sessionsPerMonth": 165,
       "inputPerM": 0.3,
       "outputPerM": 1.2,
       "cacheReadPerM": 0.006,
@@ -436,7 +340,7 @@
         "output": 0.2655
       },
       "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
-      "similarity": 1,
+      "similarity": 0.895,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
@@ -544,27 +448,7 @@
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
+      "peakHours": null
     },
     {
       "model": "DeepSeek V4 Pro (Peak)",
@@ -592,27 +476,7 @@
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
+      "peakHours": null
     },
     {
       "model": "Kimi K3",
@@ -839,54 +703,6 @@
       "peakHours": null
     },
     {
-      "model": "DeepSeek V4.1 Flash (Off-Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": null,
-      "priceUsdPerSession": 0.241877,
-      "mpPerSession": 302.35,
-      "quotaUsd": 80,
-      "multiplier": 0.75,
-      "walletMultiplier": 8,
-      "sessionsPerMonth": 330,
-      "inputPerM": 0.15,
-      "outputPerM": 0.6,
-      "cacheReadPerM": 0.003,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
       "model": "MiMo-V2.6-Flash",
       "provider": "opencode-go",
       "modelId": "mimo-v2.6-flash",
@@ -941,54 +757,6 @@
       "benchmarkIssue": null,
       "benchmarkFallback": false,
       "peakHours": null
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": null,
-      "priceUsdPerSession": 0.483754,
-      "mpPerSession": 604.69,
-      "quotaUsd": 80,
-      "multiplier": 0.75,
-      "walletMultiplier": 8,
-      "sessionsPerMonth": 165,
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
     },
     {
       "model": "LongCat-2.0",
@@ -1243,6 +1011,34 @@
       "peakHours": null
     },
     {
+      "model": "Gemini 4 Argon Contributor",
+      "provider": "opencode-go",
+      "modelId": "gemini-4-argon-contributor",
+      "score": null,
+      "priceUsdPerSession": 9.002398,
+      "mpPerSession": 30007.99,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "walletMultiplier": 3,
+      "sessionsPerMonth": 3,
+      "inputPerM": 4,
+      "outputPerM": 20,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.369,
+        "cacheRead": 0.3933,
+        "cacheWrite": 0,
+        "output": 0.2377
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "GLM-5.3",
       "provider": "opencode-go",
       "modelId": "glm-5.3",
@@ -1398,10 +1194,16 @@
   ],
   "ranked": [
     {
-      "model": "DeepSeek V4 Flash (Off-Peak)",
+      "model": "DeepSeek V4.1 Flash (Off-Peak)",
       "score": 88,
-      "mpPerSession": 806.3,
-      "scorePerMp": 0.109
+      "mpPerSession": 302.3,
+      "scorePerMp": 0.291
+    },
+    {
+      "model": "DeepSeek V4.1 Flash (Peak)",
+      "score": 88,
+      "mpPerSession": 604.7,
+      "scorePerMp": 0.146
     },
     {
       "model": "GLM-5.3-Flash",
@@ -1414,18 +1216,6 @@
       "score": 79,
       "mpPerSession": 1329.8,
       "scorePerMp": 0.059
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
-      "score": 90,
-      "mpPerSession": 1612.5,
-      "scorePerMp": 0.056
-    },
-    {
-      "model": "DeepSeek V4 Flash (Peak)",
-      "score": 88,
-      "mpPerSession": 1612.5,
-      "scorePerMp": 0.055
     },
     {
       "model": "Qwen3.7 Plus (≤ 256K tokens)",
@@ -1444,12 +1234,6 @@
       "score": 76,
       "mpPerSession": 2399.5,
       "scorePerMp": 0.032
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
-      "score": 90,
-      "mpPerSession": 3225,
-      "scorePerMp": 0.028
     },
     {
       "model": "GPT 5.6 Luna (≤ 272K tokens)",
@@ -1486,6 +1270,18 @@
       "score": 90,
       "mpPerSession": 10393.4,
       "scorePerMp": 0.009
+    },
+    {
+      "model": "DeepSeek V4 Pro (Peak)",
+      "score": 88,
+      "mpPerSession": 15325.5,
+      "scorePerMp": 0.006
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "score": 91,
+      "mpPerSession": 45192.2,
+      "scorePerMp": 0.002
     }
   ],
   "changes": {
@@ -1493,8 +1289,50 @@
     "benchmarkIssueChanged": false,
     "items": [
       {
+        "kind": "score",
+        "model": "DeepSeek V4.1 Flash (Off-Peak)",
+        "from": null,
+        "to": 88
+      },
+      {
+        "kind": "score",
+        "model": "DeepSeek V4.1 Flash (Peak)",
+        "from": null,
+        "to": 88
+      },
+      {
         "kind": "added",
         "model": "Cat Jam Free",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "Gemini 4 Argon Contributor",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "DeepSeek V4 Flash (Off-Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "DeepSeek V4 Flash (Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "DeepSeek V4 Flash Vision Exp (Peak)",
         "from": null,
         "to": null
       }

@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-14T03:37:46.299Z",
+  "generatedAt": "2026-10-14T11:14:24.742Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -332,27 +332,7 @@
       "cacheReadPerM": 0.022,
       "cacheWritePerM": 0,
       "quotaUsd": 15,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
+      "peakHours": null
     },
     {
       "model": "DeepSeek V4 Pro (Peak)",
@@ -363,151 +343,7 @@
       "cacheReadPerM": 0.044,
       "cacheWritePerM": 0,
       "quotaUsd": 15,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "model": "DeepSeek V4 Flash (Off-Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash",
-      "inputPerM": 0.15,
-      "outputPerM": 0.6,
-      "cacheReadPerM": 0.003,
-      "cacheWritePerM": 0,
-      "quotaUsd": 30,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "model": "DeepSeek V4 Flash (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash",
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "quotaUsd": 30,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash-vision-exp",
-      "inputPerM": 0.15,
-      "outputPerM": 0.6,
-      "cacheReadPerM": 0.003,
-      "cacheWritePerM": 0,
-      "quotaUsd": 15,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "model": "DeepSeek V4 Flash Vision Exp (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4-flash-vision-exp",
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "quotaUsd": 15,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
+      "peakHours": null
     },
     {
       "model": "Hy4 preview",
@@ -650,6 +486,17 @@
       "cacheReadPerM": 0.05,
       "cacheWritePerM": 0.625,
       "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "Gemini 4 Argon Contributor",
+      "provider": "opencode-go",
+      "modelId": "gemini-4-argon-contributor",
+      "inputPerM": 4,
+      "outputPerM": 20,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 0,
+      "quotaUsd": 30,
       "peakHours": null
     }
   ]
