@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-14T11:14:24.742Z",
+  "generatedAt": "2026-10-15T03:17:59.927Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1285,57 +1285,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-13",
+    "vs": "2026-10-14",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "score",
-        "model": "DeepSeek V4.1 Flash (Off-Peak)",
-        "from": null,
-        "to": 88
-      },
-      {
-        "kind": "score",
-        "model": "DeepSeek V4.1 Flash (Peak)",
-        "from": null,
-        "to": 88
-      },
-      {
-        "kind": "added",
-        "model": "Cat Jam Free",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "Gemini 4 Argon Contributor",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "DeepSeek V4 Flash (Off-Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "DeepSeek V4 Flash (Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "DeepSeek V4 Flash Vision Exp (Off-Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "DeepSeek V4 Flash Vision Exp (Peak)",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
