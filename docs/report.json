@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-16T10:44:37.407Z",
+  "generatedAt": "2026-10-16T16:07:30.315Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1062,9 +1062,9 @@
       "peakHours": null
     },
     {
-      "model": "Cat Jam Free",
+      "model": "Beam Free",
       "provider": "opencode-go",
-      "modelId": "cat-jam-free",
+      "modelId": "beam-free",
       "score": null,
       "priceUsdPerSession": 0,
       "mpPerSession": null,
@@ -1177,7 +1177,19 @@
     "items": [
       {
         "kind": "added",
+        "model": "Beam Free",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
         "model": "Step 5 Preview",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Cat Jam Free",
         "from": null,
         "to": null
       },

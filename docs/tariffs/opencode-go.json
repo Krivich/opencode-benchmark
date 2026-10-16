@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-16T10:44:37.407Z",
+  "generatedAt": "2026-10-16T16:07:30.315Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -108,9 +108,9 @@
       "peakHours": null
     },
     {
-      "model": "Cat Jam Free",
+      "model": "Beam Free",
       "provider": "opencode-go",
-      "modelId": "cat-jam-free",
+      "modelId": "beam-free",
       "inputPerM": 0,
       "outputPerM": 0,
       "cacheReadPerM": 0,
