@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-16T03:13:51.975Z",
+  "generatedAt": "2026-10-16T10:44:37.407Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -70,17 +70,6 @@
       "inputPerM": 0.95,
       "outputPerM": 4,
       "cacheReadPerM": 0.19,
-      "cacheWritePerM": 0,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
-      "model": "Kimi K2.6",
-      "provider": "opencode-go",
-      "modelId": "kimi-k2.6",
-      "inputPerM": 0.95,
-      "outputPerM": 4,
-      "cacheReadPerM": 0.16,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
       "peakHours": null
@@ -181,17 +170,6 @@
       "outputPerM": 1.2,
       "cacheReadPerM": 0.06,
       "cacheWritePerM": 0,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
-      "model": "MiniMax M2.7",
-      "provider": "opencode-go",
-      "modelId": "minimax-m2.7",
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.06,
-      "cacheWritePerM": 0.375,
       "quotaUsd": 60,
       "peakHours": null
     },
@@ -393,28 +371,6 @@
       "model": "Grok 4.7 (> 200K tokens)",
       "provider": "opencode-go",
       "modelId": "grok-4.7",
-      "inputPerM": 4,
-      "outputPerM": 12,
-      "cacheReadPerM": 1,
-      "cacheWritePerM": 0,
-      "quotaUsd": 15,
-      "peakHours": null
-    },
-    {
-      "model": "Grok 4.6 (≤ 200K tokens)",
-      "provider": "opencode-go",
-      "modelId": "grok-4.6",
-      "inputPerM": 2,
-      "outputPerM": 6,
-      "cacheReadPerM": 0.5,
-      "cacheWritePerM": 0,
-      "quotaUsd": 15,
-      "peakHours": null
-    },
-    {
-      "model": "Grok 4.6 (> 200K tokens)",
-      "provider": "opencode-go",
-      "modelId": "grok-4.6",
       "inputPerM": 4,
       "outputPerM": 12,
       "cacheReadPerM": 1,

@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-16T03:13:51.975Z",
+  "generatedAt": "2026-10-16T10:44:37.407Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -46,62 +46,6 @@
     "anchorHourUtc": 0
   },
   "rows": [
-    {
-      "model": "Grok 4.6 (≤ 200K tokens)",
-      "provider": "opencode-go",
-      "modelId": "grok-4.6",
-      "score": 94,
-      "priceUsdPerSession": 11.154066,
-      "mpPerSession": 74360.44,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 1,
-      "inputPerM": 2,
-      "outputPerM": 6,
-      "cacheReadPerM": 0.5,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.1489,
-        "cacheRead": 0.7935,
-        "cacheWrite": 0,
-        "output": 0.0576
-      },
-      "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "Grok 4.6 (> 200K tokens)",
-      "provider": "opencode-go",
-      "modelId": "grok-4.6",
-      "score": 94,
-      "priceUsdPerSession": 22.308132,
-      "mpPerSession": 148720.88,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 0,
-      "inputPerM": 4,
-      "outputPerM": 12,
-      "cacheReadPerM": 1,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.1489,
-        "cacheRead": 0.7935,
-        "cacheWrite": 0,
-        "output": 0.0576
-      },
-      "matchedBenchmarkName": "Grok 4.6 (reasoning medium) ⚠️",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
     {
       "model": "Qwen3.8 Max",
       "provider": "opencode-go",
@@ -535,34 +479,6 @@
       "peakHours": null
     },
     {
-      "model": "MiniMax M2.7",
-      "provider": "opencode-go",
-      "modelId": "minimax-m2.7",
-      "score": 81,
-      "priceUsdPerSession": 1.447232,
-      "mpPerSession": 2412.05,
-      "quotaUsd": 60,
-      "multiplier": 1,
-      "walletMultiplier": 6,
-      "sessionsPerMonth": 41,
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.06,
-      "cacheWritePerM": 0.375,
-      "costSplit": {
-        "input": 0.1721,
-        "cacheRead": 0.7339,
-        "cacheWrite": 0.0052,
-        "output": 0.0887
-      },
-      "matchedBenchmarkName": "MiniMax M2.7 ⚠️ ⏳",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
       "model": "Hy3",
       "provider": "opencode-go",
       "modelId": "hy3",
@@ -612,34 +528,6 @@
         "output": 0.0892
       },
       "matchedBenchmarkName": "MiniMax M3 ⚠️ ⏳",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "Kimi K2.6",
-      "provider": "opencode-go",
-      "modelId": "kimi-k2.6",
-      "score": 76,
-      "priceUsdPerSession": 4.049319,
-      "mpPerSession": 6748.87,
-      "quotaUsd": 60,
-      "multiplier": 1,
-      "walletMultiplier": 6,
-      "sessionsPerMonth": 14,
-      "inputPerM": 0.95,
-      "outputPerM": 4,
-      "cacheReadPerM": 0.16,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.1948,
-        "cacheRead": 0.6995,
-        "cacheWrite": 0,
-        "output": 0.1057
-      },
-      "matchedBenchmarkName": "Kimi K2.6 ⚠️ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
@@ -1229,12 +1117,6 @@
       "scorePerMp": 0.043
     },
     {
-      "model": "MiniMax M2.7",
-      "score": 81,
-      "mpPerSession": 2412.1,
-      "scorePerMp": 0.034
-    },
-    {
       "model": "MiniMax M3",
       "score": 76,
       "mpPerSession": 2399.5,
@@ -1256,12 +1138,6 @@
       "model": "DeepSeek V4 Pro (Off-Peak)",
       "score": 88,
       "mpPerSession": 7662.7,
-      "scorePerMp": 0.011
-    },
-    {
-      "model": "Kimi K2.6",
-      "score": 76,
-      "mpPerSession": 6748.9,
       "scorePerMp": 0.011
     },
     {
@@ -1287,6 +1163,12 @@
       "score": 91,
       "mpPerSession": 45192.2,
       "scorePerMp": 0.002
+    },
+    {
+      "model": "Kimi K3",
+      "score": 88,
+      "mpPerSession": 62714.3,
+      "scorePerMp": 0.001
     }
   ],
   "changes": {
@@ -1296,6 +1178,30 @@
       {
         "kind": "added",
         "model": "Step 5 Preview",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Grok 4.6 (> 200K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Grok 4.6 (≤ 200K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Kimi K2.6",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "MiniMax M2.7",
         "from": null,
         "to": null
       },
