@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-16T16:07:30.315Z",
+  "generatedAt": "2026-10-17T03:04:51.142Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1172,57 +1172,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-15",
+    "vs": "2026-10-16",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "Beam Free",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "Step 5 Preview",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Cat Jam Free",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Grok 4.6 (> 200K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Grok 4.6 (≤ 200K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Kimi K2.6",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiniMax M2.7",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Step 5 Preview Free",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
