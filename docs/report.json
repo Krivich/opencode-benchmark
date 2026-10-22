@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-22T03:23:14.707Z",
+  "generatedAt": "2026-10-22T16:40:00.854Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -731,6 +731,34 @@
       "peakHours": null
     },
     {
+      "model": "MiniMax M3.1 Flash",
+      "provider": "opencode-go",
+      "modelId": "minimax-m3.1-flash",
+      "score": null,
+      "priceUsdPerSession": 0.454305,
+      "mpPerSession": 2271.52,
+      "quotaUsd": 20,
+      "multiplier": 3,
+      "walletMultiplier": 2,
+      "sessionsPerMonth": 44,
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.015,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.2742,
+        "cacheRead": 0.5845,
+        "cacheWrite": 0,
+        "output": 0.1413
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "MiMo-V2.6-Pro",
       "provider": "opencode-go",
       "modelId": "mimo-v2.6-pro",
@@ -1055,29 +1083,6 @@
       "benchmarkIssue": null,
       "benchmarkFallback": false,
       "peakHours": null
-    },
-    {
-      "model": "MiniMax M3.1 Flash Free",
-      "provider": "opencode-go",
-      "modelId": "minimax-m3.1-flash-free",
-      "score": null,
-      "priceUsdPerSession": 0,
-      "mpPerSession": null,
-      "quotaUsd": 0,
-      "multiplier": null,
-      "walletMultiplier": null,
-      "sessionsPerMonth": null,
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "costSplit": null,
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
     }
   ],
   "ranked": [
@@ -1169,6 +1174,19 @@
   "changes": {
     "vs": "2026-10-21",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "MiniMax M3.1 Flash",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "MiniMax M3.1 Flash Free",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
