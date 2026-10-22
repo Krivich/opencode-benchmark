@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-21T03:23:59.862Z",
+  "generatedAt": "2026-10-22T03:23:14.707Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1013,7 +1013,7 @@
     {
       "model": "LongCat 2.5 Preview Free",
       "provider": "opencode-go",
-      "modelId": "longcat-2.5-preview-free",
+      "modelId": null,
       "score": null,
       "priceUsdPerSession": 0,
       "mpPerSession": null,
@@ -1167,7 +1167,7 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-20",
+    "vs": "2026-10-21",
     "benchmarkIssueChanged": false,
     "items": []
   }
