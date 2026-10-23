@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-22T16:40:00.854Z",
+  "generatedAt": "2026-10-23T21:00:31.511Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -53,13 +53,24 @@
       "peakHours": null
     },
     {
+      "model": "Kimi K3.1 Pro",
+      "provider": "opencode-go",
+      "modelId": "kimi-k3.1-pro",
+      "inputPerM": 2,
+      "outputPerM": 10,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 2,
+      "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
       "model": "Kimi K3",
       "provider": "opencode-go",
       "modelId": "kimi-k3",
       "inputPerM": 3,
       "outputPerM": 15,
       "cacheReadPerM": 0.3,
-      "cacheWritePerM": 0,
+      "cacheWritePerM": 3,
       "quotaUsd": 15,
       "peakHours": null
     },

@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-23T03:28:02.691Z",
+  "generatedAt": "2026-10-23T21:00:31.511Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -427,8 +427,8 @@
       "provider": "opencode-go",
       "modelId": "kimi-k3",
       "score": 88,
-      "priceUsdPerSession": 9.407147,
-      "mpPerSession": 62714.32,
+      "priceUsdPerSession": 9.467564,
+      "mpPerSession": 63117.1,
       "quotaUsd": 15,
       "multiplier": 4,
       "walletMultiplier": 1.5,
@@ -436,12 +436,12 @@
       "inputPerM": 3,
       "outputPerM": 15,
       "cacheReadPerM": 0.3,
-      "cacheWritePerM": 0,
+      "cacheWritePerM": 3,
       "costSplit": {
-        "input": 0.2648,
-        "cacheRead": 0.5645,
-        "cacheWrite": 0,
-        "output": 0.1706
+        "input": 0.2631,
+        "cacheRead": 0.5609,
+        "cacheWrite": 0.0064,
+        "output": 0.1696
       },
       "matchedBenchmarkName": "Kimi K3 ⚠️ ⏳",
       "similarity": 1,
@@ -983,6 +983,34 @@
       "peakHours": null
     },
     {
+      "model": "Kimi K3.1 Pro",
+      "provider": "opencode-go",
+      "modelId": "kimi-k3.1-pro",
+      "score": null,
+      "priceUsdPerSession": 6.31171,
+      "mpPerSession": 42078.06,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "walletMultiplier": 1.5,
+      "sessionsPerMonth": 2,
+      "inputPerM": 2,
+      "outputPerM": 10,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 2,
+      "costSplit": {
+        "input": 0.2631,
+        "cacheRead": 0.5609,
+        "cacheWrite": 0.0064,
+        "output": 0.1696
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "Grok 4.7 (≤ 200K tokens)",
       "provider": "opencode-go",
       "modelId": "grok-4.7",
@@ -1167,13 +1195,26 @@
     {
       "model": "Kimi K3",
       "score": 88,
-      "mpPerSession": 62714.3,
+      "mpPerSession": 63117.1,
       "scorePerMp": 0.001
     }
   ],
   "changes": {
     "vs": "2026-10-22",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "price",
+        "model": "Kimi K3",
+        "from": 9.407147,
+        "to": 9.467564
+      },
+      {
+        "kind": "added",
+        "model": "Kimi K3.1 Pro",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
