@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-22T16:40:00.854Z",
+  "generatedAt": "2026-10-23T03:28:02.691Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1172,21 +1172,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-21",
+    "vs": "2026-10-22",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "MiniMax M3.1 Flash",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiniMax M3.1 Flash Free",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
