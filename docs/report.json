@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-24T03:22:52.003Z",
+  "generatedAt": "2026-10-24T15:24:57.948Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -927,23 +927,23 @@
       "peakHours": null
     },
     {
-      "model": "Gemini 4 Argon Contributor",
+      "model": "Gemini 4 Argon (50% off)",
       "provider": "opencode-go",
-      "modelId": "gemini-4-argon-contributor",
+      "modelId": "gemini-4-argon",
       "score": null,
-      "priceUsdPerSession": 9.002398,
-      "mpPerSession": 30007.99,
+      "priceUsdPerSession": 9.004165,
+      "mpPerSession": 30013.88,
       "quotaUsd": 30,
       "multiplier": 2,
       "walletMultiplier": 3,
       "sessionsPerMonth": 3,
-      "inputPerM": 4,
-      "outputPerM": 20,
+      "inputPerM": 4.002,
+      "outputPerM": 20.001,
       "cacheReadPerM": 0.2,
       "cacheWritePerM": 0,
       "costSplit": {
-        "input": 0.369,
-        "cacheRead": 0.3933,
+        "input": 0.3691,
+        "cacheRead": 0.3932,
         "cacheWrite": 0,
         "output": 0.2377
       },
@@ -1202,6 +1202,19 @@
   "changes": {
     "vs": "2026-10-23",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "Gemini 4 Argon (50% off)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Gemini 4 Argon Contributor",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }

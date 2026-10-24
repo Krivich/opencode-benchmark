@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-23T21:00:31.511Z",
+  "generatedAt": "2026-10-24T15:24:57.948Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -456,11 +456,11 @@
       "peakHours": null
     },
     {
-      "model": "Gemini 4 Argon Contributor",
+      "model": "Gemini 4 Argon (50% off)",
       "provider": "opencode-go",
-      "modelId": "gemini-4-argon-contributor",
-      "inputPerM": 4,
-      "outputPerM": 20,
+      "modelId": "gemini-4-argon",
+      "inputPerM": 4.002,
+      "outputPerM": 20.001,
       "cacheReadPerM": 0.2,
       "cacheWritePerM": 0,
       "quotaUsd": 30,
