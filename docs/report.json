@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-24T15:24:57.948Z",
+  "generatedAt": "2026-10-25T03:18:03.101Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1200,21 +1200,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-23",
+    "vs": "2026-10-24",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "Gemini 4 Argon (50% off)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Gemini 4 Argon Contributor",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
