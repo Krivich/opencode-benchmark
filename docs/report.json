@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-25T03:18:03.101Z",
+  "generatedAt": "2026-10-25T10:46:17.804Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1067,29 +1067,6 @@
       "peakHours": null
     },
     {
-      "model": "LongCat 2.5 Preview Free",
-      "provider": "opencode-go",
-      "modelId": null,
-      "score": null,
-      "priceUsdPerSession": 0,
-      "mpPerSession": null,
-      "quotaUsd": 0,
-      "multiplier": null,
-      "walletMultiplier": null,
-      "sessionsPerMonth": null,
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "costSplit": null,
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
       "model": "Beam Free",
       "provider": "opencode-go",
       "modelId": "beam-free",
@@ -1202,6 +1179,13 @@
   "changes": {
     "vs": "2026-10-24",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "removed",
+        "model": "LongCat 2.5 Preview Free",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
