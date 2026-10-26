@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-25T10:46:17.804Z",
+  "generatedAt": "2026-10-26T03:19:30.468Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1177,15 +1177,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-24",
+    "vs": "2026-10-25",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "removed",
-        "model": "LongCat 2.5 Preview Free",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
