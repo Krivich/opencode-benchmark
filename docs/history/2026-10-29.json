@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-29T04:28:41.528Z",
+  "generatedAt": "2026-10-29T12:20:15.884Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -649,7 +649,7 @@
     {
       "model": "MiMo-V2.5",
       "provider": "opencode-go",
-      "modelId": "mimo-v2.5",
+      "modelId": null,
       "score": null,
       "priceUsdPerSession": 0.195787,
       "mpPerSession": 326.31,
@@ -817,7 +817,7 @@
     {
       "model": "MiMo-V2.5-Pro",
       "provider": "opencode-go",
-      "modelId": "mimo-v2.5-pro",
+      "modelId": null,
       "score": null,
       "priceUsdPerSession": 0.5185,
       "mpPerSession": 3456.67,

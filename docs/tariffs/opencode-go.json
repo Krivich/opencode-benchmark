@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-10-29T04:28:41.528Z",
+  "generatedAt": "2026-10-29T12:20:15.883Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -154,7 +154,7 @@
     {
       "model": "MiMo-V2.5",
       "provider": "opencode-go",
-      "modelId": "mimo-v2.5",
+      "modelId": null,
       "inputPerM": 0.14,
       "outputPerM": 0.28,
       "cacheReadPerM": 0.0028,
@@ -165,7 +165,7 @@
     {
       "model": "MiMo-V2.5-Pro",
       "provider": "opencode-go",
-      "modelId": "mimo-v2.5-pro",
+      "modelId": null,
       "inputPerM": 0.435,
       "outputPerM": 0.87,
       "cacheReadPerM": 0.003625,
