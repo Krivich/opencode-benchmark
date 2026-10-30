@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-29T12:20:15.884Z",
+  "generatedAt": "2026-10-30T04:28:59.619Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1234,27 +1234,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-28",
+    "vs": "2026-10-29",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "MiniMax M3 (> 512K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "MiniMax M3 (≤ 512K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiniMax M3",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
