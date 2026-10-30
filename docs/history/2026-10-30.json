@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-30T04:28:59.619Z",
+  "generatedAt": "2026-10-30T21:56:50.084Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -220,11 +220,11 @@
       "modelId": "deepseek-v4.1-flash",
       "score": 88,
       "priceUsdPerSession": 0.241877,
-      "mpPerSession": 302.35,
-      "quotaUsd": 80,
-      "multiplier": 0.75,
-      "walletMultiplier": 8,
-      "sessionsPerMonth": 330,
+      "mpPerSession": 241.88,
+      "quotaUsd": 100,
+      "multiplier": 0.6,
+      "walletMultiplier": 10,
+      "sessionsPerMonth": 413,
       "inputPerM": 0.15,
       "outputPerM": 0.6,
       "cacheReadPerM": 0.003,
@@ -268,11 +268,11 @@
       "modelId": "deepseek-v4.1-flash",
       "score": 88,
       "priceUsdPerSession": 0.483754,
-      "mpPerSession": 604.69,
-      "quotaUsd": 80,
-      "multiplier": 0.75,
-      "walletMultiplier": 8,
-      "sessionsPerMonth": 165,
+      "mpPerSession": 483.75,
+      "quotaUsd": 100,
+      "multiplier": 0.6,
+      "walletMultiplier": 10,
+      "sessionsPerMonth": 206,
       "inputPerM": 0.3,
       "outputPerM": 1.2,
       "cacheReadPerM": 0.006,
@@ -1145,14 +1145,14 @@
     {
       "model": "DeepSeek V4.1 Flash (Off-Peak)",
       "score": 88,
-      "mpPerSession": 302.3,
-      "scorePerMp": 0.291
+      "mpPerSession": 241.9,
+      "scorePerMp": 0.364
     },
     {
       "model": "DeepSeek V4.1 Flash (Peak)",
       "score": 88,
-      "mpPerSession": 604.7,
-      "scorePerMp": 0.146
+      "mpPerSession": 483.8,
+      "scorePerMp": 0.182
     },
     {
       "model": "GLM-5.3-Flash",
@@ -1236,6 +1236,19 @@
   "changes": {
     "vs": "2026-10-29",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "quota",
+        "model": "DeepSeek V4.1 Flash (Off-Peak)",
+        "from": 80,
+        "to": 100
+      },
+      {
+        "kind": "quota",
+        "model": "DeepSeek V4.1 Flash (Peak)",
+        "from": 80,
+        "to": 100
+      }
+    ]
   }
 }
