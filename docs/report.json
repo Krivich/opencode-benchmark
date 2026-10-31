@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-10-30T21:56:50.084Z",
+  "generatedAt": "2026-10-31T04:10:15.003Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1234,21 +1234,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-10-29",
+    "vs": "2026-10-30",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "quota",
-        "model": "DeepSeek V4.1 Flash (Off-Peak)",
-        "from": 80,
-        "to": 100
-      },
-      {
-        "kind": "quota",
-        "model": "DeepSeek V4.1 Flash (Peak)",
-        "from": 80,
-        "to": 100
-      }
-    ]
+    "items": []
   }
 }
