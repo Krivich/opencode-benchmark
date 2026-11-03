@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-11-02T04:32:53.979Z",
+  "generatedAt": "2026-11-03T00:32:45.380Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1234,7 +1234,7 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-01",
+    "vs": "2026-11-02",
     "benchmarkIssueChanged": false,
     "items": []
   }
