@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-11-04T04:55:10.608Z",
+  "generatedAt": "2026-11-04T23:14:13.206Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -787,6 +787,34 @@
       "peakHours": null
     },
     {
+      "model": "Hy4",
+      "provider": "opencode-go",
+      "modelId": "hy4",
+      "score": null,
+      "priceUsdPerSession": 1.703701,
+      "mpPerSession": 2839.5,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "walletMultiplier": 6,
+      "sessionsPerMonth": 35,
+      "inputPerM": 0.834,
+      "outputPerM": 2.501,
+      "cacheReadPerM": 0.042,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.4065,
+        "cacheRead": 0.4364,
+        "cacheWrite": 0,
+        "output": 0.1571
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "MiMo-V2.6-Pro",
       "provider": "opencode-go",
       "modelId": "mimo-v2.6-pro",
@@ -1236,6 +1264,13 @@
   "changes": {
     "vs": "2026-11-03",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "Hy4",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
