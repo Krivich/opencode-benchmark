@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-11-06T22:44:20.147Z",
+  "generatedAt": "2026-11-07T04:44:21.195Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1285,15 +1285,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-05",
+    "vs": "2026-11-06",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "Crouton Alpha Free",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
