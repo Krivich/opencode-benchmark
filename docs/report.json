@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-11-09T15:14:45.735Z",
+  "generatedAt": "2026-11-10T01:12:28.903Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -1123,29 +1123,6 @@
       "peakHours": null
     },
     {
-      "model": "Crouton Alpha Free",
-      "provider": "opencode-go",
-      "modelId": "crouton-alpha-free",
-      "score": null,
-      "priceUsdPerSession": 0,
-      "mpPerSession": null,
-      "quotaUsd": 0,
-      "multiplier": null,
-      "walletMultiplier": null,
-      "sessionsPerMonth": null,
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "costSplit": null,
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
       "model": "Beam Free",
       "provider": "opencode-go",
       "modelId": "beam-free",
@@ -1308,12 +1285,12 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-08",
+    "vs": "2026-11-09",
     "benchmarkIssueChanged": false,
     "items": [
       {
-        "kind": "added",
-        "model": "LongCat 2.5 Free",
+        "kind": "removed",
+        "model": "Crouton Alpha Free",
         "from": null,
         "to": null
       }

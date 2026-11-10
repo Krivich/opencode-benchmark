@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-09T15:14:45.734Z",
+  "generatedAt": "2026-11-10T01:12:28.903Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -105,17 +105,6 @@
       "cacheReadPerM": 0.1,
       "cacheWritePerM": 0,
       "quotaUsd": 15,
-      "peakHours": null
-    },
-    {
-      "model": "Crouton Alpha Free",
-      "provider": "opencode-go",
-      "modelId": "crouton-alpha-free",
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "quotaUsd": 0,
       "peakHours": null
     },
     {
