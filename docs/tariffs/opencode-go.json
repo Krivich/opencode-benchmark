@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-10T01:12:28.903Z",
+  "generatedAt": "2026-11-16T04:51:32.016Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -237,6 +237,17 @@
       "cacheReadPerM": 0.002,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "Qwen4 Max",
+      "provider": "opencode-go",
+      "modelId": "qwen4-max",
+      "inputPerM": 1.5,
+      "outputPerM": 4.5,
+      "cacheReadPerM": 0.075,
+      "cacheWritePerM": 1.875,
+      "quotaUsd": 15,
       "peakHours": null
     },
     {

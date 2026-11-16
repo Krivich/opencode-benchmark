@@ -1,6 +1,6 @@
 {
   "$schema": "report.schema.json",
-  "generatedAt": "2026-11-15T04:54:06.466Z",
+  "generatedAt": "2026-11-16T04:51:32.016Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": null,
@@ -46,6 +46,34 @@
     "anchorHourUtc": 0
   },
   "rows": [
+    {
+      "model": "Qwen4 Max",
+      "provider": "opencode-go",
+      "modelId": "qwen4-max",
+      "score": 95,
+      "priceUsdPerSession": 3.092612,
+      "mpPerSession": 20617.41,
+      "quotaUsd": 15,
+      "multiplier": 4,
+      "walletMultiplier": 1.5,
+      "sessionsPerMonth": 4,
+      "inputPerM": 1.5,
+      "outputPerM": 4.5,
+      "cacheReadPerM": 0.075,
+      "cacheWritePerM": 1.875,
+      "costSplit": {
+        "input": 0.4028,
+        "cacheRead": 0.4293,
+        "cacheWrite": 0.0122,
+        "output": 0.1557
+      },
+      "matchedBenchmarkName": "Qwen3.7 Max ⚠️ ⏳",
+      "similarity": 0.727,
+      "tier": "AMBIG",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
     {
       "model": "Qwen3.8 Max",
       "provider": "opencode-go",
@@ -1285,8 +1313,15 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-14",
+    "vs": "2026-11-15",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "Qwen4 Max",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
