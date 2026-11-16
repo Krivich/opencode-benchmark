@@ -39,7 +39,10 @@ jobs:
       - name: Generate index.html
         env:
           PAGES: '1'
-          SITE_URL: ${{ vars.SITE_URL }}   # https://USER.github.io/REPO — for SEO (OG/Twitter/JSON-LD)
+          # Canonical origin for SEO (canonical/OG/Twitter/JSON-LD/sitemap). Derived from the
+          # repository itself so a fork or a rename lands on its own URL instead of inheriting
+          # ours; vars.SITE_URL still wins for a custom domain.
+          SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
           # SOCKS: ${{ secrets.SOCKS }}   # uncomment if a proxy is needed
         run: npm ci && npm start
 

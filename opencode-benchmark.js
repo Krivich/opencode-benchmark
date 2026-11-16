@@ -30,6 +30,8 @@ import {
 import {
   renderHtml, renderReadmeAuto, reportSchema, OG_IMAGE,
 } from './lib/core/render.js';
+import { getSiteUrl } from './lib/core/site.js';
+import { renderSitemap } from './lib/core/sitemap.js';
 import {
   GO_URL, parseGo, attachPeak, fetchModelIds, attachModelIds, readPrevModelIds, buildTariffDataset,
 } from './lib/price/opencode.js';
@@ -79,7 +81,7 @@ async function main() {
   const report = buildReport(goRows, pool, latest.slug);
 
   // 4. Serialize the report (this IS the page's data), diff vs yesterday, snapshot.
-  const siteUrl = (process.env.SITE_URL || '').replace(/\/+$/, '');
+  const siteUrl = getSiteUrl();
   const tariffDs = buildTariffDataset(goRows);
   const sources = {
     pricing: {
@@ -125,6 +127,7 @@ async function main() {
   const html = renderHtml(full, { history: snapshots, recentChanges });
 
   writeTextIfChanged(path.join(OUT_DIR, 'index.html'), html);
+  writeTextIfChanged(path.join(OUT_DIR, 'sitemap.xml'), renderSitemap({ siteUrl, lastmod: full.generatedAt }));
   writeTextIfChanged(path.join(OUT_DIR, 'og-image.svg'), OG_IMAGE);
   writeJsonIfChanged(jsonFile, full);
   writeJsonIfChanged(path.join(OUT_DIR, 'report.schema.json'), reportSchema(siteUrl));

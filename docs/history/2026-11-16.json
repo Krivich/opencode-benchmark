@@ -1,9 +1,9 @@
 {
-  "$schema": "report.schema.json",
-  "generatedAt": "2026-11-16T14:50:56.013Z",
+  "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
+  "generatedAt": "2026-11-16T18:28:28.349Z",
   "generator": {
     "name": "opencode-benchmark",
-    "page": null,
+    "page": "https://krivich.github.io/opencode-benchmark/",
     "source": "https://github.com/krivich/opencode-benchmark",
     "license": "MIT"
   },

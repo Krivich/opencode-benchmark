@@ -19,11 +19,12 @@ No tests, no lint, no typecheck, no formatter configured. The only verification 
 
 - `PAGES=1` — write output only to `docs/` (CI). Without it, also writes `index.html` to repo root.
 - `SOCKS=socks5h://127.0.0.1:1080` — route fetches through a SOCKS proxy (optional, lazy-loads `socks-proxy-agent`).
-- `SITE_URL=https://example.com` — sets canonical URL / OG metadata in generated HTML.
+- `SITE_URL=https://example.com` — overrides the canonical origin (canonical/OG/Twitter/JSON-LD/`sitemap.xml`/`report.json` `$schema`). Defaults to `https://krivich.github.io/opencode-benchmark` (`lib/core/site.js`); CI derives it from the repository, so a fork or rename lands on its own URL without editing code.
 
 | File | Purpose |
 |------|---------|
-| `docs/index.html` | Main page (GitHub Pages serves from `docs/`) |
+| `docs/index.html` | Main page (GitHub Pages serves from `docs/`) — the only HTML page |
+| `docs/sitemap.xml` | One entry (the page) with `lastmod` = report `generatedAt`; `SITE_URL`-derived absolute `<loc>`, so it is stable when the data is |
 | `docs/report.json` | Machine-readable report (same data as the page) |
 | `docs/report.schema.json` | JSON Schema for `report.json` |
 | `docs/history/YYYY-MM-DD.json` | Daily snapshot (time series) |
@@ -84,7 +85,8 @@ Everything is fetched live; none of the read-only sources below needs a key.
 - **README auto section** — `<!-- AUTO-DATA -->` and `<!-- /AUTO-DATA -->` markers must exist in `README.md`. Manual text outside these markers is preserved. Do not edit the auto section by hand; it is regenerated.
 - **Windows** — use `npm run pages:win` for the `PAGES=1` env var (`set PAGES=1&& node opencode-benchmark.js`). PowerShell doesn't support inline env vars like Unix shells.
 - **`index.html` in root is gitignored** — only `docs/index.html` is committed. The root copy is for local dev preview.
-- **CI workflow exists** — `.github/workflows/update-pages.yml` runs every 6 h (00/06/12/18 UTC) and on `workflow_dispatch`: `npm ci && npm start` with `PAGES=1`. It then makes two commits: a data commit only when `git status docs README.md` is non-empty **excluding `docs/refresh.json`**, and an always-on `chore: heartbeat` commit for the heartbeat file (OB-DATA-14) — so a no-data-change run still advances the page's "checked N ago". It pushes whenever either commit happened (`nothing to push` when neither did). `SITE_URL` comes from the repo variable (`vars.SITE_URL`); if empty, the generated HTML uses relative URLs — don't "fix" those by hand, the next CI run would overwrite them.
+- **CI workflow exists** — `.github/workflows/update-pages.yml` runs every 6 h (00/06/12/18 UTC) and on `workflow_dispatch`: `npm ci && npm start` with `PAGES=1`. It then makes two commits: a data commit only when `git status docs README.md` is non-empty **excluding `docs/refresh.json`**, and an always-on `chore: heartbeat` commit for the heartbeat file (OB-DATA-14) — so a no-data-change run still advances the page's "checked N ago". It pushes whenever either commit happened (`nothing to push` when neither did). `SITE_URL` wins from the repo variable (`vars.SITE_URL`); when that is empty the workflow derives it from the repository itself (`https://<owner>.github.io/<repo>`), so the page never falls back to relative canonical/OG/JSON-LD URLs — a fork or a rename keeps pointing at its own origin.
+- **Canonical origin is a build fact, not a runtime discovery** — `lib/core/site.js` owns it; the renderer, `report.json`'s `$schema`/`generator.page`, `report.schema.json`'s `$id` and `docs/sitemap.xml` all derive from it. Never emit a relative `rel="canonical"`, JSON-LD `@id`/`url` or `<loc>`: a relative canonical is not a canonical, and Search Console ignores it. `tools/check-seo`-style validation is not wired yet — the check is `grep` on `docs/index.html` for `rel="canonical"` after a run.
 - **Docs page relocation** — OpenCode moved the Go docs under `/v2/` (`/docs/en/go` → `/v2/docs/console/go/`) and the API base from `/zen/go/v1/…` to `/inference/go/v1/…`. The old path still 302-redirects for browsers/our local Node, but returned **404** on the GitHub runner, which silently broke the pipeline (the run failed with `FATAL: 404 Not Found fetching …` and the heartbeat went stale — that staleness is the failure signal). We now fetch the final URL directly. If a future move 404s again, check this first.
 - **Local fetch may hang** — on some networks `timetoact-group.at` stalls mid-body (HTTP 200, never finishes). If `npm start` dies with `FATAL: terminated`, set `SOCKS=socks5h://127.0.0.1:1080` (or your proxy) and re-run. GitHub runners fetch directly and are unaffected.
 - **Top movers needs old snapshots** — the client-side movers table compares against `docs/history/*.json`; snapshots are sparse (only days whose data changed), and with fewer than two snapshots it shows an empty-state message (no crash).
