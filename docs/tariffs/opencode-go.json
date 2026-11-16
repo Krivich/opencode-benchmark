@@ -17,7 +17,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-16T04:51:32.016Z",
+  "generatedAt": "2026-11-16T14:50:56.013Z",
   "tariffs": [
     {
       "model": "GLM-5.3-Flash",
@@ -133,6 +133,17 @@
       "model": "LongCat 2.5 Free",
       "provider": "opencode-go",
       "modelId": "longcat-2.5-free",
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "quotaUsd": 0,
+      "peakHours": null
+    },
+    {
+      "model": "Hy4 flash Free",
+      "provider": "opencode-go",
+      "modelId": "hy4-flash-free",
       "inputPerM": 0,
       "outputPerM": 0,
       "cacheReadPerM": 0,
