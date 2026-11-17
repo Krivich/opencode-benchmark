@@ -1,9 +1,9 @@
 {
-  "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-16T18:28:28.349Z",
+  "$schema": "https://Krivich.github.io/opencode-benchmark/report.schema.json",
+  "generatedAt": "2026-11-17T01:36:20.020Z",
   "generator": {
     "name": "opencode-benchmark",
-    "page": "https://krivich.github.io/opencode-benchmark/",
+    "page": "https://Krivich.github.io/opencode-benchmark/",
     "source": "https://github.com/krivich/opencode-benchmark",
     "license": "MIT"
   },
@@ -1336,21 +1336,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-15",
+    "vs": "2026-11-16",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "Hy4 flash Free",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "Qwen4 Max",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
