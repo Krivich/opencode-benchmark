@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-19T06:58:09.107Z",
+  "generatedAt": "2026-11-19T15:37:17.226Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -276,34 +276,6 @@
         "output": 0.155
       },
       "matchedBenchmarkName": "GPT-5.6 Luna ☁️ ⏳",
-      "similarity": 1,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "GLM-5.2",
-      "provider": "opencode-go",
-      "modelId": "glm-5.2",
-      "score": 90,
-      "priceUsdPerSession": 6.23604,
-      "mpPerSession": 10393.4,
-      "quotaUsd": 60,
-      "multiplier": 1,
-      "walletMultiplier": 6,
-      "sessionsPerMonth": 9,
-      "inputPerM": 1.4,
-      "outputPerM": 4.4,
-      "cacheReadPerM": 0.26,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.1864,
-        "cacheRead": 0.7381,
-        "cacheWrite": 0,
-        "output": 0.0755
-      },
-      "matchedBenchmarkName": "GLM 5.2 ✅ ⏳",
       "similarity": 1,
       "tier": "OK",
       "benchmarkIssue": "september-2026",
@@ -1283,12 +1255,6 @@
       "scorePerMp": 0.011
     },
     {
-      "model": "GLM-5.2",
-      "score": 90,
-      "mpPerSession": 10393.4,
-      "scorePerMp": 0.009
-    },
-    {
       "model": "DeepSeek V4 Pro (Peak)",
       "score": 88,
       "mpPerSession": 15325.5,
@@ -1386,6 +1352,12 @@
       {
         "kind": "removed",
         "model": "Gemini 4 Argon (50% off)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "GLM-5.2",
         "from": null,
         "to": null
       },

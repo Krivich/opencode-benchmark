@@ -18,7 +18,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-19T06:58:09.105Z",
+  "generatedAt": "2026-11-19T15:37:17.225Z",
   "tariffs": [
     {
       "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
@@ -143,17 +143,6 @@
           ]
         ]
       }
-    },
-    {
-      "model": "GLM-5.2",
-      "provider": "opencode-go",
-      "modelId": "glm-5.2",
-      "inputPerM": 1.4,
-      "outputPerM": 4.4,
-      "cacheReadPerM": 0.26,
-      "cacheWritePerM": 0,
-      "quotaUsd": 60,
-      "peakHours": null
     },
     {
       "model": "GLM-5.3",
