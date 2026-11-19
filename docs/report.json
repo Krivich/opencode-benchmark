@@ -1,16 +1,16 @@
 {
-  "$schema": "https://Krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-17T01:36:20.020Z",
+  "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
+  "generatedAt": "2026-11-19T06:58:09.107Z",
   "generator": {
     "name": "opencode-benchmark",
-    "page": "https://Krivich.github.io/opencode-benchmark/",
+    "page": "https://krivich.github.io/opencode-benchmark/",
     "source": "https://github.com/krivich/opencode-benchmark",
     "license": "MIT"
   },
   "sources": {
     "pricing": {
       "title": "OpenCode Go tariff prices and quotas",
-      "url": "https://opencode.ai/v2/docs/console/go/",
+      "url": "https://opencode.ai/docs/console/go/",
       "publisher": "OpenCode"
     },
     "benchmark": {
@@ -103,9 +103,105 @@
       "peakHours": null
     },
     {
+      "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "score": 90,
+      "priceUsdPerSession": 0.241877,
+      "mpPerSession": 241.88,
+      "quotaUsd": 100,
+      "multiplier": 0.6,
+      "walletMultiplier": 10,
+      "sessionsPerMonth": 413,
+      "inputPerM": 0.15,
+      "outputPerM": 0.6,
+      "cacheReadPerM": 0.003,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
+      },
+      "matchedBenchmarkName": "DeepSeek V4 Flash 0731 (reasoning high) ⚠️",
+      "similarity": 0.75,
+      "tier": "AMBIG",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "model": "DeepSeek V4.1 Flash 1017 (Peak)",
+      "provider": "opencode-go",
+      "modelId": "deepseek-v4.1-flash",
+      "score": 90,
+      "priceUsdPerSession": 0.483754,
+      "mpPerSession": 483.75,
+      "quotaUsd": 100,
+      "multiplier": 0.6,
+      "walletMultiplier": 10,
+      "sessionsPerMonth": 206,
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.515,
+        "cacheRead": 0.2196,
+        "cacheWrite": 0,
+        "output": 0.2655
+      },
+      "matchedBenchmarkName": "DeepSeek V4 Flash 0731 (reasoning high) ⚠️",
+      "similarity": 0.75,
+      "tier": "AMBIG",
+      "benchmarkIssue": "september-2026",
+      "benchmarkFallback": false,
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
+    },
+    {
       "model": "Claude Haiku 5.5 (≤ 100K tokens)",
       "provider": "opencode-go",
-      "modelId": null,
+      "modelId": "claude-haiku-5-5",
       "score": 90,
       "priceUsdPerSession": 0.316089,
       "mpPerSession": 2107.26,
@@ -131,7 +227,7 @@
       "peakHours": null
     },
     {
-      "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "model": "GPT-5.6 Luna (≤ 272K tokens)",
       "provider": "opencode-go",
       "modelId": "gpt-5.6-luna",
       "score": 90,
@@ -159,7 +255,7 @@
       "peakHours": null
     },
     {
-      "model": "GPT 5.6 Luna (> 272K tokens)",
+      "model": "GPT-5.6 Luna (> 272K tokens)",
       "provider": "opencode-go",
       "modelId": "gpt-5.6-luna",
       "score": 90,
@@ -217,7 +313,7 @@
     {
       "model": "Claude Haiku 5.5 (> 100K tokens)",
       "provider": "opencode-go",
-      "modelId": null,
+      "modelId": "claude-haiku-5-5",
       "score": 90,
       "priceUsdPerSession": 1.580445,
       "mpPerSession": 10536.3,
@@ -241,102 +337,6 @@
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
       "peakHours": null
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Off-Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": 88,
-      "priceUsdPerSession": 0.241877,
-      "mpPerSession": 241.88,
-      "quotaUsd": 100,
-      "multiplier": 0.6,
-      "walletMultiplier": 10,
-      "sessionsPerMonth": 413,
-      "inputPerM": 0.15,
-      "outputPerM": 0.6,
-      "cacheReadPerM": 0.003,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
-      "similarity": 0.895,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Peak)",
-      "provider": "opencode-go",
-      "modelId": "deepseek-v4.1-flash",
-      "score": 88,
-      "priceUsdPerSession": 0.483754,
-      "mpPerSession": 483.75,
-      "quotaUsd": 100,
-      "multiplier": 0.6,
-      "walletMultiplier": 10,
-      "sessionsPerMonth": 206,
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.515,
-        "cacheRead": 0.2196,
-        "cacheWrite": 0,
-        "output": 0.2655
-      },
-      "matchedBenchmarkName": "DeepSeek V4 Flash (reasoning high) ⚠️ ⏳",
-      "similarity": 0.895,
-      "tier": "OK",
-      "benchmarkIssue": "september-2026",
-      "benchmarkFallback": false,
-      "peakHours": {
-        "tz": "UTC",
-        "days": [
-          1,
-          5
-        ],
-        "ranges": [
-          [
-            1,
-            0,
-            4,
-            0
-          ],
-          [
-            6,
-            0,
-            10,
-            0
-          ]
-        ]
-      }
     },
     {
       "model": "Qwen3.7 Plus (≤ 256K tokens)",
@@ -420,7 +420,27 @@
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
     },
     {
       "model": "DeepSeek V4 Pro (Peak)",
@@ -448,7 +468,27 @@
       "tier": "OK",
       "benchmarkIssue": "september-2026",
       "benchmarkFallback": false,
-      "peakHours": null
+      "peakHours": {
+        "tz": "UTC",
+        "days": [
+          1,
+          5
+        ],
+        "ranges": [
+          [
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            6,
+            0,
+            10,
+            0
+          ]
+        ]
+      }
     },
     {
       "model": "Kimi K3",
@@ -535,7 +575,7 @@
       "peakHours": null
     },
     {
-      "model": "MiniMax M3 (≤ 512K tokens)",
+      "model": "MiniMax-M3 (≤ 512K tokens)",
       "provider": "opencode-go",
       "modelId": "minimax-m3",
       "score": 76,
@@ -563,7 +603,7 @@
       "peakHours": null
     },
     {
-      "model": "MiniMax M3 (> 512K tokens)",
+      "model": "MiniMax-M3 (> 512K tokens)",
       "provider": "opencode-go",
       "modelId": "minimax-m3",
       "score": 76,
@@ -591,9 +631,9 @@
       "peakHours": null
     },
     {
-      "model": "Muse Spark 1.3 Contributor",
+      "model": "Muse Spark 1.2 Contributor",
       "provider": "opencode-go",
-      "modelId": "muse-spark-1.3-contributor",
+      "modelId": "muse-spark-1.2-contributor",
       "score": null,
       "priceUsdPerSession": 0.139848,
       "mpPerSession": 233.08,
@@ -619,9 +659,9 @@
       "peakHours": null
     },
     {
-      "model": "Muse Spark 1.2 Contributor",
+      "model": "Muse Spark 1.3 Contributor",
       "provider": "opencode-go",
-      "modelId": "muse-spark-1.2-contributor",
+      "modelId": "muse-spark-1.3-contributor",
       "score": null,
       "priceUsdPerSession": 0.139848,
       "mpPerSession": 233.08,
@@ -675,34 +715,6 @@
       "peakHours": null
     },
     {
-      "model": "MiMo-V2.5",
-      "provider": "opencode-go",
-      "modelId": null,
-      "score": null,
-      "priceUsdPerSession": 0.195787,
-      "mpPerSession": 326.31,
-      "quotaUsd": 60,
-      "multiplier": 1,
-      "walletMultiplier": 6,
-      "sessionsPerMonth": 306,
-      "inputPerM": 0.14,
-      "outputPerM": 0.28,
-      "cacheReadPerM": 0.0028,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.5938,
-        "cacheRead": 0.2532,
-        "cacheWrite": 0,
-        "output": 0.153
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
       "model": "LongCat-2.0",
       "provider": "opencode-go",
       "modelId": "longcat-2.0",
@@ -722,6 +734,34 @@
         "cacheRead": 0.2196,
         "cacheWrite": 0,
         "output": 0.2655
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
+      "model": "GLM-5.3",
+      "provider": "opencode-go",
+      "modelId": "glm-5.3",
+      "score": null,
+      "priceUsdPerSession": 6.23604,
+      "mpPerSession": 1247.21,
+      "quotaUsd": 500,
+      "multiplier": 0.12,
+      "walletMultiplier": 50,
+      "sessionsPerMonth": 80,
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1864,
+        "cacheRead": 0.7381,
+        "cacheWrite": 0,
+        "output": 0.0755
       },
       "matchedBenchmarkName": null,
       "similarity": 0,
@@ -759,7 +799,7 @@
       "peakHours": null
     },
     {
-      "model": "GPT 6 Luna (≤ 272K tokens)",
+      "model": "GPT-6 Luna (≤ 272K tokens)",
       "provider": "opencode-go",
       "modelId": "gpt-6-luna",
       "score": null,
@@ -871,35 +911,7 @@
       "peakHours": null
     },
     {
-      "model": "MiMo-V2.5-Pro",
-      "provider": "opencode-go",
-      "modelId": null,
-      "score": null,
-      "priceUsdPerSession": 0.5185,
-      "mpPerSession": 3456.67,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 28,
-      "inputPerM": 0.435,
-      "outputPerM": 0.87,
-      "cacheReadPerM": 0.003625,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.6967,
-        "cacheRead": 0.1238,
-        "cacheWrite": 0,
-        "output": 0.1796
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "GPT 6 Luna (> 272K tokens)",
+      "model": "GPT-6 Luna (> 272K tokens)",
       "provider": "opencode-go",
       "modelId": "gpt-6-luna",
       "score": null,
@@ -983,6 +995,34 @@
       "peakHours": null
     },
     {
+      "model": "Gemini 4 Argon",
+      "provider": "opencode-go",
+      "modelId": "gemini-4-argon",
+      "score": null,
+      "priceUsdPerSession": 4.501199,
+      "mpPerSession": 15004,
+      "quotaUsd": 30,
+      "multiplier": 2,
+      "walletMultiplier": 3,
+      "sessionsPerMonth": 6,
+      "inputPerM": 2,
+      "outputPerM": 10,
+      "cacheReadPerM": 0.1,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.369,
+        "cacheRead": 0.3933,
+        "cacheWrite": 0,
+        "output": 0.2377
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "Step 5 Preview",
       "provider": "opencode-go",
       "modelId": "step-5-preview",
@@ -1002,62 +1042,6 @@
         "cacheRead": 0.6126,
         "cacheWrite": 0,
         "output": 0.1
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "Gemini 4 Argon (50% off)",
-      "provider": "opencode-go",
-      "modelId": "gemini-4-argon",
-      "score": null,
-      "priceUsdPerSession": 9.004165,
-      "mpPerSession": 30013.88,
-      "quotaUsd": 30,
-      "multiplier": 2,
-      "walletMultiplier": 3,
-      "sessionsPerMonth": 3,
-      "inputPerM": 4.002,
-      "outputPerM": 20.001,
-      "cacheReadPerM": 0.2,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.3691,
-        "cacheRead": 0.3932,
-        "cacheWrite": 0,
-        "output": 0.2377
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "GLM-5.3",
-      "provider": "opencode-go",
-      "modelId": "glm-5.3",
-      "score": null,
-      "priceUsdPerSession": 6.23604,
-      "mpPerSession": 41573.6,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 2,
-      "inputPerM": 1.4,
-      "outputPerM": 4.4,
-      "cacheReadPerM": 0.26,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.1864,
-        "cacheRead": 0.7381,
-        "cacheWrite": 0,
-        "output": 0.0755
       },
       "matchedBenchmarkName": null,
       "similarity": 0,
@@ -1245,18 +1229,6 @@
   ],
   "ranked": [
     {
-      "model": "DeepSeek V4.1 Flash (Off-Peak)",
-      "score": 88,
-      "mpPerSession": 241.9,
-      "scorePerMp": 0.364
-    },
-    {
-      "model": "DeepSeek V4.1 Flash (Peak)",
-      "score": 88,
-      "mpPerSession": 483.8,
-      "scorePerMp": 0.182
-    },
-    {
       "model": "GLM-5.3-Flash",
       "score": 84,
       "mpPerSession": 1181.9,
@@ -1275,19 +1247,19 @@
       "scorePerMp": 0.043
     },
     {
-      "model": "MiniMax M3 (≤ 512K tokens)",
+      "model": "MiniMax-M3 (≤ 512K tokens)",
       "score": 76,
       "mpPerSession": 2399.5,
       "scorePerMp": 0.032
     },
     {
-      "model": "GPT 5.6 Luna (≤ 272K tokens)",
+      "model": "GPT-5.6 Luna (≤ 272K tokens)",
       "score": 90,
       "mpPerSession": 4357.2,
       "scorePerMp": 0.021
     },
     {
-      "model": "MiniMax M3 (> 512K tokens)",
+      "model": "MiniMax-M3 (> 512K tokens)",
       "score": 76,
       "mpPerSession": 4798.9,
       "scorePerMp": 0.016
@@ -1305,7 +1277,7 @@
       "scorePerMp": 0.011
     },
     {
-      "model": "GPT 5.6 Luna (> 272K tokens)",
+      "model": "GPT-5.6 Luna (> 272K tokens)",
       "score": 90,
       "mpPerSession": 8286.4,
       "scorePerMp": 0.011
@@ -1336,8 +1308,135 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-16",
+    "vs": "2026-11-17",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "quota",
+        "model": "GLM-5.3",
+        "from": 15,
+        "to": 500
+      },
+      {
+        "kind": "added",
+        "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "DeepSeek V4.1 Flash 1017 (Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "Gemini 4 Argon",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "GPT-5.6 Luna (> 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "GPT-5.6 Luna (≤ 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "GPT-6 Luna (> 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "GPT-6 Luna (≤ 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "MiniMax-M3 (> 512K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "added",
+        "model": "MiniMax-M3 (≤ 512K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "DeepSeek V4.1 Flash (Off-Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "DeepSeek V4.1 Flash (Peak)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "Gemini 4 Argon (50% off)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "GPT 5.6 Luna (> 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "GPT 5.6 Luna (≤ 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "GPT 6 Luna (> 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "GPT 6 Luna (≤ 272K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "MiMo-V2.5",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "MiMo-V2.5-Pro",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "MiniMax M3 (> 512K tokens)",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "MiniMax M3 (≤ 512K tokens)",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }

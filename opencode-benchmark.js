@@ -33,7 +33,7 @@ import {
 import { getSiteUrl } from './lib/core/site.js';
 import { renderSitemap } from './lib/core/sitemap.js';
 import {
-  GO_URL, parseGo, attachPeak, fetchModelIds, attachModelIds, readPrevModelIds, buildTariffDataset,
+  fetchGoRows, buildTariffDataset,
 } from './lib/price/opencode.js';
 import { ensureBenchCache, BENCH_INDEX_URL } from './lib/bench/timetoact.js';
 import {
@@ -50,20 +50,9 @@ const BENCH_SERIES = 'timetoact';
 const BENCH_SERIES_TITLE = 'TIMETOACT GROUP — LLM Benchmark';
 
 async function main() {
-  // 1. Fresh tariffs.
-  const [goHtml] = await Promise.all([fetchText(GO_URL)]);
-  const { goRows, notes } = parseGo(goHtml);
-  attachPeak(goRows, notes);
-  // Enrich each tariff with the provider's authoritative model id (exact match only).
-  // On an endpoint outage, keep the ids from the last published dataset instead of
-  // downgrading every row to null.
-  let idSet = new Set();
-  try {
-    idSet = await fetchModelIds();
-  } catch (e) {
-    console.error(`[parse] model id endpoint unavailable (${e.message}); keeping last published ids`);
-  }
-  attachModelIds(goRows, idSet, readPrevModelIds(path.join(TARIFF_DIR, 'opencode-go.json')));
+  // 1. Fresh tariffs: rates, context tiers, peak windows and monthly limits all come
+  // from the provider's documented model list, so a docs reshuffle cannot break the run.
+  const goRows = await fetchGoRows(fetchText);
 
   // 2. Benchmark history (fetches the index + the newest issue, reuses cached old ones).
   const seriesDir = path.join(BENCH_DIR, BENCH_SERIES);

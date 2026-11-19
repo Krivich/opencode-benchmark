@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T01:36:20.020Z",
+  "updated": "2026-11-19T06:58:09.107Z",
   "snapshots": [
     {
       "date": "2026-09-08",
@@ -536,6 +536,14 @@
       "models": 42,
       "best": "DeepSeek V4.1 Flash (Off-Peak) · 0.364",
       "changes": 0
+    },
+    {
+      "date": "2026-11-19",
+      "file": "history/2026-11-19.json",
+      "generatedAt": "2026-11-19T06:58:09.107Z",
+      "models": 40,
+      "best": "GLM-5.3-Flash · 0.071",
+      "changes": 21
     }
   ]
 }
