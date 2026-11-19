@@ -214,7 +214,7 @@
     <div>Fresh input<br><b>5,649<span class="muted"> + 137 cw</span></b> /turn</div>
     <div>Cache-read<br><b>120,424</b> /turn · <span class="muted">94.9%</span></div>
     <div>Output<br><b>728</b> /turn</div>
-    <div title="What the card is charged each month. On the fullest-quota tariffs that funds $60 of list-price work — ×6 your money; thinner quotas stretch it only ×3 or ×1.5. mp is a share of your plan, i.e. the same percentage of the $10.">Plan<br><b>$10/mo</b><span class="muted"> · up to ×6</span></div>
+    <div title="What the card is charged each month. A tariff stretches it as far as its monthly allowance covers list-price work — the widest allowance here reaches ×50, while the plan's usual virtual pool of $60 funds ×6 and thinner quotas only ×3 or ×1.5. Boosted allowances are often temporary promos, so this ceiling moves. mp is a share of your plan, i.e. the same percentage of the $10.">Plan<br><b>$10/mo</b><span class="muted"> · up to ×50</span></div>
     <div><b>mp/session</b> = session price ÷ quota × 100 000<br><span class="mp-explain">share of your $10/mo plan one average task (a full session) consumes — higher means more expensive</span></div>
   </div>
 
@@ -1168,7 +1168,8 @@
     <h3>Disclaimer</h3>
     <p>This site is an unofficial, independent and unaffiliated aggregation of publicly available data. It is not endorsed by or affiliated with OpenCode, TIMETOACT GROUP, any model vendor or their owners.</p>
     <p>All cost figures are <em>rough estimates</em> based on a measured session profile (one developer's autonomous-agent workload, see <a href="profiles/measured.json">profiles/measured.json</a>) and publicly stated prices. Actual usage, prices, quotas, multipliers and model capabilities differ and change without notice. Do not make financial or architectural decisions based on these numbers.</p>
-    <p>The <b>$10/mo</b> plan figure is what the author is actually charged (Sept 2026) — not a scraped list price, and not necessarily what every subscriber pays. OpenCode books that charge as a virtual <b>$60 pool</b> with per-tariff multipliers that let one tariff draw $60 of list-price work while another draws only $15. <b>mp</b> is a share of that pool, which is numerically the same percentage of the $10 charged — that is exactly why it is used instead of raw dollars.</p>
+    <p>The <b>$10/mo</b> plan figure is what the author is actually charged (Sept 2026) — not a scraped list price, and not necessarily what every subscriber pays. OpenCode books that charge as a virtual <b>$60 pool</b> with per-tariff multipliers: a tariff with a $60 monthly allowance draws up to $60 of list-price work, a $15 allowance only $15. <b>mp</b> is a share of that pool, which is numerically the same percentage of the $10 charged — that is exactly why it is used instead of raw dollars.</p>
+    <p>Allowances and prices sometimes carry <b>temporary promotions</b> — the provider announces them in its own docs (in November 2026 GLM-5.3 ran a boosted monthly allowance and Gemini 4 Argon a 50% price discount). This page reports whatever the pricing API returns at refresh time, so a promo appears as a better number and silently disappears when it ends; no expiry is modelled and none is guessed.</p>
     <p>Use of trademarks, logos and model names (OpenAI, Anthropic, Google, DeepSeek, Qwen, GLM, Kimi, MiniMax, Grok, MiMo, Muse and others) is for identification purposes only; all rights belong to their respective owners.</p>
     <p>Neither the author nor this site is liable for any loss, direct or indirect, arising from the use of the information presented here.</p>
     <p>© 2026 opencode-benchmark. Build it yourself: <code>npm start</code> regenerates this file.</p>

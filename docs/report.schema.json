@@ -409,7 +409,7 @@
               "null"
             ],
             "minimum": 0,
-            "description": "Your purchasing-power multiplier: quotaUsd ÷ the actual monthly charge (session.monthlySubscriptionUsd) — ×6/×3/×1.5, how far the payment stretches in list-price work. This is the headline column on the page."
+            "description": "Your purchasing-power multiplier: quotaUsd ÷ the actual monthly charge (session.monthlySubscriptionUsd) — usually ×6/×3/×1.5, how far the payment stretches in list-price work, but a temporarily boosted allowance can push it far higher (e.g. ×50). This is the headline column on the page; the hero ceiling is the maximum over all rows."
           },
           "sessionsPerMonth": {
             "type": [
