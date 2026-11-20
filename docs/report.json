@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-19T15:37:17.226Z",
+  "generatedAt": "2026-11-20T00:19:06.269Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -1274,141 +1274,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-17",
+    "vs": "2026-11-19",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "quota",
-        "model": "GLM-5.3",
-        "from": 15,
-        "to": 500
-      },
-      {
-        "kind": "added",
-        "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "DeepSeek V4.1 Flash 1017 (Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "Gemini 4 Argon",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "GPT-5.6 Luna (> 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "GPT-5.6 Luna (≤ 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "GPT-6 Luna (> 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "GPT-6 Luna (≤ 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "MiniMax-M3 (> 512K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "added",
-        "model": "MiniMax-M3 (≤ 512K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "DeepSeek V4.1 Flash (Off-Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "DeepSeek V4.1 Flash (Peak)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "Gemini 4 Argon (50% off)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "GLM-5.2",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "GPT 5.6 Luna (> 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "GPT 5.6 Luna (≤ 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "GPT 6 Luna (> 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "GPT 6 Luna (≤ 272K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiMo-V2.5",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiMo-V2.5-Pro",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiniMax M3 (> 512K tokens)",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "MiniMax M3 (≤ 512K tokens)",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
