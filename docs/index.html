@@ -24,7 +24,7 @@
 <meta name="twitter:description" content="OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.">
 <meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
 <link rel="sitemap" type="application/xml" href="https://krivich.github.io/opencode-benchmark/sitemap.xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go pricing — which model gets you the most for your money?","description":"OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-11-20T00:19:06.269Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-11-20T00:19:06.269Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"],"distribution":[{"@type":"DataDownload","name":"Full report — every tariff joined with its benchmark score, session cost and quota share","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/report.json"},{"@type":"DataDownload","name":"Normalized OpenCode Go pricing — rates, monthly limits, peak/off-peak windows","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/tariffs/opencode-go.json"},{"@type":"DataDownload","name":"TIMETOACT monthly benchmark issues, one JSON per measurement","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/benchmarks/timetoact/index.json"},{"@type":"DataDownload","name":"Daily snapshots of the report — the time series behind the change log","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/history/index.json"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go pricing — which model gets you the most for your money?","description":"OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-11-21T05:43:09.314Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-11-21T05:43:09.314Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"],"distribution":[{"@type":"DataDownload","name":"Full report — every tariff joined with its benchmark score, session cost and quota share","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/report.json"},{"@type":"DataDownload","name":"Normalized OpenCode Go pricing — rates, monthly limits, peak/off-peak windows","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/tariffs/opencode-go.json"},{"@type":"DataDownload","name":"TIMETOACT monthly benchmark issues, one JSON per measurement","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/benchmarks/timetoact/index.json"},{"@type":"DataDownload","name":"Daily snapshots of the report — the time series behind the change log","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/history/index.json"}]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -180,9 +180,9 @@
         average task actually costs — a full session (~147 turns), not a single request — and how smart each model is.</p>
       <div class="meta">
         <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
-          Updated: <time datetime="2026-11-20T00:19:06.269Z">11/20/2026, 12:19:06 AM</time></p>
+          Updated: <time datetime="2026-11-21T05:43:09.314Z">11/21/2026, 5:43:09 AM</time></p>
         <p class="sub fresh" id="fresh"
-          data-changed="2026-11-20T00:19:06.269Z"
+          data-changed="2026-11-21T05:43:09.314Z"
           data-every="6"
           data-anchor="0"
           title="The page is rebuilt on a schedule. 'Checked' is when the updater last ran (even with no data changes); 'numbers changed' is when the values actually moved; 'next check' is the next scheduled run. A stale 'checked' means the updater is not running.">
@@ -898,6 +898,12 @@
       <thead><tr><th title="Link to that day’s full report JSON. History is sparse — a day with no data change adds no file, so a gap means unchanged, not lost.">Date</th><th class="num" title="Tariff rows that day — a jump means the price page grew new tariffs, which usually reshuffles every ranking below.">Models</th><th title="Top Score/mp of that day — the lead can change on a price edit alone, even with identical benchmark scores.">Best score/mp</th><th class="num" title="Change events versus the previous snapshot (added, removed, score, price, quota).">Δ changes</th></tr></thead>
       <tbody>
 <tr>
+        <td><a href="history/2026-11-21.json">2026-11-21</a></td>
+        <td class="num">39</td>
+        <td>GLM-5.3-Flash · 0.071</td>
+        <td class="num">0</td>
+      </tr>
+<tr>
         <td><a href="history/2026-11-20.json">2026-11-20</a></td>
         <td class="num">39</td>
         <td>GLM-5.3-Flash · 0.071</td>
@@ -1071,12 +1077,6 @@
         <td>DeepSeek V4.1 Flash (Off-Peak) · 0.291</td>
         <td class="num">2</td>
       </tr>
-<tr>
-        <td><a href="history/2026-10-21.json">2026-10-21</a></td>
-        <td class="num">36</td>
-        <td>DeepSeek V4.1 Flash (Off-Peak) · 0.291</td>
-        <td class="num">0</td>
-      </tr>
       </tbody>
     </table>
   </div>
@@ -1086,7 +1086,7 @@
   <h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
   
   <ul class="chgs">
-      <li class="chg empty">No changes vs 2026-11-19.</li>
+      <li class="chg empty">No changes vs 2026-11-20.</li>
   </ul>
 </div>
   <div class="chgcard">
