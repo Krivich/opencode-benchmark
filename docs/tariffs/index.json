@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-19T15:37:17.225Z",
+  "updated": "2026-11-22T23:15:30.146Z",
   "tariffs": [
     {
       "provider": "opencode-go",
       "title": "OpenCode Go tariff prices and quotas",
       "file": "tariffs/opencode-go.json",
       "url": "https://opencode.ai/docs/console/go/",
-      "rows": 39
+      "rows": 38
     }
   ]
 }

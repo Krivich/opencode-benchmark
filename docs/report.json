@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-22T05:11:46.574Z",
+  "generatedAt": "2026-11-22T23:15:30.146Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -687,9 +687,9 @@
       "peakHours": null
     },
     {
-      "model": "LongCat-2.0",
+      "model": "LongCat-2.5",
       "provider": "opencode-go",
-      "modelId": "longcat-2.0",
+      "modelId": "longcat-2.5",
       "score": null,
       "priceUsdPerSession": 0.483754,
       "mpPerSession": 806.26,
@@ -706,34 +706,6 @@
         "cacheRead": 0.2196,
         "cacheWrite": 0,
         "output": 0.2655
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "GLM-5.3",
-      "provider": "opencode-go",
-      "modelId": "glm-5.3",
-      "score": null,
-      "priceUsdPerSession": 6.23604,
-      "mpPerSession": 1247.21,
-      "quotaUsd": 500,
-      "multiplier": 0.12,
-      "walletMultiplier": 50,
-      "sessionsPerMonth": 80,
-      "inputPerM": 1.4,
-      "outputPerM": 4.4,
-      "cacheReadPerM": 0.26,
-      "cacheWritePerM": 0,
-      "costSplit": {
-        "input": 0.1864,
-        "cacheRead": 0.7381,
-        "cacheWrite": 0,
-        "output": 0.0755
       },
       "matchedBenchmarkName": null,
       "similarity": 0,
@@ -846,6 +818,34 @@
         "cacheRead": 0.4364,
         "cacheWrite": 0,
         "output": 0.1571
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
+      "model": "GLM-5.3",
+      "provider": "opencode-go",
+      "modelId": "glm-5.3",
+      "score": null,
+      "priceUsdPerSession": 6.23604,
+      "mpPerSession": 3118.02,
+      "quotaUsd": 200,
+      "multiplier": 0.3,
+      "walletMultiplier": 20,
+      "sessionsPerMonth": 32,
+      "inputPerM": 1.4,
+      "outputPerM": 4.4,
+      "cacheReadPerM": 0.26,
+      "cacheWritePerM": 0,
+      "costSplit": {
+        "input": 0.1864,
+        "cacheRead": 0.7381,
+        "cacheWrite": 0,
+        "output": 0.0755
       },
       "matchedBenchmarkName": null,
       "similarity": 0,
@@ -1153,29 +1153,6 @@
       "peakHours": null
     },
     {
-      "model": "LongCat 2.5 Free",
-      "provider": "opencode-go",
-      "modelId": "longcat-2.5-free",
-      "score": null,
-      "priceUsdPerSession": 0,
-      "mpPerSession": null,
-      "quotaUsd": 0,
-      "multiplier": null,
-      "walletMultiplier": null,
-      "sessionsPerMonth": null,
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "costSplit": null,
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
       "model": "Hy4 flash Free",
       "provider": "opencode-go",
       "modelId": "hy4-flash-free",
@@ -1276,6 +1253,31 @@
   "changes": {
     "vs": "2026-11-21",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "quota",
+        "model": "GLM-5.3",
+        "from": 500,
+        "to": 200
+      },
+      {
+        "kind": "added",
+        "model": "LongCat-2.5",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "LongCat 2.5 Free",
+        "from": null,
+        "to": null
+      },
+      {
+        "kind": "removed",
+        "model": "LongCat-2.0",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }

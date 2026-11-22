@@ -18,7 +18,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-19T15:37:17.225Z",
+  "generatedAt": "2026-11-22T23:15:30.146Z",
   "tariffs": [
     {
       "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
@@ -152,7 +152,7 @@
       "outputPerM": 4.4,
       "cacheReadPerM": 0.26,
       "cacheWritePerM": 0,
-      "quotaUsd": 500,
+      "quotaUsd": 200,
       "peakHours": null
     },
     {
@@ -376,17 +376,6 @@
       "peakHours": null
     },
     {
-      "model": "LongCat-2.0",
-      "provider": "opencode-go",
-      "modelId": "longcat-2.0",
-      "inputPerM": 0.3,
-      "outputPerM": 1.2,
-      "cacheReadPerM": 0.006,
-      "cacheWritePerM": 0,
-      "quotaUsd": 60,
-      "peakHours": null
-    },
-    {
       "model": "Step 5 Preview",
       "provider": "opencode-go",
       "modelId": "step-5-preview",
@@ -497,17 +486,6 @@
       "peakHours": null
     },
     {
-      "model": "LongCat 2.5 Free",
-      "provider": "opencode-go",
-      "modelId": "longcat-2.5-free",
-      "inputPerM": 0,
-      "outputPerM": 0,
-      "cacheReadPerM": 0,
-      "cacheWritePerM": 0,
-      "quotaUsd": 0,
-      "peakHours": null
-    },
-    {
       "model": "Hy4 flash Free",
       "provider": "opencode-go",
       "modelId": "hy4-flash-free",
@@ -527,6 +505,17 @@
       "cacheReadPerM": 0.075,
       "cacheWritePerM": 1.875,
       "quotaUsd": 15,
+      "peakHours": null
+    },
+    {
+      "model": "LongCat-2.5",
+      "provider": "opencode-go",
+      "modelId": "longcat-2.5",
+      "inputPerM": 0.3,
+      "outputPerM": 1.2,
+      "cacheReadPerM": 0.006,
+      "cacheWritePerM": 0,
+      "quotaUsd": 60,
       "peakHours": null
     }
   ]
