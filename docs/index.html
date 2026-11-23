@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='46' font-family='monospace,Menlo,Consolas' font-size='27' font-weight='700' fill='%23fff' text-anchor='middle'%3EGO%3F%3C/text%3E%3C/svg%3E">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpenCode Go pricing — which model gets you the most for your money?</title>
-<meta name="description" content="OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>OpenCode Go pricing: which model gives the most per dollar?</title>
+<meta name="description" content="One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with the benchmark score it buys.">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="O7YHM8W4OrBjZyITD93PQChpfj860BccMVHN0KySxSs">
 <meta name="theme-color" content="#000">
@@ -14,17 +16,17 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="OpenCode Go × TIMETOACT LLM Benchmark">
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="OpenCode Go pricing — which model gets you the most for your money?">
-<meta property="og:description" content="OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.">
+<meta property="og:title" content="OpenCode Go pricing: which model gives the most per dollar?">
+<meta property="og:description" content="One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with the benchmark score it buys.">
 <meta property="og:url" content="https://krivich.github.io/opencode-benchmark/">
-<meta property="og:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
+<meta property="og:image" content="https://krivich.github.io/opencode-benchmark/og-image.png">
 <link rel="canonical" href="https://krivich.github.io/opencode-benchmark/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OpenCode Go pricing — which model gets you the most for your money?">
-<meta name="twitter:description" content="OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.">
-<meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.svg">
+<meta name="twitter:title" content="OpenCode Go pricing: which model gives the most per dollar?">
+<meta name="twitter:description" content="One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with the benchmark score it buys.">
+<meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.png">
 <link rel="sitemap" type="application/xml" href="https://krivich.github.io/opencode-benchmark/sitemap.xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go pricing — which model gets you the most for your money?","description":"OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-11-23T05:51:40.738Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"OpenCode Go pricing and session cost for every tariff, next to independent TIMETOACT benchmark scores — quotas, multipliers and context splits decoded, side by side.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-11-23T05:51:40.738Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"],"distribution":[{"@type":"DataDownload","name":"Full report — every tariff joined with its benchmark score, session cost and quota share","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/report.json"},{"@type":"DataDownload","name":"Normalized OpenCode Go pricing — rates, monthly limits, peak/off-peak windows","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/tariffs/opencode-go.json"},{"@type":"DataDownload","name":"TIMETOACT monthly benchmark issues, one JSON per measurement","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/benchmarks/timetoact/index.json"},{"@type":"DataDownload","name":"Daily snapshots of the report — the time series behind the change log","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/history/index.json"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","alternateName":"OpenCode Go pricing","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go pricing: which model gives the most per dollar?","description":"One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with the benchmark score it buys.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-11-23T05:51:40.738Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with the benchmark score it buys.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-11-23T05:51:40.738Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"],"distribution":[{"@type":"DataDownload","name":"Full report — every tariff joined with its benchmark score, session cost and quota share","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/report.json"},{"@type":"DataDownload","name":"Normalized OpenCode Go pricing — rates, monthly limits, peak/off-peak windows","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/tariffs/opencode-go.json"},{"@type":"DataDownload","name":"TIMETOACT monthly benchmark issues, one JSON per measurement","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/benchmarks/timetoact/index.json"},{"@type":"DataDownload","name":"Daily snapshots of the report — the time series behind the change log","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/history/index.json"}]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -45,6 +47,15 @@
   h1 .brand { color: #000; font-weight: 900; letter-spacing: -0.03em; font-stretch: condensed;
     white-space: nowrap; }
   .tagline { color: #555; font-size: 1.02rem; margin: 0 0 10px; }
+  /* The finding, not a teaser: a reader (and a SERP snippet) should get the answer from the
+     first paragraph without scrolling into the tables. */
+  .answer { margin: 12px 0 16px; padding: 10px 14px; max-width: 74ch; font-size: 0.95rem;
+    color: #24303f; background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 0 8px 8px 0; }
+  .answer b { color: #0b2a55; }
+  @media (prefers-color-scheme: dark) {
+    .answer { background: #16263a; border-color: #60a5fa; color: #d6e2f2; }
+    .answer b { color: #fff; }
+  }
   @media (prefers-color-scheme: dark) {
     h1 .brand { color: #fff; }
     .tagline { color: #bbb; }
@@ -175,12 +186,28 @@
   <div class="head">
     <div class="cols">
       <p class="kicker">OpenCode Go × TIMETOACT LLM Benchmark</p>
-      <h1>Which <span class="brand">OpenCode Go</span> model gets you the most for your money?</h1>
+      <h1><span class="brand">OpenCode Go</span> pricing: which model gives the most per dollar?</h1>
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what one
         average task actually costs — a full session (~147 turns), not a single request — and how smart each model is.</p>
+      <p class="answer"><b>Short answer:</b> GLM-5.3-Flash buys the most benchmark
+        score per slice of the plan — 84 points for
+        $0.71 a task, 1.2%
+        of the $10/mo plan. That same measured task costs $0.14
+        on the cheapest tariff (Muse Spark 1.2 Contributor) and $22.31 on
+        the priciest (Grok 4.7 (&gt; 200K tokens)) — 160× for identical work. All
+        38 tariffs are priced below, cheapest first.</p>
+      <p class="intro">OpenCode Go is a $10/month plan whose real price per task depends on the tariff,
+        not on the model's fame — picking one means solving a billing puzzle, not an AI one.
+        Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into
+        <b>input / cache-read / cache-write / output</b>, and a tariff named “Flash” can cost four times what its “Max”
+        sibling does — with nothing explaining how that relates to how <em>smart</em> the model actually is.
+        Good luck comparing anything by eyeballing a price list. This page pairs each tariff with an
+        independent benchmark <a href="https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026" rel="noopener">score</a> and works out the honest number: what one average task costs in
+        dollars, how many <b>millipercents of your monthly plan</b> it eats, and how much intelligence you get
+        per unit. No marketing, no “premium” labels — just price against measured capability.</p>
       <div class="meta">
         <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
-          Updated: <time datetime="2026-11-23T05:51:40.738Z">11/23/2026, 5:51:40 AM</time></p>
+          Updated: <time datetime="2026-11-23T05:51:40.738Z">11/23/2026, 8:51:40 AM</time></p>
         <p class="sub fresh" id="fresh"
           data-changed="2026-11-23T05:51:40.738Z"
           data-every="6"
@@ -196,15 +223,6 @@
           raw normalized datasets, free to reuse ·
           <a href="history/index.json">history/index.json</a> — daily snapshots with change diffs</p>
       </div>
-
-      <p class="intro">Picking a model on OpenCode Go means solving a billing puzzle, not an AI one.
-        Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into
-        <b>input / cache-read / cache-write / output</b>, and a tariff named “Flash” can cost four times what its “Max”
-        sibling does — with nothing explaining how that relates to how <em>smart</em> the model actually is.
-        Good luck comparing anything by eyeballing a price list. This page pairs each tariff with an
-        independent benchmark <a href="https://www.timetoact-group.at/en/insights/llm-benchmarks/september-2026" rel="noopener">score</a> and works out the honest number: what one average task costs in
-        dollars, how many <b>millipercents of your monthly plan</b> it eats, and how much intelligence you get
-        per unit. No marketing, no “premium” labels — just price against measured capability.</p>
     </div>
     <div class="goq" aria-hidden="true">GO?</div>
   </div>
@@ -219,12 +237,14 @@
   </div>
 
   <h2>All tariffs <span class="tt" title="Every OpenCode Go tariff from the price list, priced for one average task — a full session of ~147 turns. Hover $/session for the per-token split. Click a header to sort.">ⓘ</span></h2>
-  <p class="sub" style="margin-top:-6px">⚡ = Peak/Off-Peak pricing — hover for the hours in your timezone.</p>
+  <p class="sub" style="margin-top:-6px">Sorted cheapest first by <b>mp/session</b> — click any header to re-sort.
+    ⚡ = Peak/Off-Peak pricing, hover for the hours in your timezone. Rows without a quota (free tiers) have no
+    share of the plan to compare and stay at the bottom.</p>
   <div class="scroll">
     <table class="sortable">
       <thead><tr>
         <th class="num sortable" title="Row number in the current sort order — not a fixed rank; click any header to re-sort.">#</th><th class="sortable" title="The tariff exactly as named on the OpenCode Go price page. One model can appear as several tariffs (Peak/Off-Peak, context tiers), so compare rows rather than model names.">Model (Go)</th><th class="num sortable" title="Final score of the latest TIMETOACT LLM Benchmark — the independent capability side of the comparison. A dash means the name failed strict matching (versions and subtypes must align), not that the model is weak.">Score</th>
-        <th class="num sortable" title="What one average task (the measured ~147-turn session) costs in dollars, regardless of quota — the raw outlay. Hover the value for the input/cache/output split that builds this bill.">$/session</th><th class="num sortable wrap2" title="Milli-percent of the monthly quota one session eats (price ÷ quota × 100 000; higher = worse). The point of mp: you pay $10/mo and each tariff lets that stretch to a different amount of list-price work ($60, $30 or $15 = ×6, ×3, ×1.5 of what you paid) — so in % of quota a session that costs more in dollars can still consume less, because the multipliers cancel in the percentage.">session/mp</th><th class="num sortable" title="How much list-price work your $10 funds on this tariff this month — $60, $30 or $15. It never moves $/session, yet it decides session/mp and session/mo: the thinner the quota, the faster one session eats it.">Quota $</th>
+        <th class="num sortable" title="What one average task (the measured ~147-turn session) costs in dollars, regardless of quota — the raw outlay. Hover the value for the input/cache/output split that builds this bill.">$/session</th><th class="num sortable wrap2 sorted" data-dir="asc" title="Milli-percent of the monthly quota one session eats (price ÷ quota × 100 000; higher = worse). The point of mp: you pay $10/mo and each tariff lets that stretch to a different amount of list-price work ($60, $30 or $15 = ×6, ×3, ×1.5 of what you paid) — so in % of quota a session that costs more in dollars can still consume less, because the multipliers cancel in the percentage.">mp/session</th><th class="num sortable" title="How much list-price work your $10 funds on this tariff this month — $60, $30 or $15. It never moves $/session, yet it decides mp/session and session/mo: the thinner the quota, the faster one session eats it.">Quota $</th>
         <th class="num sortable" title="Your purchasing-power multiplier: quota ÷ what you pay, so ×6, ×3 or ×1.5 — how far your $10 stretches in list-price work. OpenCode labels the reciprocal on its own page (60 ÷ quota = 1×/2×/4×), which is why their numbers look inverted.">Your ×</th><th class="num sortable wrap2" title="Average sessions that fit into this tariff quota — the practical monthly capacity if you stay on one model. Single digits mean a couple of heavy tasks per month, not a month of work.">session/mo</th>
         <th class="num sortable" title="USD per 1M fresh, uncached prompt tokens. It dominates whenever cache hits are low — new chats, large system prompts resent every turn — so prompt-heavy setups should weight this column over the cache rate.">Input $/M</th>
         <th class="num sortable" title="USD per 1M cache-served prompt tokens — about 2% of the input rate, yet ~95% of tokens in a long agentic session. On long-context tariffs this single rate can carry three quarters of the bill, which is how a model with pricier input still wins overall.">Cache-read $/M</th>
@@ -233,245 +253,7 @@
       </tr></thead>
       <tbody>
 <tr>
-      <td class="num">1</td>
-      <td class="model">Qwen4 Max</td>
-      <td class="num">95</td>
-      <td class="num"><span title="of one session&#39;s bill: 40% fresh input, 43% cache-read, 1% cache-write, 16% output">$3.093</span></td>
-      <td class="num"><strong>20617</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">4</td>
-      <td class="num">$1.5</td>
-      <td class="num">$0.075</td>
-      <td class="num">$4.5</td>
-      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> Qwen3.7 Max <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">2</td>
-      <td class="model">Qwen3.8 Max</td>
-      <td class="num">91</td>
-      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 65% cache-read, 1% cache-write, 9% output">$6.779</span></td>
-      <td class="num"><strong>45192</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">2</td>
-      <td class="num">$2</td>
-      <td class="num">$0.25</td>
-      <td class="num">$6</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.8 Max (reasoning medium) <span class="ic" title="License not determined">⚠️</span></td>
-    </tr>
-<tr>
-      <td class="num">3</td>
-      <td class="model">DeepSeek V4.1 Flash 1017 (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-      <td class="num">90</td>
-      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
-      <td class="num"><strong>242</strong></td>
-      <td class="num">$100</td>
-      <td class="num">10</td>
-      <td class="num">413</td>
-      <td class="num">$0.15</td>
-      <td class="num">$0.003</td>
-      <td class="num">$0.6</td>
-      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> DeepSeek V4 Flash 0731 (reasoning high) <span class="ic" title="License not determined">⚠️</span></td>
-    </tr>
-<tr>
-      <td class="num">4</td>
-      <td class="model">DeepSeek V4.1 Flash 1017 (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-      <td class="num">90</td>
-      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
-      <td class="num"><strong>484</strong></td>
-      <td class="num">$100</td>
-      <td class="num">10</td>
-      <td class="num">206</td>
-      <td class="num">$0.3</td>
-      <td class="num">$0.006</td>
-      <td class="num">$1.2</td>
-      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> DeepSeek V4 Flash 0731 (reasoning high) <span class="ic" title="License not determined">⚠️</span></td>
-    </tr>
-<tr>
-      <td class="num">5</td>
-      <td class="model">Claude Haiku 5.5 (≤ 100K tokens)</td>
-      <td class="num">90</td>
-      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$0.316</span></td>
-      <td class="num"><strong>2107</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">47</td>
-      <td class="num">$0.1</td>
-      <td class="num">$0.01</td>
-      <td class="num">$0.5</td>
-      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> Claude Fable 5 (reasoning max) <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">6</td>
-      <td class="model">GPT-5.6 Luna (≤ 272K tokens)</td>
-      <td class="num">90</td>
-      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 54% cache-read, 1% cache-write, 20% output">$0.654</span></td>
-      <td class="num"><strong>4357</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">22</td>
-      <td class="num">$0.2</td>
-      <td class="num">$0.02</td>
-      <td class="num">$1.2</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">7</td>
-      <td class="model">GPT-5.6 Luna (&gt; 272K tokens)</td>
-      <td class="num">90</td>
-      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 57% cache-read, 1% cache-write, 16% output">$1.243</span></td>
-      <td class="num"><strong>8286</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">12</td>
-      <td class="num">$0.4</td>
-      <td class="num">$0.04</td>
-      <td class="num">$1.8</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">8</td>
-      <td class="model">Claude Haiku 5.5 (&gt; 100K tokens)</td>
-      <td class="num">90</td>
-      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$1.580</span></td>
-      <td class="num"><strong>10536</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">9</td>
-      <td class="num">$0.5</td>
-      <td class="num">$0.05</td>
-      <td class="num">$2.5</td>
-      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> Claude Fable 5 (reasoning max) <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">9</td>
-      <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
-      <td class="num">88</td>
-      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 14% output">$1.222</span></td>
-      <td class="num"><strong>2036</strong></td>
-      <td class="num">$60</td>
-      <td class="num">6</td>
-      <td class="num">49</td>
-      <td class="num">$0.4</td>
-      <td class="num">$0.04</td>
-      <td class="num">$1.6</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
-    </tr>
-<tr>
-      <td class="num">10</td>
-      <td class="model">Qwen3.7 Plus (&gt; 256K tokens)</td>
-      <td class="num">88</td>
-      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 14% output">$3.665</span></td>
-      <td class="num"><strong>6108</strong></td>
-      <td class="num">$60</td>
-      <td class="num">6</td>
-      <td class="num">16</td>
-      <td class="num">$1.2</td>
-      <td class="num">$0.12</td>
-      <td class="num">$4.8</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
-    </tr>
-<tr>
-      <td class="num">11</td>
-      <td class="model">DeepSeek V4 Pro (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-      <td class="num">88</td>
-      <td class="num"><span title="of one session&#39;s bill: 48% fresh input, 34% cache-read, 0% cache-write, 18% output">$1.149</span></td>
-      <td class="num"><strong>7663</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">13</td>
-      <td class="num">$0.66</td>
-      <td class="num">$0.022</td>
-      <td class="num">$1.98</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Pro <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">12</td>
-      <td class="model">DeepSeek V4 Pro (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
-      <td class="num">88</td>
-      <td class="num"><span title="of one session&#39;s bill: 48% fresh input, 34% cache-read, 0% cache-write, 18% output">$2.299</span></td>
-      <td class="num"><strong>15325</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">6</td>
-      <td class="num">$1.32</td>
-      <td class="num">$0.044</td>
-      <td class="num">$3.96</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Pro <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">13</td>
-      <td class="model">Kimi K3</td>
-      <td class="num">88</td>
-      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$9.468</span></td>
-      <td class="num"><strong>63117</strong></td>
-      <td class="num">$15</td>
-      <td class="num">1.5</td>
-      <td class="num">1</td>
-      <td class="num">$3</td>
-      <td class="num">$0.3</td>
-      <td class="num">$15</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Kimi K3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">14</td>
-      <td class="model">GLM-5.3-Flash</td>
-      <td class="num">84</td>
-      <td class="num"><span title="of one session&#39;s bill: 18% fresh input, 75% cache-read, 0% cache-write, 8% output">$0.709</span></td>
-      <td class="num"><strong>1182</strong></td>
-      <td class="num">$60</td>
-      <td class="num">6</td>
-      <td class="num">84</td>
-      <td class="num">$0.15</td>
-      <td class="num">$0.03</td>
-      <td class="num">$0.5</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GLM 5.3 Flash (reasoning high) <span class="ic" title="Open source, unrestricted local use">✅</span></td>
-    </tr>
-<tr>
-      <td class="num">15</td>
-      <td class="model">Hy3</td>
-      <td class="num">79</td>
-      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 78% cache-read, 0% cache-write, 8% output">$0.798</span></td>
-      <td class="num"><strong>1330</strong></td>
-      <td class="num">$60</td>
-      <td class="num">6</td>
-      <td class="num">75</td>
-      <td class="num">$0.14</td>
-      <td class="num">$0.035</td>
-      <td class="num">$0.58</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Tencent Hy3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">16</td>
-      <td class="model">MiniMax-M3 (≤ 512K tokens)</td>
-      <td class="num">76</td>
-      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 74% cache-read, 0% cache-write, 9% output">$1.440</span></td>
-      <td class="num"><strong>2399</strong></td>
-      <td class="num">$60</td>
-      <td class="num">6</td>
-      <td class="num">41</td>
-      <td class="num">$0.3</td>
-      <td class="num">$0.06</td>
-      <td class="num">$1.2</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> MiniMax M3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">17</td>
-      <td class="model">MiniMax-M3 (&gt; 512K tokens)</td>
-      <td class="num">76</td>
-      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 74% cache-read, 0% cache-write, 9% output">$2.879</span></td>
-      <td class="num"><strong>4799</strong></td>
-      <td class="num">$60</td>
-      <td class="num">6</td>
-      <td class="num">20</td>
-      <td class="num">$0.6</td>
-      <td class="num">$0.12</td>
-      <td class="num">$2.4</td>
-      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> MiniMax M3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
-    </tr>
-<tr>
-      <td class="num">18</td>
+      <td class="num idx">1</td>
       <td class="model">Muse Spark 1.2 Contributor</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.140</span></td>
@@ -485,7 +267,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">19</td>
+      <td class="num idx">2</td>
       <td class="model">Muse Spark 1.3 Contributor</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.140</span></td>
@@ -499,7 +281,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">20</td>
+      <td class="num idx">3</td>
+      <td class="model">DeepSeek V4.1 Flash 1017 (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="num">90</td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.242</span></td>
+      <td class="num"><strong>242</strong></td>
+      <td class="num">$100</td>
+      <td class="num">10</td>
+      <td class="num">413</td>
+      <td class="num">$0.15</td>
+      <td class="num">$0.003</td>
+      <td class="num">$0.6</td>
+      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> DeepSeek V4 Flash 0731 (reasoning high) <span class="ic" title="License not determined">⚠️</span></td>
+    </tr>
+<tr>
+      <td class="num idx">4</td>
       <td class="model">MiMo-V2.6-Flash</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 59% fresh input, 25% cache-read, 0% cache-write, 15% output">$0.196</span></td>
@@ -513,7 +309,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">21</td>
+      <td class="num idx">5</td>
+      <td class="model">DeepSeek V4.1 Flash 1017 (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="num">90</td>
+      <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
+      <td class="num"><strong>484</strong></td>
+      <td class="num">$100</td>
+      <td class="num">10</td>
+      <td class="num">206</td>
+      <td class="num">$0.3</td>
+      <td class="num">$0.006</td>
+      <td class="num">$1.2</td>
+      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> DeepSeek V4 Flash 0731 (reasoning high) <span class="ic" title="License not determined">⚠️</span></td>
+    </tr>
+<tr>
+      <td class="num idx">6</td>
       <td class="model">LongCat-2.5</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 52% fresh input, 22% cache-read, 0% cache-write, 27% output">$0.484</span></td>
@@ -527,7 +337,35 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">22</td>
+      <td class="num idx">7</td>
+      <td class="model">GLM-5.3-Flash</td>
+      <td class="num">84</td>
+      <td class="num"><span title="of one session&#39;s bill: 18% fresh input, 75% cache-read, 0% cache-write, 8% output">$0.709</span></td>
+      <td class="num"><strong>1182</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">84</td>
+      <td class="num">$0.15</td>
+      <td class="num">$0.03</td>
+      <td class="num">$0.5</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GLM 5.3 Flash (reasoning high) <span class="ic" title="Open source, unrestricted local use">✅</span></td>
+    </tr>
+<tr>
+      <td class="num idx">8</td>
+      <td class="model">Hy3</td>
+      <td class="num">79</td>
+      <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 78% cache-read, 0% cache-write, 8% output">$0.798</span></td>
+      <td class="num"><strong>1330</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">75</td>
+      <td class="num">$0.14</td>
+      <td class="num">$0.035</td>
+      <td class="num">$0.58</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Tencent Hy3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">9</td>
       <td class="model">Qwen3.8 Flash</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 61% cache-read, 1% cache-write, 11% output">$0.462</span></td>
@@ -541,7 +379,35 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">23</td>
+      <td class="num idx">10</td>
+      <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
+      <td class="num">88</td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 14% output">$1.222</span></td>
+      <td class="num"><strong>2036</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">49</td>
+      <td class="num">$0.4</td>
+      <td class="num">$0.04</td>
+      <td class="num">$1.6</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
+    </tr>
+<tr>
+      <td class="num idx">11</td>
+      <td class="model">Claude Haiku 5.5 (≤ 100K tokens)</td>
+      <td class="num">90</td>
+      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$0.316</span></td>
+      <td class="num"><strong>2107</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">47</td>
+      <td class="num">$0.1</td>
+      <td class="num">$0.01</td>
+      <td class="num">$0.5</td>
+      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> Claude Fable 5 (reasoning max) <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">12</td>
       <td class="model">GPT-6 Luna (≤ 272K tokens)</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$0.316</span></td>
@@ -555,7 +421,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">24</td>
+      <td class="num idx">13</td>
       <td class="model">MiniMax M3.1 Flash</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 0% cache-write, 14% output">$0.454</span></td>
@@ -569,7 +435,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">25</td>
+      <td class="num idx">14</td>
+      <td class="model">MiniMax-M3 (≤ 512K tokens)</td>
+      <td class="num">76</td>
+      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 74% cache-read, 0% cache-write, 9% output">$1.440</span></td>
+      <td class="num"><strong>2399</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">41</td>
+      <td class="num">$0.3</td>
+      <td class="num">$0.06</td>
+      <td class="num">$1.2</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> MiniMax M3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">15</td>
       <td class="model">Hy4</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 41% fresh input, 44% cache-read, 0% cache-write, 16% output">$1.704</span></td>
@@ -583,7 +463,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">26</td>
+      <td class="num idx">16</td>
       <td class="model">GLM-5.3</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 19% fresh input, 74% cache-read, 0% cache-write, 8% output">$6.236</span></td>
@@ -597,7 +477,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">27</td>
+      <td class="num idx">17</td>
       <td class="model">MiMo-V2.6-Pro</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 70% fresh input, 12% cache-read, 0% cache-write, 18% output">$0.518</span></td>
@@ -611,7 +491,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">28</td>
+      <td class="num idx">18</td>
       <td class="model">GPT-6 Luna (&gt; 272K tokens)</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 13% output">$0.605</span></td>
@@ -625,7 +505,35 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">29</td>
+      <td class="num idx">19</td>
+      <td class="model">GPT-5.6 Luna (≤ 272K tokens)</td>
+      <td class="num">90</td>
+      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 54% cache-read, 1% cache-write, 20% output">$0.654</span></td>
+      <td class="num"><strong>4357</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">22</td>
+      <td class="num">$0.2</td>
+      <td class="num">$0.02</td>
+      <td class="num">$1.2</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">20</td>
+      <td class="model">MiniMax-M3 (&gt; 512K tokens)</td>
+      <td class="num">76</td>
+      <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 74% cache-read, 0% cache-write, 9% output">$2.879</span></td>
+      <td class="num"><strong>4799</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">20</td>
+      <td class="num">$0.6</td>
+      <td class="num">$0.12</td>
+      <td class="num">$2.4</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> MiniMax M3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">21</td>
       <td class="model">Hy4 preview</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 41% fresh input, 44% cache-read, 0% cache-write, 16% output">$1.704</span></td>
@@ -639,7 +547,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">30</td>
+      <td class="num idx">22</td>
+      <td class="model">Qwen3.7 Plus (&gt; 256K tokens)</td>
+      <td class="num">88</td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 58% cache-read, 1% cache-write, 14% output">$3.665</span></td>
+      <td class="num"><strong>6108</strong></td>
+      <td class="num">$60</td>
+      <td class="num">6</td>
+      <td class="num">16</td>
+      <td class="num">$1.2</td>
+      <td class="num">$0.12</td>
+      <td class="num">$4.8</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.7 Plus <span class="ic" title="License not determined">⚠️</span></td>
+    </tr>
+<tr>
+      <td class="num idx">23</td>
       <td class="model">Kimi K2.7 Code</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 17% fresh input, 73% cache-read, 0% cache-write, 9% output">$4.580</span></td>
@@ -653,7 +575,49 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">31</td>
+      <td class="num idx">24</td>
+      <td class="model">DeepSeek V4 Pro (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="num">88</td>
+      <td class="num"><span title="of one session&#39;s bill: 48% fresh input, 34% cache-read, 0% cache-write, 18% output">$1.149</span></td>
+      <td class="num"><strong>7663</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">13</td>
+      <td class="num">$0.66</td>
+      <td class="num">$0.022</td>
+      <td class="num">$1.98</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Pro <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">25</td>
+      <td class="model">GPT-5.6 Luna (&gt; 272K tokens)</td>
+      <td class="num">90</td>
+      <td class="num"><span title="of one session&#39;s bill: 27% fresh input, 57% cache-read, 1% cache-write, 16% output">$1.243</span></td>
+      <td class="num"><strong>8286</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">12</td>
+      <td class="num">$0.4</td>
+      <td class="num">$0.04</td>
+      <td class="num">$1.8</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> GPT-5.6 Luna <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">26</td>
+      <td class="model">Claude Haiku 5.5 (&gt; 100K tokens)</td>
+      <td class="num">90</td>
+      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$1.580</span></td>
+      <td class="num"><strong>10536</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">9</td>
+      <td class="num">$0.5</td>
+      <td class="num">$0.05</td>
+      <td class="num">$2.5</td>
+      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> Claude Fable 5 (reasoning max) <span class="ic" title="Cloud, proprietary license">☁️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">27</td>
       <td class="model">Gemini 4 Argon</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 37% fresh input, 39% cache-read, 0% cache-write, 24% output">$4.501</span></td>
@@ -667,7 +631,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">32</td>
+      <td class="num idx">28</td>
+      <td class="model">DeepSeek V4 Pro (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
+      <td class="num">88</td>
+      <td class="num"><span title="of one session&#39;s bill: 48% fresh input, 34% cache-read, 0% cache-write, 18% output">$2.299</span></td>
+      <td class="num"><strong>15325</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">6</td>
+      <td class="num">$1.32</td>
+      <td class="num">$0.044</td>
+      <td class="num">$3.96</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> DeepSeek V4 Pro <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">29</td>
       <td class="model">Step 5 Preview</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 29% fresh input, 61% cache-read, 0% cache-write, 10% output">$2.890</span></td>
@@ -681,7 +659,21 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">33</td>
+      <td class="num idx">30</td>
+      <td class="model">Qwen4 Max</td>
+      <td class="num">95</td>
+      <td class="num"><span title="of one session&#39;s bill: 40% fresh input, 43% cache-read, 1% cache-write, 16% output">$3.093</span></td>
+      <td class="num"><strong>20617</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">4</td>
+      <td class="num">$1.5</td>
+      <td class="num">$0.075</td>
+      <td class="num">$4.5</td>
+      <td class="match"><span class="tier tier-ambig" title="Plausible, but the names differ — check by eye.">⚠</span> Qwen3.7 Max <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">31</td>
       <td class="model">Kimi K3.1 Pro</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$6.312</span></td>
@@ -695,7 +687,35 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">34</td>
+      <td class="num idx">32</td>
+      <td class="model">Qwen3.8 Max</td>
+      <td class="num">91</td>
+      <td class="num"><span title="of one session&#39;s bill: 25% fresh input, 65% cache-read, 1% cache-write, 9% output">$6.779</span></td>
+      <td class="num"><strong>45192</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">2</td>
+      <td class="num">$2</td>
+      <td class="num">$0.25</td>
+      <td class="num">$6</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Qwen3.8 Max (reasoning medium) <span class="ic" title="License not determined">⚠️</span></td>
+    </tr>
+<tr>
+      <td class="num idx">33</td>
+      <td class="model">Kimi K3</td>
+      <td class="num">88</td>
+      <td class="num"><span title="of one session&#39;s bill: 26% fresh input, 56% cache-read, 1% cache-write, 17% output">$9.468</span></td>
+      <td class="num"><strong>63117</strong></td>
+      <td class="num">$15</td>
+      <td class="num">1.5</td>
+      <td class="num">1</td>
+      <td class="num">$3</td>
+      <td class="num">$0.3</td>
+      <td class="num">$15</td>
+      <td class="match"><span class="tier tier-ok" title="Confident match — name similarity ≥ 0.85, or exact substring (e.g. "Hy3" inside "Tencent Hy3").">✓</span> Kimi K3 <span class="ic" title="License not determined">⚠️</span> <span class="ic" title="Benchmark results still in progress (provisional)">⏳</span></td>
+    </tr>
+<tr>
+      <td class="num idx">34</td>
       <td class="model">Grok 4.7 (≤ 200K tokens)</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 79% cache-read, 0% cache-write, 6% output">$11.154</span></td>
@@ -709,7 +729,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">35</td>
+      <td class="num idx">35</td>
       <td class="model">Grok 4.7 (&gt; 200K tokens)</td>
       <td class="num">—</td>
       <td class="num"><span title="of one session&#39;s bill: 15% fresh input, 79% cache-read, 0% cache-write, 6% output">$22.308</span></td>
@@ -723,7 +743,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">36</td>
+      <td class="num idx">36</td>
       <td class="model">Beam Free</td>
       <td class="num">—</td>
       <td class="num"><span title="">$0.000</span></td>
@@ -737,7 +757,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">37</td>
+      <td class="num idx">37</td>
       <td class="model">Iceman Contributor Free</td>
       <td class="num">—</td>
       <td class="num"><span title="">$0.000</span></td>
@@ -751,7 +771,7 @@
       <td class="match"><span class="muted" title="Not found in benchmark">—</span></td>
     </tr>
 <tr>
-      <td class="num">38</td>
+      <td class="num idx">38</td>
       <td class="model">Hy4 flash Free</td>
       <td class="num">—</td>
       <td class="num"><span title="">$0.000</span></td>
@@ -774,84 +794,84 @@
       <thead><tr><th class="num sortable" title="Position by Score/mp; click a header to re-sort.">#</th><th class="sortable" title="Only confident (✓) matches are ranked here — tariffs without a benchmark score are excluded, so this table compares measured intelligence, not every tariff on the price page.">Model</th><th class="num sortable" title="Benchmark final score — with Score/mp as the criterion, equal scores are separated purely by session cost.">Score</th><th class="num sortable" title="Milli-percent of the monthly quota per session (from the main table) — the denominator you pay with; lower is cheaper.">mp</th><th class="num sortable" title="Score bought per milli-percent of quota: intelligence per unit of subscription. It rewards lean sessions, so a mid-score model on a cheap tariff can outrun a flagship priced out of its own quota.">Score/mp</th></tr></thead>
       <tbody>
 <tr>
-    <td class="num">1</td>
+    <td class="num idx">1</td>
     <td class="model">GLM-5.3-Flash</td>
     <td class="num">84</td>
     <td class="num">1182</td>
     <td class="num"><strong>0.071</strong></td>
   </tr>
 <tr>
-    <td class="num">2</td>
+    <td class="num idx">2</td>
     <td class="model">Hy3</td>
     <td class="num">79</td>
     <td class="num">1330</td>
     <td class="num"><strong>0.059</strong></td>
   </tr>
 <tr>
-    <td class="num">3</td>
+    <td class="num idx">3</td>
     <td class="model">Qwen3.7 Plus (≤ 256K tokens)</td>
     <td class="num">88</td>
     <td class="num">2036</td>
     <td class="num"><strong>0.043</strong></td>
   </tr>
 <tr>
-    <td class="num">4</td>
+    <td class="num idx">4</td>
     <td class="model">MiniMax-M3 (≤ 512K tokens)</td>
     <td class="num">76</td>
     <td class="num">2400</td>
     <td class="num"><strong>0.032</strong></td>
   </tr>
 <tr>
-    <td class="num">5</td>
+    <td class="num idx">5</td>
     <td class="model">GPT-5.6 Luna (≤ 272K tokens)</td>
     <td class="num">90</td>
     <td class="num">4357</td>
     <td class="num"><strong>0.021</strong></td>
   </tr>
 <tr>
-    <td class="num">6</td>
+    <td class="num idx">6</td>
     <td class="model">MiniMax-M3 (&gt; 512K tokens)</td>
     <td class="num">76</td>
     <td class="num">4799</td>
     <td class="num"><strong>0.016</strong></td>
   </tr>
 <tr>
-    <td class="num">7</td>
+    <td class="num idx">7</td>
     <td class="model">Qwen3.7 Plus (&gt; 256K tokens)</td>
     <td class="num">88</td>
     <td class="num">6108</td>
     <td class="num"><strong>0.014</strong></td>
   </tr>
 <tr>
-    <td class="num">8</td>
+    <td class="num idx">8</td>
     <td class="model">DeepSeek V4 Pro (Off-Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;off&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
     <td class="num">88</td>
     <td class="num">7663</td>
     <td class="num"><strong>0.011</strong></td>
   </tr>
 <tr>
-    <td class="num">9</td>
+    <td class="num idx">9</td>
     <td class="model">GPT-5.6 Luna (&gt; 272K tokens)</td>
     <td class="num">90</td>
     <td class="num">8286</td>
     <td class="num"><strong>0.011</strong></td>
   </tr>
 <tr>
-    <td class="num">10</td>
+    <td class="num idx">10</td>
     <td class="model">DeepSeek V4 Pro (Peak)<span class="pk" data-peak='{&quot;tz&quot;:&quot;UTC&quot;,&quot;days&quot;:[1,5],&quot;ranges&quot;:[[1,0,4,0],[6,0,10,0]],&quot;variant&quot;:&quot;peak&quot;}' title="Peak/Off-Peak tariff">⚡</span></td>
     <td class="num">88</td>
     <td class="num">15326</td>
     <td class="num"><strong>0.006</strong></td>
   </tr>
 <tr>
-    <td class="num">11</td>
+    <td class="num idx">11</td>
     <td class="model">Qwen3.8 Max</td>
     <td class="num">91</td>
     <td class="num">45192</td>
     <td class="num"><strong>0.002</strong></td>
   </tr>
 <tr>
-    <td class="num">12</td>
+    <td class="num idx">12</td>
     <td class="model">Kimi K3</td>
     <td class="num">88</td>
     <td class="num">63117</td>
@@ -1150,6 +1170,12 @@
           return dir === 'asc' ? c : -c;
         });
         rows.forEach(function (row) { tbody.appendChild(row); });
+        // The "#" column is a counter of the current order, not a frozen rank (that is what
+        // its tooltip promises): renumber it, or sorting by price leaves a column of
+        // ordinals that describe an order the reader can no longer see.
+        rows.forEach(function (row, i) {
+          if (row.cells[0].classList.contains('idx')) row.cells[0].textContent = String(i + 1);
+        });
       });
     });
   });

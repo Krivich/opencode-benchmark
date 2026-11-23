@@ -28,7 +28,7 @@ import {
   writeRefreshState,
 } from './lib/core/pipeline.js';
 import {
-  renderHtml, renderReadmeAuto, reportSchema, OG_IMAGE,
+  renderHtml, renderReadmeAuto, reportSchema,
 } from './lib/core/render.js';
 import { getSiteUrl } from './lib/core/site.js';
 import { renderSitemap } from './lib/core/sitemap.js';
@@ -117,7 +117,6 @@ async function main() {
 
   writeTextIfChanged(path.join(OUT_DIR, 'index.html'), html);
   writeTextIfChanged(path.join(OUT_DIR, 'sitemap.xml'), renderSitemap({ siteUrl, lastmod: full.generatedAt }));
-  writeTextIfChanged(path.join(OUT_DIR, 'og-image.svg'), OG_IMAGE);
   writeJsonIfChanged(jsonFile, full);
   writeJsonIfChanged(path.join(OUT_DIR, 'report.schema.json'), reportSchema(siteUrl));
 
