@@ -52,9 +52,13 @@
   .answer { margin: 12px 0 16px; padding: 10px 14px; max-width: 74ch; font-size: 0.95rem;
     color: #24303f; background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 0 8px 8px 0; }
   .answer b { color: #0b2a55; }
+  /* Coverage note: a caption of the answer, not a second paragraph — it says what the ranking
+     cannot see without competing with the finding itself. */
+  .answer .cover { display: block; margin-top: 6px; font-size: 0.78rem; line-height: 1.45; color: #5b6b7f; }
   @media (prefers-color-scheme: dark) {
     .answer { background: #16263a; border-color: #60a5fa; color: #d6e2f2; }
     .answer b { color: #fff; }
+    .answer .cover { color: #9fb0c6; }
   }
   @media (prefers-color-scheme: dark) {
     h1 .brand { color: #fff; }
@@ -189,17 +193,15 @@
       <h1><span class="brand">OpenCode Go</span> pricing: which model gives the most per dollar?</h1>
       <p class="tagline">Tariffs hide the real price behind quota multipliers and context splits. Here's what one
         average task actually costs — a full session (~147 turns), not a single request — and how smart each model is.</p>
-      <p class="answer"><b>Short answer:</b> the benchmark covers only part of the price list —
-        12 of 38 tariffs match a measured model by name (✓),
-        5 merely resemble one (⚠) and 21 were never measured (—).
-        Among the 12 measured, GLM-5.3-Flash buys the most benchmark score per
-        slice of the plan: 84 points for
-        $0.71 a task, 1.2%
-        of the $10/mo plan. The cheapest task on the list, Muse Spark 1.2 Contributor at
-        $0.14, is
-        priced but unmeasured — it stays out of the ranking instead of being assumed good;
-        the priciest is $22.31 (Grok 4.7 (&gt; 200K tokens)),
-        so one identical task spans 160×.</p>
+      <p class="answer"><b>Short answer:</b> among the 12 measured tariffs,
+        GLM-5.3-Flash gives the most score per slice of the plan —
+        84 points for $0.71 a task,
+        1.2% of the $10/mo plan.
+        The cheapest tasks (from $0.14) are unmeasured, so they stay unranked.
+        <span class="cover" title="Benchmark coverage decides what the ranking can claim: ✓ = the issue measured this exact model and only those rows are ranked; ⚠ = only a similar name was measured (a different build — see the Match column); — = never measured (unknown, not bad).">Coverage:
+        12 of 38 measured ✓ · 5 lookalike ⚠ ·
+        21 never measured — · one task spans $0.14–$22.31
+        (160×)</span></p>
       <p class="intro">OpenCode Go is a $10/month plan whose real price per task depends on the tariff,
         not on the model's fame — picking one means solving a billing puzzle, not an AI one.
         Tariffs come with <b>quota multipliers</b> that quietly triple the price, every session splits into
