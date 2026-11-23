@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-22T23:15:30.146Z",
+  "generatedAt": "2026-11-23T05:51:40.738Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -1251,33 +1251,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-21",
+    "vs": "2026-11-22",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "quota",
-        "model": "GLM-5.3",
-        "from": 500,
-        "to": 200
-      },
-      {
-        "kind": "added",
-        "model": "LongCat-2.5",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "LongCat 2.5 Free",
-        "from": null,
-        "to": null
-      },
-      {
-        "kind": "removed",
-        "model": "LongCat-2.0",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
