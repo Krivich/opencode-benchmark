@@ -18,7 +18,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-22T23:15:30.146Z",
+  "generatedAt": "2026-11-24T03:49:44.633Z",
   "tariffs": [
     {
       "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
@@ -516,6 +516,17 @@
       "cacheReadPerM": 0.006,
       "cacheWritePerM": 0,
       "quotaUsd": 60,
+      "peakHours": null
+    },
+    {
+      "model": "HungerG Free",
+      "provider": "opencode-go",
+      "modelId": "hungerg-free",
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "quotaUsd": 0,
       "peakHours": null
     }
   ]

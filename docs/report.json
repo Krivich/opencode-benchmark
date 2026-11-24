@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-23T05:51:40.738Z",
+  "generatedAt": "2026-11-24T03:49:44.634Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -1174,6 +1174,29 @@
       "benchmarkIssue": null,
       "benchmarkFallback": false,
       "peakHours": null
+    },
+    {
+      "model": "HungerG Free",
+      "provider": "opencode-go",
+      "modelId": "hungerg-free",
+      "score": null,
+      "priceUsdPerSession": 0,
+      "mpPerSession": null,
+      "quotaUsd": 0,
+      "multiplier": null,
+      "walletMultiplier": null,
+      "sessionsPerMonth": null,
+      "inputPerM": 0,
+      "outputPerM": 0,
+      "cacheReadPerM": 0,
+      "cacheWritePerM": 0,
+      "costSplit": null,
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
     }
   ],
   "ranked": [
@@ -1251,8 +1274,15 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-22",
+    "vs": "2026-11-23",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "added",
+        "model": "HungerG Free",
+        "from": null,
+        "to": null
+      }
+    ]
   }
 }
