@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-24T03:49:44.634Z",
+  "generatedAt": "2026-11-25T01:55:08.190Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -1274,15 +1274,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-23",
+    "vs": "2026-11-24",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "added",
-        "model": "HungerG Free",
-        "from": null,
-        "to": null
-      }
-    ]
+    "items": []
   }
 }
