@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-25T01:55:08.190Z",
+  "generatedAt": "2026-11-25T16:49:45.448Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -967,6 +967,34 @@
       "peakHours": null
     },
     {
+      "model": "Kimi K3.1 Pro",
+      "provider": "opencode-go",
+      "modelId": "kimi-k3.1-pro",
+      "score": null,
+      "priceUsdPerSession": 6.31171,
+      "mpPerSession": 10519.52,
+      "quotaUsd": 60,
+      "multiplier": 1,
+      "walletMultiplier": 6,
+      "sessionsPerMonth": 9,
+      "inputPerM": 2,
+      "outputPerM": 10,
+      "cacheReadPerM": 0.2,
+      "cacheWritePerM": 2,
+      "costSplit": {
+        "input": 0.2631,
+        "cacheRead": 0.5609,
+        "cacheWrite": 0.0064,
+        "output": 0.1696
+      },
+      "matchedBenchmarkName": null,
+      "similarity": 0,
+      "tier": "NONE",
+      "benchmarkIssue": null,
+      "benchmarkFallback": false,
+      "peakHours": null
+    },
+    {
       "model": "Gemini 4 Argon",
       "provider": "opencode-go",
       "modelId": "gemini-4-argon",
@@ -1014,34 +1042,6 @@
         "cacheRead": 0.6126,
         "cacheWrite": 0,
         "output": 0.1
-      },
-      "matchedBenchmarkName": null,
-      "similarity": 0,
-      "tier": "NONE",
-      "benchmarkIssue": null,
-      "benchmarkFallback": false,
-      "peakHours": null
-    },
-    {
-      "model": "Kimi K3.1 Pro",
-      "provider": "opencode-go",
-      "modelId": "kimi-k3.1-pro",
-      "score": null,
-      "priceUsdPerSession": 6.31171,
-      "mpPerSession": 42078.06,
-      "quotaUsd": 15,
-      "multiplier": 4,
-      "walletMultiplier": 1.5,
-      "sessionsPerMonth": 2,
-      "inputPerM": 2,
-      "outputPerM": 10,
-      "cacheReadPerM": 0.2,
-      "cacheWritePerM": 2,
-      "costSplit": {
-        "input": 0.2631,
-        "cacheRead": 0.5609,
-        "cacheWrite": 0.0064,
-        "output": 0.1696
       },
       "matchedBenchmarkName": null,
       "similarity": 0,
@@ -1276,6 +1276,13 @@
   "changes": {
     "vs": "2026-11-24",
     "benchmarkIssueChanged": false,
-    "items": []
+    "items": [
+      {
+        "kind": "quota",
+        "model": "Kimi K3.1 Pro",
+        "from": 15,
+        "to": 60
+      }
+    ]
   }
 }

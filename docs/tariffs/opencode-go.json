@@ -18,7 +18,7 @@
     "contextTokensPerTurn": 126938,
     "monthlyPoolUsd": 60
   },
-  "generatedAt": "2026-11-24T03:49:44.633Z",
+  "generatedAt": "2026-11-25T16:49:45.448Z",
   "tariffs": [
     {
       "model": "DeepSeek V4.1 Flash 1017 (Off-Peak)",
@@ -449,7 +449,7 @@
       "outputPerM": 10,
       "cacheReadPerM": 0.2,
       "cacheWritePerM": 2,
-      "quotaUsd": 15,
+      "quotaUsd": 60,
       "peakHours": null
     },
     {
