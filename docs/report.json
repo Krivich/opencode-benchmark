@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-25T16:49:45.448Z",
+  "generatedAt": "2026-11-26T01:35:28.736Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -1274,15 +1274,8 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-24",
+    "vs": "2026-11-25",
     "benchmarkIssueChanged": false,
-    "items": [
-      {
-        "kind": "quota",
-        "model": "Kimi K3.1 Pro",
-        "from": 15,
-        "to": 60
-      }
-    ]
+    "items": []
   }
 }
