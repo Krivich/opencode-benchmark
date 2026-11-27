@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with benchmark scores only where measured.">
 <meta name="twitter:image" content="https://krivich.github.io/opencode-benchmark/og-image.png">
 <link rel="sitemap" type="application/xml" href="https://krivich.github.io/opencode-benchmark/sitemap.xml">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","alternateName":"OpenCode Go pricing","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go pricing: which model gives the most per dollar?","description":"One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with benchmark scores only where measured.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-11-26T01:35:28.736Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with benchmark scores only where measured.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-11-26T01:35:28.736Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"],"distribution":[{"@type":"DataDownload","name":"Full report — every tariff joined with its benchmark score, session cost and quota share","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/report.json"},{"@type":"DataDownload","name":"Normalized OpenCode Go pricing — rates, monthly limits, peak/off-peak windows","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/tariffs/opencode-go.json"},{"@type":"DataDownload","name":"TIMETOACT monthly benchmark issues, one JSON per measurement","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/benchmarks/timetoact/index.json"},{"@type":"DataDownload","name":"Daily snapshots of the report — the time series behind the change log","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/history/index.json"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://krivich.github.io/opencode-benchmark/#website","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go × TIMETOACT LLM Benchmark","alternateName":"OpenCode Go pricing","publisher":{"@type":"Organization","name":"opencode-benchmark"}},{"@type":"WebPage","@id":"https://krivich.github.io/opencode-benchmark/#webpage","url":"https://krivich.github.io/opencode-benchmark/","name":"OpenCode Go pricing: which model gives the most per dollar?","description":"One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with benchmark scores only where measured.","isPartOf":{"@id":"https://krivich.github.io/opencode-benchmark/#website"},"dateModified":"2026-11-27T01:29:56.224Z","inLanguage":"en","mainEntity":{"@id":"https://krivich.github.io/opencode-benchmark/#dataset"}},{"@type":"Dataset","@id":"https://krivich.github.io/opencode-benchmark/#dataset","name":"OpenCode Go tariff pricing vs TIMETOACT LLM benchmark scores","description":"One agent task costs $0.14–$22.31 on OpenCode Go — a 160× spread for identical work. Every tariff priced per session, with benchmark scores only where measured.","url":"https://krivich.github.io/opencode-benchmark/","dateModified":"2026-11-27T01:29:56.224Z","creator":{"@type":"Organization","name":"opencode-benchmark"},"license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["OpenCode","OpenCode Go","LLM","benchmark","pricing","quota","TIMETOACT"],"distribution":[{"@type":"DataDownload","name":"Full report — every tariff joined with its benchmark score, session cost and quota share","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/report.json"},{"@type":"DataDownload","name":"Normalized OpenCode Go pricing — rates, monthly limits, peak/off-peak windows","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/tariffs/opencode-go.json"},{"@type":"DataDownload","name":"TIMETOACT monthly benchmark issues, one JSON per measurement","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/benchmarks/timetoact/index.json"},{"@type":"DataDownload","name":"Daily snapshots of the report — the time series behind the change log","encodingFormat":"application/json","contentUrl":"https://krivich.github.io/opencode-benchmark/history/index.json"}]}]}</script>
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -215,9 +215,9 @@
         against measured capability.</p>
       <div class="meta">
         <p class="sub">Session cost (one average task) and the share of the monthly quota it consumes.
-          Updated: <time datetime="2026-11-26T01:35:28.736Z">11/26/2026, 1:35:28 AM</time></p>
+          Updated: <time datetime="2026-11-27T01:29:56.224Z">11/27/2026, 1:29:56 AM</time></p>
         <p class="sub fresh" id="fresh"
-          data-changed="2026-11-26T01:35:28.736Z"
+          data-changed="2026-11-27T01:29:56.224Z"
           data-every="6"
           data-anchor="0"
           title="The page is rebuilt on a schedule. 'Checked' is when the updater last ran (even with no data changes); 'numbers changed' is when the values actually moved; 'next check' is the next scheduled run. A stale 'checked' means the updater is not running.">
@@ -928,6 +928,12 @@
       <thead><tr><th title="Link to that day’s full report JSON. History is sparse — a day with no data change adds no file, so a gap means unchanged, not lost.">Date</th><th class="num" title="Tariff rows that day — a jump means the price page grew new tariffs, which usually reshuffles every ranking below.">Models</th><th title="Top Score/mp of that day — the lead can change on a price edit alone, even with identical benchmark scores.">Best score/mp</th><th class="num" title="Change events versus the previous snapshot (added, removed, score, price, quota).">Δ changes</th></tr></thead>
       <tbody>
 <tr>
+        <td><a href="history/2026-11-27.json">2026-11-27</a></td>
+        <td class="num">39</td>
+        <td>GLM-5.3-Flash · 0.071</td>
+        <td class="num">0</td>
+      </tr>
+<tr>
         <td><a href="history/2026-11-26.json">2026-11-26</a></td>
         <td class="num">39</td>
         <td>GLM-5.3-Flash · 0.071</td>
@@ -1101,12 +1107,6 @@
         <td>DeepSeek V4.1 Flash (Off-Peak) · 0.291</td>
         <td class="num">0</td>
       </tr>
-<tr>
-        <td><a href="history/2026-10-27.json">2026-10-27</a></td>
-        <td class="num">37</td>
-        <td>DeepSeek V4.1 Flash (Off-Peak) · 0.291</td>
-        <td class="num">1</td>
-      </tr>
       </tbody>
     </table>
   </div>
@@ -1116,7 +1116,7 @@
   <h2>What changed <span class="tt" title="Diff against the previous daily snapshot (docs/history/).">ⓘ</span></h2>
   
   <ul class="chgs">
-      <li class="chg empty">No changes vs 2026-11-25.</li>
+      <li class="chg empty">No changes vs 2026-11-26.</li>
   </ul>
 </div>
   <div class="chgcard">
