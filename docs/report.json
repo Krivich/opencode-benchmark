@@ -1,6 +1,6 @@
 {
   "$schema": "https://krivich.github.io/opencode-benchmark/report.schema.json",
-  "generatedAt": "2026-11-27T01:29:56.224Z",
+  "generatedAt": "2026-11-28T01:06:49.806Z",
   "generator": {
     "name": "opencode-benchmark",
     "page": "https://krivich.github.io/opencode-benchmark/",
@@ -1274,7 +1274,7 @@
     }
   ],
   "changes": {
-    "vs": "2026-11-26",
+    "vs": "2026-11-27",
     "benchmarkIssueChanged": false,
     "items": []
   }

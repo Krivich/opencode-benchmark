@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T01:29:56.224Z",
+  "updated": "2026-11-28T01:06:49.806Z",
   "snapshots": [
     {
       "date": "2026-09-08",
@@ -605,6 +605,14 @@
       "date": "2026-11-27",
       "file": "history/2026-11-27.json",
       "generatedAt": "2026-11-27T01:29:56.224Z",
+      "models": 39,
+      "best": "GLM-5.3-Flash · 0.071",
+      "changes": 0
+    },
+    {
+      "date": "2026-11-28",
+      "file": "history/2026-11-28.json",
+      "generatedAt": "2026-11-28T01:06:49.806Z",
       "models": 39,
       "best": "GLM-5.3-Flash · 0.071",
       "changes": 0
